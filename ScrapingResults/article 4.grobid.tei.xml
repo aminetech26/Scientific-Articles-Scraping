@@ -1,0 +1,1408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Striving for Modernity: Layout and Abstracts in the Biomedical Literature</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>MDPI AG</publisher>
+				<availability status="unknown"><p>Copyright MDPI AG</p>
+				</availability>
+				<date type="published" when="2020-07-11">11 July 2020</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName coords="1,76.54,169.75,50.63,9.34"><forename type="first">Carlo</forename><surname>Galli</surname></persName>
+							<email>carlo.galli@unipr.it</email>
+							<idno type="ORCID">0000-0001-7476-7181</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Medicine and Surgery</orgName>
+								<orgName type="institution">University of Parma</orgName>
+								<address>
+									<addrLine>Via Volturno 39</addrLine>
+									<postCode>43126</postCode>
+									<settlement>Parma</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,154.81,169.75,107.38,9.34"><forename type="first">Maria</forename><forename type="middle">Teresa</forename><surname>Colangelo</surname></persName>
+							<email>mariateresa.colangelo@studenti.unipr.it</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Medicine and Surgery</orgName>
+								<orgName type="laboratory">Histology and Embryology Lab</orgName>
+								<orgName type="institution">University of Parma</orgName>
+								<address>
+									<addrLine>Via Volturno 39</addrLine>
+									<postCode>43126</postCode>
+									<settlement>Parma</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,291.09,169.75,83.29,9.34"><forename type="first">Stefano</forename><surname>Guizzardi</surname></persName>
+							<email>stefano.guizzardi@unipr.it</email>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Medicine and Surgery</orgName>
+								<orgName type="laboratory">Histology and Embryology Lab</orgName>
+								<orgName type="institution">University of Parma</orgName>
+								<address>
+									<addrLine>Via Volturno 39</addrLine>
+									<postCode>43126</postCode>
+									<settlement>Parma</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Striving for Modernity: Layout and Abstracts in the Biomedical Literature</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Publications</title>
+						<title level="j" type="abbrev">Publications</title>
+						<idno type="eISSN">2304-6775</idno>
+						<imprint>
+							<publisher>MDPI AG</publisher>
+							<biblScope unit="volume">8</biblScope>
+							<biblScope unit="issue">3</biblScope>
+							<biblScope unit="page">38</biblScope>
+							<date type="published" when="2020-07-11">11 July 2020</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A623DF0542B2C365CF5C7BF443B1DCDD</idno>
+					<idno type="DOI">10.3390/publications8030038</idno>
+					<note type="submission">Received: 2 June 2020; Accepted: 6 July 2020;</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2024-02-03T16:13+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>layout</term>
+					<term>academic publishing</term>
+					<term>abstract</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Most academic journals have a fairly consistent look: they are structured similarly, their text is divided into similar sections; for example, they have an abstract at the beginning of the manuscript, and their text is usually organized in two columns. There may be different reasons for this similarity, ranging from the need to contain publication costs by using less page space to conforming to an internationally well-accepted format that may be perceived as the hallmark of academic articles. We surveyed 35 medical journals founded before 1960 and looked for their change in format over time and how this was experienced by and explained to readers. We then discussed what recent research has shown about the effects of layout on reading, looking for further explanations as to why this format was so successful.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="7" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="8" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="9" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="10" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="11" ulx="0.0" uly="0.0" lrx="841.89" lry="595.276"/>
+		<surface n="12" ulx="0.0" uly="0.0" lrx="841.89" lry="595.276"/>
+		<surface n="13" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="14" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>The layout-the juxtaposition of text within a document-plays an important and yet often overlooked role in communication <ref type="bibr" coords="1,233.47,491.68,10.70,9.58" target="#b0">[1]</ref>. The choice of layout dictates how information is distributed across a page and can guide the reader through the text with visual cues, bring related information together and thereby create cohesion. Layout can be so closely associated with certain kinds of genres and certain ways of delivering information that readers can immediately recognize a newspaper, a textbook, a novel, or a web page just by looking at how lines of text are ordered in the page. Scientific articles in academic journals are no exceptions to this, as they are characterized by a consistent structure and look, both in their printed form and their, more recent, online versions. It has been shown that the choice of typeface and typographic layout affects the visual rhetorical impression of readers, and a consistent, uniform look is mostly associated with "academic", "informative", "professional" descriptors in experimental settings <ref type="bibr" coords="1,237.32,613.27,10.63,9.58" target="#b1">[2]</ref>. Indeed, the purpose of scientific articles is mostly to inform, to transfer knowledge and do that in a balanced, objective way, while avoiding linguistic or iconographic frills that may distract readers from this primary purpose. However, reducing the role of layout to the mere negative quality of absence of distraction would be diminishing. Although the layout can indeed serve a noise-reduction function, together with text segmentation, it also creates meaning. Academic articles are consistently structured in a pre-defined and well-known sequence of paragraphs. When it comes to the life science area, the adoption of a standardized structure, which is mostly represented by the familiar Abstract, Introduction, Materials, Results and Discussion sequence <ref type="bibr" coords="1,444.97,707.83,11.72,9.58" target="#b2">[3]</ref> helps readers navigate through the article and quickly find relevant pieces of information, as readers are able to anticipate what kind of content to expect in each section. A specific layout has also become a consistent mainstay of biomedical articles. Although most journals differ in the details of their style choices, e.g., the font used, the way paragraphs are marked, the citation style, any brief survey of publications in the Figure <ref type="figure" coords="2,141.86,755.68,3.21,8.68" target="#fig_0">1</ref>. Comparison between two mock-up texts as they would appear in A) a one-column layout or B) a two-column layout. Most academic journals adopted either one of these two formats for their articles. Comparison between two mock-up texts as they would appear in (A) a one-column layout or (B) a two-column layout. Most academic journals adopted either one of these two formats for their articles.</p><p>This commentary intends to question the interpretation that two-column layouts were adopted just to save space on printed pages, and investigate whether there may be additional reasons for the adoption of a different page format, because the layout of the page may also affect the way data are presented and even handled by the readers. In particular, the aim of this commentary is to investigate whether the common transition to a two-column format in medical journals may be associated with a change in perspective or attitude toward the scientific literature. This commentary will also consider how the change in layout relates to the introduction of abstracts in the medical literature, one of the hallmarks of scientific articles being geared towards mass indexing and searching <ref type="bibr" coords="3,437.53,185.64,10.58,9.58" target="#b8">[9]</ref>.</p><p>To answer this question, the present article will examine a set of biomedical journals from their beginning to today's issues, noting their pivoting in style in their printed versions and whether the motivations for such a change were provided.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Materials and Methods</head><p>The biomedical literature has always been rich in specialty journals, which focused on specific areas and specifically targeted physicians or researchers. We considered a cohort of 55 peer-reviewed journals in the medical field that were available online, were indexed in MEDLINE and were founded before 1960 (Table <ref type="table" coords="3,157.68,309.40,9.21,9.58">A2</ref>). This date was arbitrarily chosen because a preliminary search of the literature showed that journals were more likely to have a one-column layout before the 1960s-1970s. We then browsed the available issues starting from the first published issue and included those journals (n = 37) which were first published in a one-column format and had been digitalized for the dates of interest. The list of included journals can be found in Table <ref type="table" coords="3,300.16,363.43,3.77,9.58">1</ref>. We decided also to include the date the journal acquired an abstract, which is an independent feature that developed over time in all journals, as the need for faster data retrieval became more prominent, to assess a possible relation between the two of them. Data were analyzed and plotted using the Pandas, Numpy and Seaborn libraries for Python 3.</p><p>Table <ref type="table" coords="3,122.85,429.45,3.36,8.41">1</ref>. This is the list of the included journals, their publishers, the date the journal opted for a single-column or double-column layout and the appearance of abstracts.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Results</head><p>As we mentioned, it is well known that the two-column format was adopted by some journals right from the beginning. It is for instance the, perhaps unsurprising, case of Clinical Pharmacology &amp; Therapeutics or Circulation, which were first published in 1960 and in 1950, respectively (Table <ref type="table" coords="4,501.38,137.58,9.30,9.58">A2</ref>), with features typical of later articles, such as a two-column layout and the presence of an abstract at the beginning of the text. By comparison, the almost contemporary journal Diabetes appeared in a two-column format in 1952 but was equipped with an abstract only in January 1964. This observation holds true not only for journals established in the 1960s, as a two-column layout can also be found in earlier biomedical journals. Chest, the organ of the American College of Chest Physicians, was first published in 1935 in a two-column format, though again abstracts appeared only in July 1968. The pages of the famous British Medical Journal had a two-column layout starting from their initial issue in 1840 and, similarly to Science, were divided in two halves by a vertical black border until January 1937, when the journal underwent a revision, as explained by the editor <ref type="bibr" coords="4,345.08,259.16,15.10,9.58" target="#b9">[10]</ref>. In their commentary, the journal's editorial team thoroughly explained the small but extensive changes that were made to the format of the journal, using improved fonts with higher readability and more suitable for the faster rotary presses that were being introduced into production, and a better use of the available paper space, plus a number of changes in format including the adoption of the Harvard reference system for citations.</p><p>Other journals, which constitute the core of this report (Table <ref type="table" coords="4,381.05,326.71,3.67,9.58">1</ref>), however, started off with a one-column format, and, in some cases, this lasted a considerable amount of time (Figure <ref type="figure" coords="4,452.95,340.22,3.52,9.58" target="#fig_1">2</ref>). The average transition from one to two columns occurred around 1969 (Figure <ref type="figure" coords="4,367.79,353.73,9.29,9.58">3A</ref>), though with much variability (the standard deviation is 20.8 years). By comparison, abstracts were adopted on average around the year 1973±8.2 (Figure <ref type="figure" coords="4,171.43,380.75,8.27,9.58">3B</ref>), thus with lower variability, as is well visible also from Figure <ref type="figure" coords="4,453.19,380.75,3.66,9.58" target="#fig_1">2</ref>. Interestingly, it took longer for older journals to switch to a two-column format (Figure <ref type="figure" coords="4,394.13,394.26,8.75,9.58">3C</ref>). If only journals founded before the turn of the century are considered, they all took more than 60 years to adopt a two-column layout (mean= 100.2 years), and a clear trend toward earlier adoption is observed with younger journals (Pearson's correlation coefficient = -0.78). Several explanations could be brought forth for this phenomenon, and apparently, if Journal of Experimental Medicine can be taken as an example, tradition played a role in this.</p><p>Journal of Experimental Medicine, whose formatting we briefly analyzed in a previous report <ref type="bibr" coords="4,500.83,475.31,15.32,9.58" target="#b10">[11]</ref>, was founded in 1896 and maintained a one-column layout until July 1990, when a two-column format was adopted, together with an abstract at the beginning of the article. A commentary by the editor M. McCarty illustrated the reasons behind the choice as being dictated, as expected, by the need to accommodate a growing number of articles within the limits of the printed journal <ref type="bibr" coords="4,441.95,529.35,15.27,9.58" target="#b11">[12]</ref>.</p><p>"It may seem like an extreme degree of conservatism to continue for so long a period without substantial changes. However, it was simply a matter of preserving what appeared to be a fully satisfactory style: the Editors were comfortable with it, and as far as we could determine, so were the contributors and the readers. There was little motivation for radical change. As a matter of fact, the new format was not primarily dictated by growing dissatisfaction with the old or by a strongly felt need to "modernize," but rather by the pressure to provide additional space for the rapidly increasing number of manuscripts submitted to the Journal . . . . . . After maintaining a stable level for the first five years, there has been a steady and precipitous increase in submissions since 1985. The larger page size and double column format will allow the publication of more papers, thus alleviating the pressure resulting from this increase, and at the same time will improve the display of certain types of data. Changes other than those dictated by page size and double column format have been kept to a minimum." <ref type="bibr" coords="4,332.75,711.26,16.60,9.50" target="#b11">[12]</ref> The editor, therefore, actually denied that this change was to be accounted for by the need to "modernize" the journal, whose outlook had been maintained for over 90 years and still appeared satisfactory to both the editorial team and its readers. It has been stated that readers are actually very conservative <ref type="bibr" coords="4,480.54,761.88,10.44,9.58" target="#b0">[1]</ref>, grow accustomed to a format and like knowing what to expect within the frame of the sensorial experience provided by reading, which also includes visual elements. McCarty, however, conceded that this new format could more easily accommodate "certain types of data". Two main observations can be made here. The first and foremost is that, at a certain point in time, at least by 1990, a two-column format was perceived as more modern, possibly because by that time, most journals had already acquired or were transitioning to this format that had become mainstream. The second observation is that, by 1990, more flexibility in inserting extra-textual content, e.g., tables or figures, was needed by the editors. It is known that older studies had a more limited iconography, due to the obvious technical restraints that authors had to endure <ref type="bibr" coords="5,196.03,199.15,15.23,9.58" target="#b12">[13]</ref>. However, the appearance and diffusion of personal computers made creating graphs and figures an easier task for researchers and scientific studies were progressively adorned with richer sets of figures, hence the need to find them a place on the page.</p><p>Publications 2020, 8, x FOR PEER REVIEW 6 of 20</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Results</head><p>As we mentioned, it is well known that the two-column format was adopted by some journals right from the beginning. It is for instance the, perhaps unsurprising, case of Clinical Pharmacology &amp; Therapeutics or Circulation, which were first published in 1960 and in 1950, respectively (Table <ref type="table" coords="5,451.10,89.07,6.34,7.63">B1</ref>), with features typical of later articles, such as a two-column layout and the presence of an abstract at the beginning of the text. By comparison, the almost contemporary journal Diabetes appeared in a two-column format in 1952 but was equipped with an abstract only in January 1964. This observation holds true not only for journals established in the 1960s, as a two-column layout can also be found in earlier biomedical journals. Chest, the organ of the American College of Chest Physicians, was first published in 1935 in a two-column format, though again abstracts appeared only in July 1968. The pages of the famous British Medical Journal had a two-column layout starting from their initial issue in 1840 and, similarly to Science, were divided in two halves by a vertical black border until January 1937, when the journal underwent a revision, as explained by the editor <ref type="bibr" coords="5,376.28,180.15,11.50,7.63" target="#b9">[10]</ref>. In their commentary, the journal's editorial team thoroughly explained the small but extensive changes that were made to the format of the journal, using improved fonts with higher readability and more suitable for the faster rotary presses that were being introduced into production, and a better use of the available paper space, plus a number of changes in format including the adoption of the Harvard reference system for citations. The Journal of Experimental Medicine was not alone in its format choice, but was actually preceded by several others. The American Journal of Public Health, which first appeared in 1911, changed its format in 1933, preceded by the Canadian Medical Association Journal, which switched to a new layout in 1920. Its editors did not thoroughly explain the reasons for this change, beside hoping that the "more attractive form" <ref type="bibr" coords="5,147.55,722.18,16.46,9.58" target="#b13">[14]</ref> would be welcomed by its readers. This comment, while brief, again suggests that even by that time this new layout would somewhat affect the attitudes of readers. It is difficult not to assume there was a need to have a renewed graphical look mirror the extensive innovation the Canadian Medical Association was undergoing at the time. These changes are well described in the same issue of the journal, which was a central tool in the management of this professional association <ref type="bibr" coords="6,457.82,91.07,15.16,9.58" target="#b13">[14]</ref>. This was not the only instance that a change in typographic format occurred at a time of management change for the journal or the underlying association. Academic Medicine adopted a two-column format in 1952, when A.C. Bachmeyer was elected president of the Association of American Medical Colleges <ref type="bibr" coords="6,501.22,131.60,15.41,9.58" target="#b14">[15]</ref>. Similarly, the British Journal of Cancer changed format in 1971, when the editorial board was renewed <ref type="bibr" coords="6,501.58,145.11,15.12,9.58" target="#b15">[16]</ref>. Interestingly, the journal had just undergone a pivotal, albeit almost unnoticed, change in format in March 1970, when Summaries were moved from the end of articles to the beginning. These new Summaries were now written in bold fonts, to underline a new role for this important section of the study. The new change in layout was also accompanied in 1972 by a change in the types of accepted publications, which now included short communications and letters to the editor, together with small adjustments aiming at making the journal ready to face a surge in publications, "This will be more necessary than before, in view of the large American effort planned for the seventies, which will undoubtedly result in a greatly increased flow of information", <ref type="bibr" coords="6,397.97,258.40,16.60,9.58" target="#b15">[16]</ref> while remaining a palatable, yet central forum for its readers. Similarly, Anaesthesia, the organ of the Association of Anaesthetists of Great Britain &amp; Ireland, transitioned to a two-column layout in 1980, when the association was renewed and Dr. Philip Helliwell was elected president <ref type="bibr" coords="6,464.51,304.15,15.33,9.58">[17]</ref>. By that time, this journal was already facing a big increase in the number of published studies: "Readers will also notice changes in the printing and format of Anaesthesia. These are designed to provide more space, more economically, with the objective of aiding the Editors in their impossible task of accommodating a quart (1140 ml) in a pint (570 ml) pot!"</p><p>The journal had been, however, undergoing a period of profound changes for some years, which culminated in 1980 when the editors decided to revise the whole journal, making it fully compliant with the Uniform Requirements for Manuscripts Submitted to Biomedical Journals <ref type="bibr" coords="6,448.89,411.75,15.41,9.58" target="#b17">[18]</ref>, which also included having abstracts at the beginning of the article.</p><p>Figure <ref type="figure" coords="6,143.98,0.96,3.04,8.22" target="#fig_1">2</ref>. This graph summarizes the introduction of a two-column layout and abstract in the printed edition for each of the journals that were considered in the present commentary. White circles indicate the date the journal was first published, black squares-the year they switched to a two-column format, and the grey triangles-the year abstracts at the beginning of articles were introduced. The figure does not include the introduction of digital editions.</p><p>Other journals, which constitute the core of this report (Table <ref type="table" coords="6,359.97,69.79,3.25,9.15">1</ref>), however, started off with a onecolumn format, and, in some cases, this lasted a considerable amount of time (Fig. <ref type="figure" coords="6,435.27,81.93,3.25,9.15" target="#fig_0">1</ref>). The average transition from one to two columns occurred around 1969 (Figure <ref type="figure" coords="6,361.01,94.08,8.38,9.15">3A</ref>), though with much variability (the standard deviation is 20.8 years). By comparison, abstracts were adopted on average around the year 1973±8.2 (Figure <ref type="figure" coords="6,194.05,118.38,7.62,9.15">3B</ref>), thus with lower variability, as is well visible also from Figure <ref type="figure" coords="6,490.26,118.38,3.37,9.15" target="#fig_1">2</ref>. Interestingly, it took longer for older journals to switch to a two-column format (Figure <ref type="figure" coords="6,451.97,130.48,8.09,9.15">3C</ref>). If only journals founded before the turn of the century are considered, they all took more than 60 years to adopt a two-column layout (mean= 100.2 years), and a clear trend toward earlier adoption is observed with younger journals (Pearson's correlation coefficient = -0.78). Several explanations could be brought forth for this phenomenon, and apparently, if Journal of Experimental Medicine can be taken as an example, tradition played a role in this.</p><p>Journal of Experimental Medicine, whose formatting we briefly analyzed in a previous report <ref type="bibr" coords="6,479.71,203.38,13.80,9.15" target="#b10">[11]</ref>, was founded in 1896 and maintained a one-column layout until July 1990, when a two-column format was adopted, together with an abstract at the beginning of the article. A commentary by the editor M. McCarty illustrated the reasons behind the choice as being dictated, as expected, by the need to accommodate a growing number of articles within the limits of the printed journal <ref type="bibr" coords="6,429.29,251.93,13.82,9.15" target="#b11">[12]</ref>.</p><p>"It may seem like an extreme degree of conservatism to continue for so long a period without substantial changes . However, it was simply a matter of preserving what appeared to be a fully satisfactory style : the Editors were comfortable with it, and as far as we could determine, so were the contributors and the readers . There was little motivation for radical change. As a matter of fact, the new format was not primarily dictated by growing dissatisfaction with the old or by a strongly felt need to "modernize," but rather by the pressure to provide additional space for the rapidly increasing number of manuscripts submitted to the Journal… …After maintaining a stable level for the first five years, there has been a steady and precipitous increase in submissions since 1985 . The larger page size and double column format will allow the publication of more papers, thus alleviating the pressure resulting from this increase, and at the same time will improve the display of certain types of data. Changes other than those dictated by page size and double column format have been kept to a minimum." <ref type="bibr" coords="6,259.36,419.22,15.03,9.15" target="#b11">[12]</ref>  The Angle Orthodontist published its first issue in 1931, using a single-column layout, which then changed in July 1950, two issues before its 20th anniversary, as noted by the editor <ref type="bibr" coords="6,440.17,648.11,15.27,9.58" target="#b18">[19]</ref>. Interestingly, abstracts at the beginning of articles were introduced in 1981, again on an anniversary-the 50th anniversary-of this journal. The editor commented on the choice of two columns:</p><p>"The new type is 10 point Baskerville, an attractive face and a somewhat more readable one than the condensed face formerly used. The practical effect of this change will be to reduce the number of characters in a given line, but this will be achieved in a more direct fashion by establishing two columns where one was used before. With this format, the reader's eyes will have a shorter 'swing' from the end of one line to the beginning of the next. Two columns will also allow more flexibility in the arrangement of illustrative material with the text." <ref type="bibr" coords="6,321.94,762.71,16.60,9.58" target="#b18">[19]</ref> This crucial observation thus highlights that the layout was meant to improve the journal's readability, by reducing the readers' efforts to follow through a now shorter text in shorter columns (we will come back to this issue later in this commentary). The editor also hinted at an increased flexibility in arranging figures, just like with Journal of Experimental Medicine. Similar considerations can be found in the editorial on Acta Pediatrica, when in 1991, 70 years after its foundation, the editors decided to move to a two-column format. This new layout "conforms with most comparable international journals . . . .will enhance the technical standard of tables and illustrations and provide more scope for their presentation". <ref type="bibr" coords="7,385.87,195.60,16.60,9.58" target="#b19">[20]</ref> It must be pointed out that having the right figures on the page is not just an editorial necessity but may be very important to readers as well. According to the spatial contiguity principle <ref type="bibr" coords="7,459.25,232.58,15.25,9.58" target="#b20">[21]</ref>, the close proximity of text and images facilitates their interpretation, especially in the presence of visual cues in the text that orient the reader to check the images for the desired content, without requiring split attention to go and look for figures on other pages <ref type="bibr" coords="7,298.02,273.11,15.21,9.58" target="#b21">[22]</ref>. In this respect, the new layout could really be considered more modern, as it was indeed accomodating to modern needs of scientific papers, i.e., a richer iconography. As articles became more and more complex <ref type="bibr" coords="7,374.02,300.13,15.42,9.58" target="#b22">[23]</ref>, it also became important to assist readers through the text, to improve their understanding. Actually, it is now more important than ever, given the huge amount of available literature in the biomedical field.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">A Useful Choice?</head><p>Several reasons seem therefore to underlie most of the format changes that we have mentioned. The first reason why this format was so broadly adopted is confirmed to be mainly one of pure practicality: as journals had to bear the significant costs of printing their articles, they tried to increase efficiency by reducing more articles within fewer printed pages. This required smaller fonts and two columns became necessary to avoid having too many characters per line of text and thus maintain its readability. Lonsdale has actually shown that a shorter single column is significantly easier to read than a one-column text with longer lines in an academic context, for tasks such as retrieving relevant information by skimming through the text <ref type="bibr" coords="7,270.85,464.42,15.41,9.58" target="#b23">[24]</ref>. However, it is reasonable to wonder whether cost reduction alone may fully explain the success of this format.</p><p>Several studies have investigated whether a two-column layout could prove advantageous over a simpler one-column format, although the results have been so far controversial <ref type="bibr" coords="7,416.72,504.94,15.12,9.58" target="#b24">[25]</ref>. Some studies have reported that single-column texts allow for faster reading, both on paper and online <ref type="bibr" coords="7,456.24,518.45,15.42,9.58" target="#b25">[26]</ref>, although they acknowledge that one-column layouts may prove more challenging because they require better orientation to keep track of the beginning of new lines. This can be particularly difficult while reading on-screen texts, where aids such as using a pen or a finger are harder to use. In line with this observation is a study by Al Samarraie and Price who shows that a two-column layout required a reduced cognitive load, as revealed at EEG <ref type="bibr" coords="7,187.60,586.00,15.41,9.58" target="#b26">[27]</ref>. Reading long straight lines could then impair the ability to search for information and leap to the next idea <ref type="bibr" coords="7,242.72,599.51,15.29,9.58" target="#b27">[28]</ref>. In particular, a two-column layout would be better suited for repeated reading, where it could help the reader locate information more effectively, offering more visual cues that could guide and direct the attention of the reader to relevant parts of the text <ref type="bibr" coords="7,501.21,626.53,15.42,9.58" target="#b28">[29]</ref>. In other words, a multicolumn text would make it easier for readers to skip through lines to parts of the text that are more directly relevant for the reader, i.e., the beginning and end of the line would be used as a visual sign to bookmark important sentences or passages. This could actually be crucial when considering the attitude and purpose of readers when approaching a scientific text, as opposed to other genres such as a narrative text, e.g., a novel. A novel is supposed to be read from the start to the very end, with a continuous, uninterrupted reading flow and immersion into the universe of the story <ref type="bibr" coords="7,100.90,721.09,15.12,9.58" target="#b29">[30]</ref>, with all its parts constituting a linear continuum that equally contributes to the story, within the limits of the structure of the story itself. This kind of reading is sometimes referred to as receptive reading or linear reading <ref type="bibr" coords="7,188.82,748.11,10.58,9.58" target="#b0">[1]</ref>. However, this is by far not the only way to read a text. A scientific text, such as an academic article, is mostly referential in nature and is read strategically, with the purpose of extracting relevant information <ref type="bibr" coords="8,132.53,118.09,15.41,9.58" target="#b30">[31]</ref>. Its sub-parts have functions that are not all necessarily activated in a sequence, or during the same reading session <ref type="bibr" coords="8,219.49,131.60,15.18,9.58" target="#b31">[32]</ref>. The text can be browsed, scanned, skimmed, read repeatedly, in a circular or concentric way, and some parts can even be skipped <ref type="bibr" coords="8,356.11,145.11,10.44,9.58" target="#b0">[1]</ref>. A scientific text is not approached linearly and is not approached passively. An interactive process is established between the reader and the text, and such process includes both a flow of information that is extracted from the text and a flow of information that is added by the reader to the text, most often through underlining, highlighting, adding cues, jotting down sidenotes, to create a cognitive niche that helps the reader to better understand and retain knowledge <ref type="bibr" coords="8,255.48,212.66,15.22,9.58" target="#b32">[33]</ref>. The reader takes information from the text and actively builds knowledge, using the text itself, the paper, the pencil, almost as an extension of their own mind in the learning process <ref type="bibr" coords="8,176.72,239.68,15.14,9.58" target="#b33">[34]</ref>. In this context, the layout stops being just a way to order sentences within a page but becomes an access structure to the text <ref type="bibr" coords="8,296.69,253.19,10.58,9.58" target="#b0">[1]</ref>.</p><p>As the amount of publications available to scholars increased, filtering relevant information became of the utmost importance. Unsurprisigly, an important tool in article selection, the abstract, was systematically introduced quite consistently around the 1970s in the set of journals we examined in this commentary. Although, retrospectively, the presence of an abstract at the beginning of each article may seem a major revolution in the structure of the text, few editors have actually commented on it. The editors of Diabetes only stated that the summary had been moved to the front page, so that it could be "photographed . . . for separate indexing" purposes <ref type="bibr" coords="8,343.50,347.75,15.19,9.58" target="#b34">[35]</ref>. K. S. Smith, the editor of Heart was, however, more open on what he thought about this new format he introduced shortly before he retired from that position <ref type="bibr" coords="8,158.53,374.77,15.27,9.58" target="#b35">[36]</ref>:</p><p>"The Journal has adopted, not without misgiving, the synoptic preface. Readers may, and editors certainly do, notice that the summary has often been the weakest part of a paper: as if the authors, exhausted by labours of composition, could not bring themselves to recrystallize their thoughts. They will now need to show special skill to summarize their aims and achievement in a space shorter than the erstwhile terminal summary." <ref type="bibr" coords="8,238.58,452.28,16.60,9.58" target="#b36">[37]</ref> The adoption of abstracts was apparently a controversial move, the scope of which was not yet completely self-explanatory to everyone, let alone readers. The Summary was a section of which the purpose-i.e., summarizing a whole study at the end of it, to better understand and appreciate it-was clear to editors and readers. However, summaries were visibly underperforming due to fact that they were placed at the end of the text, and therefore were relegated to a part of the text where little attention was commonly devoted to them. They were now being replaced by a section that was in the spotlight. In those cases where a two-column layout was introduced before the abstract, the summary was part of those two columns. However, in most cases of a two-column format, the abstract at the beginning of the text graphically overarches the two columns, ideally embracing the whole text. It is both typographically and functionally supraordinate to the rest of the text. It is the first part of the text that readers encounter just after the title. But why would readers waste time with a shorter version of an article that they are just about to read anyway? Abstracts may have even seemed as a librarian's tool, rather than an instrument directed at readers themselves, and this was probably true until the Internet era. In the aforementioned editorial, M. McCarty, editor of Journal of Experimental Medicine, commented: "A touch of modernization has been added by having the summary appear at the beginning of each article, where readers are now accustomed to look for it in most publications", <ref type="bibr" coords="8,413.07,699.87,16.60,9.58" target="#b11">[12]</ref> which would suggest again that the importance of having that section was not fully grasped at the time. If we look at Table <ref type="table" coords="8,183.24,734.86,3.66,9.58">1</ref>, we notice that while the change in column layout usually occurred with the beginning of a solar year, and thus with a new volume, abstracts often appeared mid-year, as if they represented a minor adjustment for internal purposes, almost to be unnoticed by authors. Yet abstracts are now the emblem of the strategic approach to literature that was mentioned above. An abstract serves the purpose of quick identification of the content of a text, which is particularly useful during a literature search, where dozens or hundreds of articles are browsed and only a few pertinent works must be retained <ref type="bibr" coords="9,150.59,131.60,15.12,9.58" target="#b37">[38]</ref>, and it is thus at the heart of that strategy of information retrieval that is necessary vis-à-vis the current biomedical literature.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Taking the Alternative Path?</head><p>The development of the World Wide Web was a game changer and the revolutionary effects of digital media on reading and publishing cannot be overstated. Texts can be read on a computer screen, on a tablet, on a mobile phone or on an e-ink reader <ref type="bibr" coords="9,250.95,214.83,14.74,9.58" target="#b38">[39]</ref>. These last devices are probably less relevant for academic publishing than for novels, because they cannot render color images such as photographs or graphs with a great resolution, but more importantly because they are not really fit for non-strategic reading <ref type="bibr" coords="9,474.24,241.85,10.13,9.58" target="#b0">[1]</ref>.</p><p>As previously mentioned, biomedical journals are now available also in digital edition, and a growing awareness for waste consumption and ecological concerns may possibly promote the use of on-screen reading over paper printing. More and more researchers resort to reading the scientific literature-or rather browsing through the literature-on their computer screens rather than printing it. This phenomenon has been made even compulsory by the sheer volume of literature that scholars must search in their routine research activity or just to keep up to date in their field, but it has also been aided by the possibilities of hypertexting offered by digital media, which proves very useful during literature searches <ref type="bibr" coords="9,116.13,349.92,15.79,9.58" target="#b39">[40,</ref><ref type="bibr" coords="9,131.93,349.92,11.85,9.58" target="#b40">41]</ref>. The effectiveness of digital reading compared to paper reading has been nontheless questioned, as many readers report that they still prefer reading texts on paper <ref type="bibr" coords="9,421.43,363.43,15.20,9.58" target="#b41">[42]</ref>, and some studies suggest that readers may perform more poorly and have lower metacognitive awareness while reading on-screen, especially for expository texts <ref type="bibr" coords="9,265.75,390.45,12.87,9.58" target="#b42">[43]</ref><ref type="bibr" coords="9,278.62,390.45,4.29,9.58" target="#b43">[44]</ref><ref type="bibr" coords="9,278.62,390.45,4.29,9.58" target="#b44">[45]</ref><ref type="bibr" coords="9,282.91,390.45,12.87,9.58" target="#b45">[46]</ref>, though possibly no differences exist in reading speed <ref type="bibr" coords="9,104.65,403.96,15.72,9.58" target="#b41">[42,</ref><ref type="bibr" coords="9,120.38,403.96,11.79,9.58" target="#b44">45]</ref>. Optimizing articles to make them easier to read may therefore be an important goal for scientific literature. It has been investigated whether two-column formats perform equally effectively for digital reading <ref type="bibr" coords="9,161.84,430.98,15.41,9.58" target="#b46">[47]</ref>. Given the peculiar way that most computer interfaces work, scrolling is a much faster way to read than moving around the page, which, however, touchscreens have made a less cumbersome operation than on regular mouse-operated computers. Text optimization for screen viewing has been shown to reduce mental workload <ref type="bibr" coords="9,337.38,471.51,15.20,9.58" target="#b47">[48]</ref>. This is actually the reason why most publishers, as we mentioned, still offer the choice between a PDF file with standard, printer-friendly two-column formatting and an html-encoded version for digital reading. As responsive PDF viewers are not available <ref type="bibr" coords="9,153.30,512.04,15.41,9.58" target="#b46">[47]</ref>, these full-text versions optimized for screen viewing usually consist of a one column of text, where font size can be easily adjusted by the reader, within a frame of header, footer, even sidebars containing additional information, hyperlinks and providing context to the main text. Some studies suggest that reading one-column texts may be significantly slower on screens than on paper <ref type="bibr" coords="9,105.08,566.07,15.42,9.58" target="#b25">[26]</ref>, although caveats are necessary to note regarding the difference between speed and text comprehension in light of the purpose of the actual text, as new metrics should be evaluated <ref type="bibr" coords="9,484.81,579.58,15.77,9.58" target="#b48">[49,</ref><ref type="bibr" coords="9,500.58,579.58,11.83,9.58" target="#b49">50]</ref>.</p><p>It must be, however, noted that economic factors may also compound, when the adoption of specific layouts is considered. The digital age has dramatically decreased publication costs and the introduction of new, hitherto unthinkable, business models (e.g., open access journals), together with the need of authors to have more and more articles published, has facilitated the appearance of new big editorial groups. The policy of these publishers is often to make uniform the journal layout and appearance for easier management of the publishing operations. Such is, for instance, the case with MDPI, a relatively young publishing company that has consistently adopted a one-column format for both the html and PDF versions of its articles. Unlike many publishers, and definitely unlike what was habitually done in the past <ref type="bibr" coords="9,217.11,701.17,15.31,9.58" target="#b50">[51]</ref>, its journals almost completely delegate manuscript preparation to authors. Most word processors that are commonly used by researchers worldwide are very apt at handling one column of text, and this layout format is arguably easier to manage than two-column layouts. A further explanation of this choice of layout is that it may be reasonable to provide articles in a format that is optimized for screen reading, as texts are not printed as often than they used to. This publisher may be therefore betting that readers will eventually make the transition and move to a fully digital reading experience (getting over the cognitively more gratifying experience of paper), and that the predominant part of the strategic reading of an article will be to scroll the text for very select pieces of information.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.">Where To?</head><p>Any survey at how this important-and yet so often overlooked-feature of scientific texts has changed over time leads to the conclusion that biomedical journals have mostly migrated from a one-column layout, which was popular at end of the 19th and beginning of the 20th century, to a two-column format in a period of time that in most examined cases was between 1960 and 1980. This change was mostly fueled by the need to save printed paper and by the higher flexibility of two-column layouts to accommodate graphical elements. However, most editors acknowledged that the new layout was somewhat more modern, or pleasant, or legible, thus confirming the relevance of this aspect of text composition in providing access to the content of the journal and its articles. More recently, the introduction of digital media has revived one-column texts again, and these may see a surge in popularity, as computer screens are the routine way to approach scientific texts. In spite of the long experience of the importance of layout in textbook understanding, relatively little attention has been devoted to using the layout as a way to facilitate information finding in the academic biomedical literature. This may be at least in part due to a prejudice, i.e., that scientific literature should be foreign to the frills of leisure publishing and that its readers should not be enticed by graphics or design but should rather solely focus on content. Yet page design is just another way to make content more accessible, and the importance of quickly identifying relevant data in an age of literature overload cannot be overstated. Further research should therefore be conducted to better delineate optimal layouts for the need of the readers of biomedical literature, to optimize the readers' experience even in this regard, as reading retains and will retain its rightful place at the heart of the whole academic publishing industry.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="2,97.80,737.59,399.68,8.63;2,97.80,750.42,399.86,8.63;2,97.80,763.24,51.31,8.63"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1.Comparison between two mock-up texts as they would appear in (A) a one-column layout or (B) a two-column layout. Most academic journals adopted either one of these two formats for their articles.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="5,97.80,596.18,399.69,8.63;5,97.80,609.00,399.68,8.63;5,97.80,621.82,400.80,8.63;5,97.80,634.65,399.69,8.63;5,97.80,647.47,185.71,8.63"><head>Figure 2 .</head><label>2</label><figDesc>Figure2. This graph summarizes the introduction of a two-column layout and abstract in the printed edition for each of the journals that were considered in the present commentary. White circles indicate the date the journal was first published, black squares-the year they switched to a two-column format, and the grey triangles-the year abstracts at the beginning of articles were introduced. The figure does not include the introduction of digital editions.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="6,118.14,542.79,359.74,8.22;6,118.14,554.51,359.70,8.22;6,118.14,566.23,359.70,8.22;6,118.14,577.89,359.70,8.22;6,118.14,589.67,359.71,8.22;6,118.14,601.33,296.47,8.22;6,372.43,455.19,113.29,74.20"><head>Figure 3 .Figure 3 .</head><label>33</label><figDesc>Figure 3. A) Frequency distribution of the transition from one-to two-column layouts in the present sample of journals. The year the change in format occurred is reported on the x axis. B) Frequency distribution of adoption of abstracts in the present sample. The year the change in format occurred is reported on the x axis. C) Correlation plot between the journal foundation (x axis) and the time span to the adoption of a two-column layout (y axis). There is a clear correlation trend: younger journals were also faster to switch to a new layout (Pearson's correlation coefficient = -0.78).</figDesc><graphic coords="6,372.43,455.19,113.29,74.20" type="bitmap" /></figure>
+		</body>
+		<back>
+
+			<div type="funding">
+<div><p>Funding: This research received no external funding.</p></div>
+<div><head>Acknowledgments:</head><p>The authors would like to thank <rs type="person">Lorenzo Magnani</rs> and <rs type="person">Selene Arfini</rs> (<rs type="affiliation">Computational Philosophy Lab, University of Pavia</rs>) for their insights on cognitive niche construction.</p></div>
+			</div>			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of Interest:</head><p>The authors declare no conflict of interest. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Appendix A</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="13,79.90,110.60,438.84,8.74" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Graphic Literacies for a Digital Age: The Survival of Layout</title>
+		<author>
+			<persName coords=""><forename type="first">Robert</forename><surname>Waller</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/01972243.2012.689609</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Information Society</title>
+		<title level="j" type="abbrev">The Information Society</title>
+		<idno type="ISSN">0197-2243</idno>
+		<idno type="ISSNe">1087-6537</idno>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="236" to="252" />
+			<date type="published" when="2012-07">2012</date>
+			<publisher>Informa UK Limited</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,79.90,123.63,438.84,8.63;13,98.05,136.43,214.78,8.74" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Typographic layout and first impressions: Testing how changes in text layout influence reader&apos;s judgments of documents</title>
+		<author>
+			<persName coords=""><forename type="first">J</forename><forename type="middle">L</forename><surname>Moys</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Visible Lang</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="40" to="67" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,79.90,149.45,439.03,8.63;13,98.05,162.25,176.55,8.74" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">The introduction, methods, results, and discussion (IMRAD) structure: A fifty-year survey</title>
+		<author>
+			<persName coords=""><forename type="first">L</forename><forename type="middle">B</forename><surname>Sollaci</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><forename type="middle">G</forename><surname>Pereira</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Med. Libr. Assoc</title>
+		<imprint>
+			<biblScope unit="volume">92</biblScope>
+			<biblScope unit="page" from="364" to="367" />
+			<date type="published" when="2004">2004</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,79.90,175.28,438.85,8.63;13,98.05,188.07,223.27,8.74" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">GENETIC EVOLUTION OF BACTERIOPHAGE, I. HYBRIDS BETWEEN UNRELATED BACTERIOPHAGES P22 AND FELS 2</title>
+		<author>
+			<persName coords=""><forename type="first">Nobuto</forename><surname>Yamamoto</surname></persName>
+		</author>
+		<idno type="DOI">10.1073/pnas.62.1.63</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the National Academy of Sciences</title>
+		<title level="j" type="abbrev">Proc. Natl. Acad. Sci. U.S.A.</title>
+		<idno type="ISSN">0027-8424</idno>
+		<idno type="ISSNe">1091-6490</idno>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="63" to="69" />
+			<date type="published" when="1968">1968</date>
+			<publisher>Proceedings of the National Academy of Sciences</publisher>
+			<pubPlace>USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,79.90,200.98,257.90,8.74" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Electricity as Power</title>
+		<author>
+			<persName coords=""><forename type="first">Francis</forename><forename type="middle">P</forename><surname>Upton</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.os-1.1.5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<title level="j" type="abbrev">Science</title>
+		<idno type="ISSN">0036-8075</idno>
+		<idno type="ISSNe">1095-9203</idno>
+		<imprint>
+			<biblScope unit="volume">os-1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="5" to="5" />
+			<date type="published" when="1880-07-03" />
+			<publisher>American Association for the Advancement of Science (AAAS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,79.90,213.90,357.90,8.74" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Movement of the arms in walking</title>
+		<author>
+			<persName coords=""><forename type="first">F</forename><forename type="middle">W</forename><surname>True</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.ns-1.1.11-a</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<imprint>
+			<biblScope unit="volume">1883</biblScope>
+			<biblScope unit="page">11</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,79.90,226.81,411.23,8.74" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">First principle of typographic design for document production</title>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Southall</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">TUGboat</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="page" from="79" to="90" />
+			<date type="published" when="1984">1984</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,79.90,239.72,387.30,8.74" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Scientific literature: Information overload</title>
+		<author>
+			<persName coords=""><forename type="first">Esther</forename><surname>Landhuis</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nj7612-457a</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<title level="j" type="abbrev">Nature</title>
+		<idno type="ISSN">0028-0836</idno>
+		<idno type="ISSNe">1476-4687</idno>
+		<imprint>
+			<biblScope unit="volume">535</biblScope>
+			<biblScope unit="issue">7612</biblScope>
+			<biblScope unit="page" from="457" to="458" />
+			<date type="published" when="2016-07">2016</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,79.90,252.75,440.41,8.63;13,97.73,265.54,223.81,8.74" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">More Informative Abstracts Revisited</title>
+		<author>
+			<persName coords=""><forename type="first">R</forename><forename type="middle">B</forename><surname>Haynes</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><forename type="middle">D</forename><surname>Mulrow</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">E</forename><forename type="middle">J</forename><surname>Huth</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">D</forename><forename type="middle">G</forename><surname>Altman</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><forename type="middle">J</forename><surname>Gardner</surname></persName>
+		</author>
+		<idno type="DOI">10.7326/0003-4819-113-1-69</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Annals of Internal Medicine</title>
+		<title level="j" type="abbrev">Ann Intern Med</title>
+		<idno type="ISSN">0003-4819</idno>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">69</biblScope>
+			<date type="published" when="1990-07-01">1990</date>
+			<publisher>American College of Physicians</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,278.45,268.18,8.74" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">New Typography of the Journal</title>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Morison</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/bmj.1.3965.32</idno>
+	</analytic>
+	<monogr>
+		<title level="j">BMJ</title>
+		<title level="j" type="abbrev">BMJ</title>
+		<idno type="ISSN">0959-8138</idno>
+		<idno type="ISSNe">1468-5833</idno>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">3965</biblScope>
+			<biblScope unit="page" from="32" to="33" />
+			<date type="published" when="1937-01-02">1937</date>
+			<publisher>BMJ</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,291.48,434.73,8.63;13,98.05,304.28,421.81,8.74;13,97.83,317.19,64.79,8.74" xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Between Innovation and Standardization, Is There Still a Room for Scientific Reports? The Rise of a Formatting Tradition in Periodontal Research</title>
+		<author>
+			<persName><forename type="first">Carlo</forename><surname>Galli</surname></persName>
+			<idno type="ORCID">0000-0001-7476-7181</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Roberto</forename><surname>Sala</surname></persName>
+			<idno type="ORCID">0000-0002-9167-0020</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Maria</forename><forename type="middle">Teresa</forename><surname>Colangelo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Guizzardi</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/publications7040067</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Publications</title>
+		<title level="j" type="abbrev">Publications</title>
+		<idno type="ISSNe">2304-6775</idno>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page">67</biblScope>
+			<date type="published" when="2019-12-17">2019</date>
+			<publisher>MDPI AG</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,330.10,393.50,8.74" xml:id="b11">
+	<analytic>
+		<title level="a" type="main">The Journal prepares for its second century.</title>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Mccarty</surname></persName>
+		</author>
+		<idno type="DOI">10.1084/jem.172.1.1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of experimental medicine</title>
+		<idno type="ISSN">0022-1007</idno>
+		<idno type="ISSNe">1540-9538</idno>
+		<imprint>
+			<biblScope unit="volume">172</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="6" />
+			<date type="published" when="1990-07-01">1990</date>
+			<publisher>Rockefeller University Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,343.13,434.73,8.63;13,98.05,355.92,174.79,8.74" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Change in Format, Register and Narration Style in the Biomedical Literature: A 1948 Example</title>
+		<author>
+			<persName><forename type="first">Carlo</forename><surname>Galli</surname></persName>
+			<idno type="ORCID">0000-0001-7476-7181</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Guizzardi</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/publications8010010</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Publications</title>
+		<title level="j" type="abbrev">Publications</title>
+		<idno type="ISSNe">2304-6775</idno>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">10</biblScope>
+			<date type="published" when="2020-02-07">2020</date>
+			<publisher>MDPI AG</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,368.84,228.68,8.74" xml:id="b13">
+	<analytic>
+		<title/>
+		<author>
+			<persName coords=""><surname>Foreword</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Can. Med. Assoc. J</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="1" to="2" />
+			<date type="published" when="1921">1921</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,381.75,374.77,8.74" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Retrospect and Prospect</title>
+		<author>
+			<persName coords=""><forename type="first">Arthur</forename><forename type="middle">C</forename><surname>Bachmeyer</surname></persName>
+		</author>
+		<idno type="DOI">10.1097/00001888-195201000-00001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Academic Medicine</title>
+		<title level="j" type="abbrev">Academic Medicine</title>
+		<idno type="ISSN">1040-2446</idno>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="9" />
+			<date type="published" when="1952-01">1952</date>
+			<publisher>Ovid Technologies (Wolters Kluwer Health)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,394.66,201.66,8.74;13,76.54,407.69,7.47,8.63" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Editorial</title>
+		<idno type="DOI">10.1038/bjc.1972.1</idno>
+		<idno>17</idno>
+	</analytic>
+	<monogr>
+		<title level="j">British Journal of Cancer</title>
+		<title level="j" type="abbrev">Br J Cancer</title>
+		<idno type="ISSN">0007-0920</idno>
+		<idno type="ISSNe">1532-1827</idno>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="2" />
+			<date type="published" when="1972-02-01">1972</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+	<note>Editorial</note>
+</biblStruct>
+
+<biblStruct coords="13,84.01,407.57,198.94,8.74" xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Editorial</title>
+		<idno type="DOI">10.1111/j.1365-2044.1977.tb11548.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Anaesthesia</title>
+		<title level="j" type="abbrev">Anaesthesia</title>
+		<idno type="ISSN">0003-2409</idno>
+		<idno type="ISSNe">1365-2044</idno>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="2" />
+			<date type="published" when="1977-01">1977</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+	<note>Editorial</note>
+</biblStruct>
+
+<biblStruct coords="13,84.01,420.48,319.01,8.74" xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Editorial</title>
+		<author>
+			<persName coords=""><forename type="first">G</forename><forename type="middle">K</forename><surname>Chesterton</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><forename type="middle">B</forename><surname>Boulton</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1365-2044.1980.tb03710.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Anaesthesia</title>
+		<title level="j" type="abbrev">Anaesthesia</title>
+		<idno type="ISSN">0003-2409</idno>
+		<idno type="ISSNe">1365-2044</idno>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="2" />
+			<date type="published" when="1980-01">1980</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,433.39,237.22,8.74" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">What&apos;s New in Dentistry</title>
+		<author>
+			<persName><forename type="first">Vincent</forename><surname>Kokich</surname></persName>
+		</author>
+		<idno type="DOI">10.2319/0003-3219(2006)76[909:wnid]2.0.co;2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Angle Orthodontist</title>
+		<title level="j" type="abbrev">Angle Orthod</title>
+		<idno type="ISSN">0003-3219</idno>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">909</biblScope>
+			<date type="published" when="1950">1950</date>
+			<publisher>The Angle Orthodontist (EH Angle Education &amp; Research Foundation)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,446.31,436.30,8.74;13,98.05,459.33,41.48,8.63" xml:id="b19">
+	<analytic>
+		<title level="a" type="main">&lt;i&gt;Acta Paediatrica Scandinavica&lt;/i&gt;–now just &lt;i&gt;Acta Paediatrica&lt;/i&gt;</title>
+		<author>
+			<persName coords=""><forename type="first">Rolf</forename><surname>Zetterström</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1651-2227.1992.tb12091.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Acta Paediatrica</title>
+		<title level="j" type="abbrev">Acta Paediatrica</title>
+		<idno type="ISSN">0803-5253</idno>
+		<idno type="ISSNe">1651-2227</idno>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="95" to="95" />
+			<date type="published" when="1992-01">1992</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,472.13,435.85,8.74;13,97.77,485.04,171.52,8.74" xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Cognitive principles of multimedia learning: The role of modality and contiguity.</title>
+		<author>
+			<persName><forename type="first">Roxana</forename><surname>Moreno</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Richard</forename><forename type="middle">E</forename><surname>Mayer</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/0022-0663.91.2.358</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Educational Psychology</title>
+		<title level="j" type="abbrev">Journal of Educational Psychology</title>
+		<idno type="ISSN">0022-0663</idno>
+		<idno type="ISSNe">1939-2176</idno>
+		<imprint>
+			<biblScope unit="volume">91</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="358" to="368" />
+			<date type="published" when="1999-06">1999</date>
+			<publisher>American Psychological Association (APA)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,498.07,434.73,8.63;13,98.05,510.86,311.51,8.74" xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Reading information graphics: The role of spatial contiguity and dual attentional guidance</title>
+		<author>
+			<persName><forename type="first">Jana</forename><surname>Holsanova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nils</forename><surname>Holmberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kenneth</forename><surname>Holmqvist</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/acp.1525</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Applied Cognitive Psychology</title>
+		<title level="j" type="abbrev">Applied Cognitive Psychology</title>
+		<idno type="ISSN">0888-4080</idno>
+		<idno type="ISSNe">1099-0720</idno>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1215" to="1226" />
+			<date type="published" when="2009">2009</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,523.89,434.74,8.63;13,98.05,536.69,421.81,8.74;13,98.05,549.71,82.54,8.63" xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Life Science’s Average Publishable Unit (APU) Has Increased over the Past Two Decades</title>
+		<author>
+			<persName><forename type="first">Radames</forename><forename type="middle">J B</forename><surname>Cordero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carlos</forename><forename type="middle">M</forename><surname>De León-Rodriguez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">K</forename><surname>Alvarado-Torres</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ana</forename><forename type="middle">R</forename><surname>Rodriguez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Arturo</forename><surname>Casadevall</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0156983</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PLOS ONE</title>
+		<title level="j" type="abbrev">PLoS ONE</title>
+		<idno type="ISSNe">1932-6203</idno>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">e0156983</biblScope>
+			<date type="published" when="2016-06-16">2016</date>
+			<publisher>Public Library of Science (PLoS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,562.63,434.73,8.63;13,98.05,575.42,360.73,8.74" xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Typographic features of text and their contribution to the legibility of academic reading materials: An empirical study-White Rose Research Online</title>
+		<author>
+			<persName coords=""><forename type="first">M</forename><forename type="middle">D S</forename><surname>Lonsdale</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Visible Lang</title>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="page" from="79" to="111" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,588.33,435.85,8.74;13,97.77,601.24,170.86,8.74" xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Legibility of Textbooks: A Literature Review</title>
+		<author>
+			<persName><forename type="first">Dmitry</forename><forename type="middle">A</forename><surname>Tarasov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><forename type="middle">P</forename><surname>Sergeev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Victor</forename><forename type="middle">V</forename><surname>Filimonov</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.sbspro.2015.01.751</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Procedia - Social and Behavioral Sciences</title>
+		<title level="j" type="abbrev">Procedia - Social and Behavioral Sciences</title>
+		<idno type="ISSN">1877-0428</idno>
+		<imprint>
+			<biblScope unit="volume">174</biblScope>
+			<biblScope unit="page" from="1300" to="1308" />
+			<date type="published" when="2015-02">2015</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,614.27,434.73,8.63;13,98.05,627.07,383.89,8.74" xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Effects of Information Layout on Reading Speed: Differences between Paper and Monitor Presentation</title>
+		<author>
+			<persName><forename type="first">Panayiotis</forename><surname>Zaphiris</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Kurniawan</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/154193120104501512</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the Human Factors and Ergonomics Society Annual Meeting</title>
+		<title level="j" type="abbrev">Proceedings of the Human Factors and Ergonomics Society Annual Meeting</title>
+		<idno type="ISSN">2169-5067</idno>
+		<idno type="ISSNe">1071-1813</idno>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page" from="1210" to="1214" />
+			<date type="published" when="2001-10">2001</date>
+			<publisher>SAGE Publications</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,640.10,435.86,8.63;13,97.70,652.89,204.26,8.74" xml:id="b26">
+	<analytic>
+		<title level="a" type="main">How reading in single- and multiple-column types influence our cognitive load: an EEG study</title>
+		<author>
+			<persName><forename type="first">Hosam</forename><surname>Al-Samarraie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Atef</forename><surname>Eldenfria</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fahed</forename><surname>Zaqout</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Melissa</forename><forename type="middle">Lee</forename><surname>Price</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/el-01-2019-0006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Electronic Library</title>
+		<title level="j" type="abbrev">EL</title>
+		<idno type="ISSN">0264-0473</idno>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="593" to="606" />
+			<date type="published" when="2019-09-02">2019</date>
+			<publisher>Emerald</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,665.80,435.85,8.74;13,97.73,678.71,147.72,8.74" xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Eye-tracking: Regularities of educational information searching</title>
+		<author>
+			<persName coords=""><forename type="first">S</forename><forename type="middle">B</forename><surname>Venig</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">V</forename><forename type="middle">A</forename><surname>Solovyova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Int. Annu. Ed. Appl. Psychol. Theory</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="97" to="111" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,691.74,434.74,8.63;13,98.05,704.54,321.37,8.74" xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Visual perception of multi-column-layout text: insight from repeated and non-repeated reading</title>
+		<author>
+			<persName><forename type="first">Hosam</forename><surname>Al-Samarraie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Samer</forename><forename type="middle">Muthana</forename><surname>Sarsam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Irfan</forename><forename type="middle">Naufal</forename><surname>Umar</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/0144929x.2016.1196502</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Behaviour &amp; Information Technology</title>
+		<title level="j" type="abbrev">Behaviour &amp; Information Technology</title>
+		<idno type="ISSN">0144-929X</idno>
+		<idno type="ISSNe">1362-3001</idno>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="page" from="1" to="10" />
+			<date type="published" when="2016-06-28">2016</date>
+			<publisher>Informa UK Limited</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,717.57,434.73,8.63;13,97.80,730.36,285.83,8.74" xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Reading Stories Activates Neural Representations of Visual and Motor Experiences</title>
+		<author>
+			<persName><forename type="first">Nicole</forename><forename type="middle">K</forename><surname>Speer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeremy</forename><forename type="middle">R</forename><surname>Reynolds</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Khena</forename><forename type="middle">M</forename><surname>Swallow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeffrey</forename><forename type="middle">M</forename><surname>Zacks</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1467-9280.2009.02397.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Psychological Science</title>
+		<title level="j" type="abbrev">Psychol Sci</title>
+		<idno type="ISSN">0956-7976</idno>
+		<idno type="ISSNe">1467-9280</idno>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="989" to="999" />
+			<date type="published" when="2009-08">2009</date>
+			<publisher>SAGE Publications</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,84.01,743.39,434.73,8.63;13,98.05,756.18,420.69,8.74" xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Scholarly article seeking, reading, and use: a continuing evolution from print to electronic in the sciences and social sciences</title>
+		<author>
+			<persName><forename type="first">Carol</forename><surname>Tenopir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Donald</forename><forename type="middle">W</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lisa</forename><surname>Christian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rachel</forename><surname>Volentine</surname></persName>
+		</author>
+		<idno type="DOI">10.1087/20150203</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Learned Publishing</title>
+		<title level="j" type="abbrev">Learned Publishing</title>
+		<idno type="ISSN">0953-1513</idno>
+		<idno type="ISSNe">1741-4857</idno>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="93" to="105" />
+			<date type="published" when="2015-04">2015</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,91.63,436.30,8.74;14,98.05,104.66,41.48,8.63" xml:id="b31">
+	<analytic>
+		<title level="a" type="main">International Reading Strategies for IMRD Articles</title>
+		<author>
+			<persName coords=""><forename type="first">Joy</forename><surname>Burrough-Boenisch</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/0741088399016003002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Written Communication</title>
+		<title level="j" type="abbrev">Written Communication</title>
+		<idno type="ISSN">0741-0883</idno>
+		<idno type="ISSNe">1552-8472</idno>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="296" to="316" />
+			<date type="published" when="1999-07">1999</date>
+			<publisher>SAGE Publications</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,117.46,430.31,8.74" xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Language, embodiment, and the cognitive niche</title>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Clark</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.tics.2006.06.012</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Trends in Cognitive Sciences</title>
+		<title level="j" type="abbrev">Trends in Cognitive Sciences</title>
+		<idno type="ISSN">1364-6613</idno>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="370" to="374" />
+			<date type="published" when="2006-08">2006</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,130.37,334.46,8.74" xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Finding the Mind</title>
+		<author>
+			<persName coords=""><forename type="first">Andy</forename><surname>Clark</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11098-010-9598-9</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Philosophical Studies</title>
+		<title level="j" type="abbrev">Philos Stud</title>
+		<idno type="ISSN">0031-8116</idno>
+		<idno type="ISSNe">1573-0883</idno>
+		<imprint>
+			<biblScope unit="volume">152</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="447" to="461" />
+			<date type="published" when="2008">2008</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+			<pubPlace>Oxford, UK</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,143.28,299.05,8.74" xml:id="b34">
+	<analytic>
+		<title level="a" type="main">New Title Page Inaugurated</title>
+		<idno type="DOI">10.2337/diab.13.1.95a</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Diabetes</title>
+		<idno type="ISSN">0012-1797</idno>
+		<idno type="ISSNe">1939-327X</idno>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="95" to="95" />
+			<date type="published" when="1964-01-01">1964</date>
+			<publisher>American Diabetes Association</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,156.19,347.26,8.74" xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Retirement of K. Shirley Smith as Editor</title>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Somerville</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">K</forename><forename type="middle">Shirley</forename><surname>Retirement</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Editor</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/hrt.35.1.1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Heart</title>
+		<title level="j" type="abbrev">Heart</title>
+		<idno type="ISSN">1355-6037</idno>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="1" />
+			<date type="published" when="1973-01-01">1973</date>
+			<publisher>BMJ</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,169.10,387.44,8.74" xml:id="b36">
+	<analytic>
+		<title level="a" type="main">The British Heart Journal Redesigned</title>
+		<author>
+			<persName coords=""><forename type="first">K</forename><forename type="middle">S</forename><surname>Smith</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/hrt.32.1.1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Heart</title>
+		<title level="j" type="abbrev">Heart</title>
+		<idno type="ISSN">1355-6037</idno>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="1" />
+			<date type="published" when="1970-01-01">1970</date>
+			<publisher>BMJ</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,182.02,436.30,8.74;14,98.05,195.04,41.48,8.63" xml:id="b37">
+	<analytic>
+		<title level="a" type="main">On the composition of scientific abstracts</title>
+		<author>
+			<persName><forename type="first">Iana</forename><surname>Atanassova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marc</forename><surname>Bertin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vincent</forename><surname>Larivière</surname></persName>
+		</author>
+		<idno type="DOI">10.1108/jdoc-09-2015-0111</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Documentation</title>
+		<idno type="ISSN">0022-0418</idno>
+		<imprint>
+			<biblScope unit="volume">72</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="636" to="647" />
+			<date type="published" when="2016-07-11">2016</date>
+			<publisher>Emerald</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,207.96,434.73,8.63;14,98.05,220.87,420.69,8.63;14,98.05,233.66,165.46,8.74" xml:id="b38">
+	<analytic>
+		<title level="a" type="main">The young read in new places, the older read on new devices: A survey of digital reading practices among librarians and Information Science students in Denmark</title>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Balling</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><forename type="middle">C</forename><surname>Begnum</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Kuzmičová</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Schilhab</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Participations</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="page" from="197" to="236" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,246.57,435.85,8.74;14,98.05,259.60,78.24,8.63" xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Exploring individual processes of knowledge construction with hypertext</title>
+		<author>
+			<persName coords=""><forename type="first">Aukse</forename><surname>Balcytiene</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/bf00897324</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Instructional Science</title>
+		<title level="j" type="abbrev">Instr Sci</title>
+		<idno type="ISSN">0020-4277</idno>
+		<idno type="ISSNe">1573-1952</idno>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">3-4</biblScope>
+			<biblScope unit="page" from="303" to="328" />
+			<date type="published" when="1999-07">1999</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,272.40,434.73,8.74;14,96.30,285.31,359.22,8.74" xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Comprehending non-linear text</title>
+		<author>
+			<persName coords=""><forename type="first">Davida</forename><surname>Charney</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/317426.317436</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceeding of the ACM conference on Hypertext - HYPERTEXT &apos;87</title>
+		<meeting>eeding of the ACM conference on Hypertext - HYPERTEXT &apos;87<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM Press</publisher>
+			<date type="published" when="1987">1987</date>
+			<biblScope unit="page" from="109" to="120" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,298.34,436.30,8.63;14,98.05,311.25,420.87,8.63;14,98.05,324.04,267.74,8.74" xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Investigating paper vs. screen in real-life hospital workflows: Performance contradicts perceived superiority of paper in the user experience</title>
+		<author>
+			<persName><forename type="first">Andreas</forename><surname>Holzinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Markus</forename><surname>Baernthaler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Walter</forename><surname>Pammer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Herman</forename><surname>Katz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vesna</forename><surname>Bjelic-Radisic</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martina</forename><surname>Ziefle</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijhcs.2011.05.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Human-Computer Studies</title>
+		<title level="j" type="abbrev">International Journal of Human-Computer Studies</title>
+		<idno type="ISSN">1071-5819</idno>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="563" to="570" />
+			<date type="published" when="2011-08">2011</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,336.96,435.85,8.74;14,98.05,349.87,114.11,8.74" xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Reading from paper compared to screens: A systematic review and meta‐analysis</title>
+		<author>
+			<persName coords=""><forename type="first">Virginia</forename><surname>Clinton</surname></persName>
+			<idno type="ORCID">0000-0002-4705-2217</idno>
+		</author>
+		<idno type="DOI">10.1111/1467-9817.12269</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Research in Reading</title>
+		<title level="j" type="abbrev">Journal Research in Reading</title>
+		<idno type="ISSN">0141-0423</idno>
+		<idno type="ISSNe">1467-9817</idno>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="288" to="325" />
+			<date type="published" when="2019-01-13">2019</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,362.89,435.08,8.63;14,98.05,375.69,308.95,8.74" xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Understanding metacognitive inferiority on screen by exposing cues for depth of processing</title>
+		<author>
+			<persName><forename type="first">Yael</forename><surname>Sidi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Maya</forename><surname>Shpigelman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hagar</forename><surname>Zalmanov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rakefet</forename><surname>Ackerman</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.learninstruc.2017.01.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Learning and Instruction</title>
+		<title level="j" type="abbrev">Learning and Instruction</title>
+		<idno type="ISSN">0959-4752</idno>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="page" from="61" to="73" />
+			<date type="published" when="2017-10">2017</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,388.72,436.30,8.63;14,97.76,401.51,177.34,8.74" xml:id="b44">
+	<analytic>
+		<title level="a" type="main">Comparison of reading performance on screen and on paper: A meta-analysis</title>
+		<author>
+			<persName><forename type="first">Yiren</forename><surname>Kong</surname></persName>
+			<idno type="ORCID">0000-0001-9471-6576</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Young</forename><forename type="middle">Sik</forename><surname>Seo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ling</forename><surname>Zhai</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compedu.2018.05.005</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Education</title>
+		<title level="j" type="abbrev">Computers &amp; Education</title>
+		<idno type="ISSN">0360-1315</idno>
+		<imprint>
+			<biblScope unit="volume">123</biblScope>
+			<biblScope unit="page" from="138" to="149" />
+			<date type="published" when="2018-08">2018</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,414.54,434.73,8.63;14,98.05,427.34,270.44,8.74" xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Reading linear texts on paper versus computer screen: Effects on reading comprehension</title>
+		<author>
+			<persName><forename type="first">Anne</forename><surname>Mangen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bente</forename><forename type="middle">R</forename><surname>Walgermo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kolbjørn</forename><surname>Brønnick</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijer.2012.12.002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Educational Research</title>
+		<title level="j" type="abbrev">International Journal of Educational Research</title>
+		<idno type="ISSN">0883-0355</idno>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="page" from="61" to="68" />
+			<date type="published" when="2013-01">2013</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,440.25,435.85,8.74;14,98.05,453.16,91.69,8.74" xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Improving PDF readability of scientific papers on computer screens</title>
+		<author>
+			<persName coords=""><forename type="first">Khaled</forename><surname>Moustafa</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/0144929x.2015.1128978</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Behaviour &amp; Information Technology</title>
+		<title level="j" type="abbrev">Behaviour &amp; Information Technology</title>
+		<idno type="ISSN">0144-929X</idno>
+		<idno type="ISSNe">1362-3001</idno>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="319" to="323" />
+			<date type="published" when="2016-01-24">2016</date>
+			<publisher>Informa UK Limited</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,466.19,436.30,8.63;14,97.76,478.98,214.79,8.74" xml:id="b47">
+	<analytic>
+		<title level="a" type="main">The effect of page layout on mental workload: A dual-task experiment</title>
+		<author>
+			<persName><forename type="first">Erik</forename><surname>Wästlund</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Torsten</forename><surname>Norlander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Trevor</forename><surname>Archer</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.chb.2007.05.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computers in Human Behavior</title>
+		<title level="j" type="abbrev">Computers in Human Behavior</title>
+		<idno type="ISSN">0747-5632</idno>
+		<imprint>
+			<biblScope unit="volume">24</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1229" to="1245" />
+			<date type="published" when="2008-05">2008</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,491.89,434.73,8.74;14,97.80,504.81,422.06,8.74;14,98.05,517.83,187.24,8.63" xml:id="b48">
+	<analytic>
+		<title level="a" type="main">Exploring the effect of layout on reading from screen</title>
+		<author>
+			<persName><forename type="first">Mary</forename><forename type="middle">C</forename><surname>Dyson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gary</forename><forename type="middle">J</forename><surname>Kipping</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/bfb0053278</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Electronic Publishing, Artistic Imaging, and Digital Typography</title>
+		<meeting><address><addrLine>Berlin/Heidelberg, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer Berlin Heidelberg</publisher>
+			<date type="published" when="1998">1998</date>
+			<biblScope unit="page" from="294" to="304" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="14,84.01,530.75,434.74,8.63;14,98.05,543.54,178.90,8.74" xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Toward a Multifaceted Heuristic of Digital Reading to Inform Assessment, Research, Practice, and Policy</title>
+		<author>
+			<persName coords=""><forename type="first">Julie</forename><surname>Coiro</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/rrq.302</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Reading Research Quarterly</title>
+		<title level="j" type="abbrev">Reading Research Quarterly</title>
+		<idno type="ISSN">0034-0553</idno>
+		<idno type="ISSNe">1936-2722</idno>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="9" to="31" />
+			<date type="published" when="2020-02-20">2020</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+	<note>rrq.302</note>
+</biblStruct>
+
+<biblStruct coords="14,84.01,556.45,298.48,8.74" xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Work for the Editor</title>
+		<author>
+			<persName coords=""><forename type="first">M</forename><forename type="middle">P</forename><surname>Ravenel</surname></persName>
+		</author>
+		<idno type="DOI">10.2105/ajph.26.6.636</idno>
+	</analytic>
+	<monogr>
+		<title level="j">American Journal of Public Health and the Nations Health</title>
+		<title level="j" type="abbrev">Am J Public Health Nations Health</title>
+		<idno type="ISSN">0002-9572</idno>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="636" to="637" />
+			<date type="published" when="1936-06">1936</date>
+			<publisher>American Public Health Association</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

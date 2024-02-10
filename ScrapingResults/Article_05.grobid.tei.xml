@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Towards a Quantum Software Modeling Language</title>
+				<funder ref="#_3Gda7tw">
+					<orgName type="full">EPSRC</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>ACM</publisher>
+				<availability status="unknown"><p>Copyright ACM</p>
+				</availability>
+				<date type="published" when="2020-06-27">2020-06-27</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName coords="1,127.57,137.15,117.02,11.24;1,244.59,135.12,0.98,8.24"><forename type="first">Carlos</forename><forename type="middle">A</forename><surname>Pérez-Delgado</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,362.23,137.15,123.22,11.24"><forename type="first">Hector</forename><forename type="middle">G</forename><surname>Perez-Gonzalez</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Kent Canterbury</orgName>
+								<address>
+									<settlement>Kent</settlement>
+									<country key="GB">United Kingdom</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Universidad Autónoma de San Luis Potosí San Luis Potosí</orgName>
+								<address>
+									<region>SLP</region>
+									<country key="MX">México</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Towards a Quantum Software Modeling Language</title>
+					</analytic>
+					<monogr>
+						<title level="m">Proceedings of the IEEE/ACM 42nd International Conference on Software Engineering Workshops</title>
+						<meeting>the IEEE/ACM 42nd International Conference on Software Engineering Workshops						</meeting>
+						<imprint>
+							<publisher>ACM</publisher>
+							<date type="published" when="2020-06-27" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">0AA76BA1673DC72A5CB1968D82235B0A</idno>
+					<idno type="DOI">10.1145/3387940.3392183</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2024-02-03T16:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>conference proceedings</term>
+					<term>Design</term>
+					<term>• Software and its engineering → System description languages</term>
+					<term>Unified Modeling Language (UML)</term>
+					<term>Software design engineering</term>
+					<term>• Theory of computation → Quantum computation theory</term>
+					<term>Quantum information theory quantum computing, software engineering, UML</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We set down the principles behind a modeling language for quantum software. We present a minimal set of extensions to the wellknown Unified Modeling Language (UML) that allows it to effectively model quantum software. These extensions are separate and independent of UML as a whole. As such they can be used to extend any other software modeling language, or as a basis for a completely new language. We argue that these extensions are both necessary and sufficient to model, abstractly, any piece of quantum software. Finally, we provide a small set of examples that showcase the effectiveness of the extension set.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1">INTRODUCTION</head><p>Quantum computation rose to prominence after the discovery of quantum algorithms <ref type="bibr" coords="1,133.64,524.51,11.24,8.43" target="#b4">[5,</ref><ref type="bibr" coords="1,147.38,524.51,7.28,8.43" target="#b6">7]</ref> that can efficiently perform tasks that are intractable classically. These discoveries propelled research and interest in quantum computation. Today, there exists prototype quantum hardware with computational capabilities beyond that of any classical machine <ref type="bibr" coords="1,135.53,567.47,11.73,8.43" target="#b0">[1]</ref>. Further applications of quantum theory to computation have also been made in several areas of theory of computing, such as models of computation <ref type="bibr" coords="1,213.10,588.95,11.68,8.43" target="#b5">[6]</ref>, data structures <ref type="bibr" coords="1,283.28,588.95,10.44,8.43" target="#b7">[8]</ref>, and cryptography <ref type="bibr" coords="1,122.12,599.69,11.48,8.43" target="#b1">[2]</ref>.</p><p>Quantum computation has, until today, been studied almost exclusively 'in the small.' A general understanding of quantum computation, or, quantum programming 'in the large' is yet to be developed. Here we aim to set the foundations of a general framework for studying, developing, and conveying quantum programs. We aim to do so by developing a universal modeling language for quantum software. Rather than develop such a language from scratch, we have decided to start from the well-known Unified Modeling Language (UML) <ref type="bibr" coords="1,410.50,279.88,12.02,8.43" target="#b2">[3]</ref>, and introduce a minimum set of extensions that allow it to effectively model quantum software.</p><p>Assuming UML to be a shared common-language upon which we can build, allows us to convey our original extensions much more succinctly. Our extension set can, however, be applied with little or no modification to any other modeling language.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2">Q-UML</head><p>Before discussing in depth the extensions we are introducing, we make a few fundamental observations on which we base the guiding principles for our extension set.</p><p>Our first observation is about the nature of quantum computation. The central difference between quantum and classical computation is in how it achieves its goals. Quantum computers have access to quantum algorithms <ref type="bibr" coords="1,418.58,433.46,10.86,8.43" target="#b6">[7]</ref>, and quantum data-structures <ref type="bibr" coords="1,536.93,433.46,10.43,8.43" target="#b7">[8]</ref>, that are unavailable to classical computers-hence their performance advantage. Algorithms and data-structures are, however, implementation details. Algorithms are an essential design choice while programming in the small. However, they are more often than not completely ignored in large-scale software architectural design. For instance, UML diagrams seldom portray algorithms and data-structures beyond a very high-level design perspective.</p><p>It would seem then that quantum computation introduces nothing to computation that needs to be captured in a software design diagram. This is not the case, and the reason for this is our second observation. Quantum computation changes the very nature of information itself. Quantum information is much richer than classical information. It is also much more challenging to store, transmit, and receive. If a module (class, object, etc.) needs to store, transmit or receive quantum information, then this is an important design consideration-which needs to be included in any effective software design.</p><p>A third observation here is that the classical vs. quantum nature of the information used by a module is an important consideration both when discussing its internal implementation and its interface. Furthermore, these two are separate and independent considerations.</p><p>A classical module, implementing some classical behavior, would have no need, or capability, to communicate quantum data. A quantum module may or may not have to; i.e. a module's quantum behavior may be completely part of its internal implementation and not appear as part of its interface. For instance, take a module implementing Shor's algorithm. Shor's algorithm uses quantum effects to efficiently factor a large integer into its prime factors. The implementation of this module must necessarily be quantum. Both the input (the large integer) and the output (the prime factors), consist of classical information. And hence, the interface of such a module can be strictly classical.</p><p>More generally, we can conceive of quantum software modules that have all classical inputs and outputs (like the above example), all quantum inputs and outputs, or a mix of both. A quantum software design must address, for each individual interface element, whether it is classical input/output, or if it is quantum. In short, whether a module communicates classically or via quantum information, and whether its internal implementation requires quantum hardware are important considerations that need to be captured in a design document.</p><p>The importance of such labelling should be clear. Quantum data can only be stored and transmitted with special hardware designed to do so. More importantly, from an abstract, device-independent, strictly software perspective: quantum and classical information are not interchangeable. Classical information is clone-able and admits fanout operations, while quantum information (in general) does not. On the other hand, quantum information has a much larger state-space.</p><p>Finally, it is true that quantum information is strictly a super-set of classical information-and hence a quantum module can communicate any classical information it desires using a quantum interface element. We argue, however, that using a quantum interface element and messaging when classical would suffice is bad quantum software design, for the reasons stated above.</p><p>In summary, the guiding principles behind any quantum software modeling language must include the following:</p><p>(1) (Quantum Classes): Whenever a software module makes use of quantum information, either as part of its internal state/implementation, or as part of its interface, this must be clearly established in a design document. (3) (Quantum Supremacy): A module that has at least one quantum element is to be considered a quantum software module, otherwise it is a classical module. Quantum and classical modules should be clearly labelled as such. (4) (Quantum Aggregation): Any module that is composed of one or more quantum modules will itself be considered a quantum module, and must be labelled as such.</p><p>(5) (Quantum Communication): Quantum and classical modules can communicate with each other as long as their interfaces are compatible, i.e. the quantum module has classical inputs and/or outputs that can interface with the classical module. We will argue in Sec. 2.3 how these extensions are not only necessary, but also sufficient in order to design and represent quantum software. First, in the following two sections we put these principles into practice as a set of concrete extensions to UML.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1">Class Diagram Extensions</head><p>UML is a very graphical language, meant to convey a lot of meaning in a very small amount of space. As such, it makes sense to use a graphical way to represent quantum software elements. We chose to do this by use of bold text to denote quantum elements, and double lines to denote a quantum relationship or quantum communication. For attributes, the name will be bold if it is represented using quantum information. For methods, we use the following convention. If any of the inputs are quantum, these are bold. If the output or datatype of the method is quantum, then the datatype should also be bold. For backwards compatibility with regular UML, whenever the input or output datatypes of a method are omitted, these will be assumed to be classical in nature. If a class/object has any quantum attributes or methods then it itself is considered quantum, and its name shall also be bold.</p><p>Relationships between classes will use double-lines whenever the relationship is quantum in nature. For inheritance, if the superclass is quantum then the subclass, and the inheritance relationship, will also be quantum. (the converse is not necessarily true however). In the case of aggregation and composition, if a class/object being aggregated/composed is quantum, then the class/object to which it is aggregated/composed into, as well as that relationship will also be quantum. Association relationships do not have any special rules, beyond the need of a quantum class/object to have a classical interface if it is to associate with classical classes/objects. Fig. <ref type="figure" coords="3,85.50,105.19,4.16,8.43" target="#fig_1">1</ref> showcases a Q-UML diagram that exemplifies the above rules.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2">Sequence Diagram Extensions</head><p>Sequence diagrams in UML allow us to portray the dynamic relationship between modules in a software program. As we did before for static relationships, we extend the existing language in order to allow us to differentiate between classical and quantum messages. As previously discussed, this is essential information. Quantum information behaves differently from classical information; it can store/portray different data; it admits different operations; and, it requires different hardware to store, send, and receive. Like before, we make use of bold text to markup quantum modules, and double lines to portray quantum messages. Fig. <ref type="figure" coords="3,261.42,502.55,4.00,8.43" target="#fig_0">2</ref> shows a Q-UML sequence diagram. Note how even though the relationship between Shorfactor and ShorOrder is quantum, the messaging between them is not. This illustrates an important point. A module is marked as quantum if it uses quantum resources in any form, either directly as part of its internal implementation or as part of an aggregated module. If a sub-module (in UML a composed class or object) is quantum, then the encompassing module must also be marked as quantum. In a static (e.g. class) diagram, the quantum composition relationships inform us-especially in the case of a seemingly classical module that does not in itself use quantum resources-which composed modules are using quantum resources.</p><p>Also, note the communication between the objects ShorOrder and QFT_n. The module QFT_n operates on a quantum state. Hence, both 'set' messages are quantum. Likewise, the return messages ρ and ρ are quantum states. However, the request to perform a quantum Fourier transform (QFT) or a QFT inverse operation can (and therefore should) be communicated classically. This diagram showcases the level of granularity available to us using these diagrams with the proposed extensions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3">Discussion</head><p>We have proposed a minimal series of extensions to existing software modeling languages. We exemplify our additions in UML, but these extensions are easily applicable to any other modeling language, or be used as the basis for a new modeling language.</p><p>We've argued the necessity of each of the extensions in previous sections. We can argue as well, that these extensions are not only necessary, but also sufficient to fully model quantum software. To make this argument, we appeal to the fact that all quantum computation is simulable using classical computation albeit with an efficiency loss. Other than their use of quantum information and algorithms, quantum computers are indistinct from classical ones. Hence, from a high-level design perspective, the only information element that needs to be considered when developing quantum software is when quantum (rather than classical) information is being used.</p><p>The one remaining information element we have not discussed is algorithm efficiency. If quantum computation is to be used, it will most likely be due to the efficient algorithms at its disposal. That said, algorithm efficiency is not a solely quantum consideration. UML itself does not inherently have language elements for algorithm efficiency (beyond user-defined notes). It does, however, have several extensions used and proposed for this purpose(see e.g. <ref type="bibr" coords="3,326.05,364.25,8.64,8.43" target="#b3">[4]</ref>). Other modeling languages may also have definite algorithm efficiency elements. We argue that it is best to use existing language elements when they are available.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="2,71.12,470.44,225.71,8.43;2,84.35,481.18,211.51,8.43;2,84.13,491.92,211.73,8.43;2,84.35,502.66,73.36,8.43;2,79.59,513.39,216.27,8.43;2,92.65,524.14,204.18,8.43;2,92.65,534.88,204.18,8.43;2,92.65,545.62,203.22,8.43;2,92.65,556.36,56.88,8.43;2,79.06,567.09,218.29,8.43;2,92.64,577.83,203.21,8.43;2,92.65,588.57,203.21,8.43;2,92.65,599.31,124.12,8.43"><head>( 2 )</head><label>2</label><figDesc>(Quantum Elements): Each module interface element (e.g. public functions/methods, public variables) and internal state variables can be either classical or quantum, and must be labelled accordingly. (a) (Quantum Variables): Each variable should be labelled as classical or quantum. If the model represents data types, the variables should also specify the classical (e.g. integer, string) or quantum (e.g. qubit, qubit array, quantum graph state) data type, (b) (Quantum Operations): For each operation, both the input and output should be clearly labelled as either classical or quantum. Whether the operation internally operates quantumly should also be labelled.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="2,314.12,466.52,237.00,8.43;2,314.12,477.25,235.43,8.43;2,314.12,487.99,196.94,8.43"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: Q-UML class diagram of Shor's Algorithm. Quantum classes and interface elements are presented in bold text, and quantum relationships use double-lines.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="3,60.34,440.54,236.93,8.43;3,60.34,451.28,235.43,8.43;3,60.34,462.01,105.90,8.43"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: Q-UML sequence diagram of Shor's Algorithm. Quantum classes are presented in bold text, and quantum messages use double-lines.</figDesc></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>CP-D would like to acknowledge funding through the <rs type="funder">EPSRC</rs> <rs type="grantName">Quantum Communications Hub</rs> (<rs type="grantNumber">EP/T001011/1</rs>). The authors would also like to thank <rs type="person">Joanna I. Ziembicka</rs> for useful comments during the preparation on this manuscript.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_3Gda7tw">
+					<idno type="grant-number">EP/T001011/1</idno>
+					<orgName type="grant-name">Quantum Communications Hub</orgName>
+				</org>
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="3,326.48,484.75,224.65,6.55;3,326.48,492.56,223.94,6.55;3,326.48,500.37,52.37,6.55" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Quantum supremacy using a programmable superconducting processor</title>
+		<author>
+			<persName coords=""><forename type="first">Frank</forename><surname>Arute</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kunal</forename><surname>Arya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryan</forename><surname>Babbush</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dave</forename><surname>Bacon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Joseph</forename><forename type="middle">C</forename><surname>Bardin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rami</forename><surname>Barends</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rupak</forename><surname>Biswas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sergio</forename><surname>Boixo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fernando</forename><forename type="middle">G S L</forename><surname>Brandao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">A</forename><surname>Buell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brian</forename><surname>Burkett</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zijun</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ben</forename><surname>Chiaro</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roberto</forename><surname>Collins</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><surname>Courtney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Dunsworth</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Edward</forename><surname>Farhi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Brooks</forename><surname>Foxen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Austin</forename><surname>Fowler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Craig</forename><surname>Gidney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marissa</forename><surname>Giustina</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rob</forename><surname>Graff</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Keith</forename><surname>Guerin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Steve</forename><surname>Habegger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">P</forename><surname>Harrigan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">J</forename><surname>Hartmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alan</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Markus</forename><surname>Hoffmann</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Trent</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Travis</forename><forename type="middle">S</forename><surname>Humble</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sergei</forename><forename type="middle">V</forename><surname>Isakov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Evan</forename><surname>Jeffrey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhang</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dvir</forename><surname>Kafri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kostyantyn</forename><surname>Kechedzhi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julian</forename><surname>Kelly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Paul</forename><forename type="middle">V</forename><surname>Klimov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sergey</forename><surname>Knysh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexander</forename><surname>Korotkov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fedor</forename><surname>Kostritsa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Landhuis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mike</forename><surname>Lindmark</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Erik</forename><surname>Lucero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dmitry</forename><surname>Lyakh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Salvatore</forename><surname>Mandrà</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jarrod</forename><forename type="middle">R</forename><surname>Mcclean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><surname>Mcewen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anthony</forename><surname>Megrant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiao</forename><surname>Mi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kristel</forename><surname>Michielsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Masoud</forename><surname>Mohseni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Josh</forename><surname>Mutus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ofer</forename><surname>Naaman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><surname>Neeley</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><surname>Neill</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Murphy</forename><forename type="middle">Yuezhen</forename><surname>Niu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eric</forename><surname>Ostby</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andre</forename><surname>Petukhov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">C</forename><surname>Platt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><surname>Quintana</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Eleanor</forename><forename type="middle">G</forename><surname>Rieffel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pedram</forename><surname>Roushan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nicholas</forename><forename type="middle">C</forename><surname>Rubin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Sank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><forename type="middle">J</forename><surname>Satzinger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vadim</forename><surname>Smelyanskiy</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><forename type="middle">J</forename><surname>Sung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matthew</forename><forename type="middle">D</forename><surname>Trevithick</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amit</forename><surname>Vainsencher</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benjamin</forename><surname>Villalonga</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Theodore</forename><surname>White</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">Jamie</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ping</forename><surname>Yeh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Zalcman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hartmut</forename><surname>Neven</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">M</forename><surname>Martinis</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41586-019-1666-5</idno>
+		<ptr target="https://doi.org/10.1038/s41586-019-1666-5" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<title level="j" type="abbrev">Nature</title>
+		<idno type="ISSN">0028-0836</idno>
+		<idno type="ISSNe">1476-4687</idno>
+		<imprint>
+			<biblScope unit="volume">574</biblScope>
+			<biblScope unit="issue">7779</biblScope>
+			<biblScope unit="page" from="505" to="510" />
+			<date type="published" when="2019-10-23">2019. 2019</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="3,326.48,508.18,223.68,6.55;3,326.48,515.99,193.52,6.55" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Quantum cryptography: public key distribution and coin tossing</title>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Charles</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Gilles</forename><surname>Bennett</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Brassard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Theor. Comput. Sci</title>
+		<imprint>
+			<biblScope unit="volume">560</biblScope>
+			<biblScope unit="page" from="7" to="11" />
+			<date type="published" when="2014">2014. 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="3,326.48,523.81,224.18,6.55;3,326.48,531.62,224.55,6.55;3,326.24,539.43,82.51,6.55" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Unified Modeling Language User Guide, The</title>
+		<author>
+			<persName coords=""><forename type="first">Grady</forename><surname>Booch</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">James</forename><surname>Rumbaugh</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ivar</forename><surname>Jacobson</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="s">Addison-Wesley Object Technology Series</title>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<publisher>Addison-Wesley Professional</publisher>
+		</imprint>
+	</monogr>
+	<note>2nd Edition</note>
+</biblStruct>
+
+<biblStruct coords="3,326.48,547.24,223.50,6.55;3,326.48,555.05,224.55,6.55;3,326.48,562.86,224.55,6.55;3,326.48,570.67,108.66,6.55" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Performance modelling with the unified modelling language and stochastic process algebras</title>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Canevet</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Gilmore</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Hillston</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Prowse</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Stevens</surname></persName>
+		</author>
+		<idno type="DOI">10.1049/ip-cdt:20030084</idno>
+		<ptr target="https://doi.org/10.1049/ip-cdt:20030084" />
+	</analytic>
+	<monogr>
+		<title level="j">IEE Proceedings - Computers and Digital Techniques</title>
+		<title level="j" type="abbrev">IEE Proc., Comput. Digit. Tech.</title>
+		<idno type="ISSN">1350-2387</idno>
+		<imprint>
+			<biblScope unit="volume">150</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">107</biblScope>
+			<date type="published" when="2003-03">2003. March 2003</date>
+			<publisher>Institution of Engineering and Technology (IET)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="3,326.48,578.48,223.50,6.55;3,326.48,586.29,224.18,6.55;3,326.48,594.10,224.29,6.55;3,326.26,601.91,88.71,6.55" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A Fast Quantum Mechanical Algorithm for Database Search</title>
+		<author>
+			<persName coords=""><forename type="first">K</forename><surname>Lov</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Grover</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/237814.237866</idno>
+		<ptr target="https://doi.org/10.1145/237814.237866" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-eighth Annual ACM Symposium on Theory of Computing (STOC &apos;96)</title>
+		<meeting>the Twenty-eighth Annual ACM Symposium on Theory of Computing (STOC &apos;96)<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="1996">1996</date>
+			<biblScope unit="page" from="212" to="219" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="3,326.48,609.72,223.63,6.55;3,326.48,617.53,223.94,6.55;3,326.48,625.35,56.90,6.55" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Local unitary quantum cellular automata</title>
+		<author>
+			<persName coords=""><forename type="first">Carlos</forename><forename type="middle">A</forename><surname>Pérez-Delgado</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Donny</forename><surname>Cheung</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physreva.76.032320</idno>
+		<ptr target="https://doi.org/10.1103/PhysRevA.76.032320" />
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review A</title>
+		<title level="j" type="abbrev">Phys. Rev. A</title>
+		<idno type="ISSN">1050-2947</idno>
+		<idno type="ISSNe">1094-1622</idno>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">32320</biblScope>
+			<date type="published" when="2007-09-20">2007. Sep 2007</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="3,326.48,633.16,223.50,6.55;3,326.48,640.97,223.50,6.55;3,326.48,648.78,60.60,6.55" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Algorithms for quantum computation: Discrete logarithms and factoring</title>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Peter</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Shor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings 35th annual symposium on foundations of computer science</title>
+		<meeting>35th annual symposium on foundations of computer science</meeting>
+		<imprint>
+			<publisher>Ieee</publisher>
+			<date type="published" when="1994">1994</date>
+			<biblScope unit="page" from="124" to="134" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="3,326.48,656.59,223.50,6.55;3,326.48,664.40,224.55,6.55;3,326.48,672.21,121.79,6.55" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Fast graph operations in quantum computation</title>
+		<author>
+			<persName coords=""><forename type="first">Liming</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Carlos</forename><forename type="middle">A</forename><surname>Pérez-Delgado</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Joseph</forename><forename type="middle">F</forename><surname>Fitzsimons</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physreva.93.032314</idno>
+		<ptr target="https://doi.org/10.1103/PhysRevA.93.032314" />
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review A</title>
+		<title level="j" type="abbrev">Phys. Rev. A</title>
+		<idno type="ISSN">2469-9926</idno>
+		<idno type="ISSNe">2469-9934</idno>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">32314</biblScope>
+			<date type="published" when="2016-03-10">2016. Mar 2016</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

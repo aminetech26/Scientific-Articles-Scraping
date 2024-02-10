@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Sparse Representation with Harmonic Wavelets</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>IEEE</publisher>
+				<availability status="unknown"><p>Copyright IEEE</p>
+				</availability>
+				<date type="published" when="2009">2009</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName coords="1,279.02,130.68,53.86,9.29;1,287.96,142.34,35.98,9.46"><forename type="first">Carlo</forename><forename type="middle">Cattani</forename><surname>Difarma</surname></persName>
+							<email>ccattani@unisa.it</email>
+							<affiliation key="aff0">
+								<orgName type="institution">University of Salerno Fisciano (SA)</orgName>
+								<address>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Sparse Representation with Harmonic Wavelets</title>
+					</analytic>
+					<monogr>
+						<title level="m">2009 Sixth International Conference on Fuzzy Systems and Knowledge Discovery</title>
+						<imprint>
+							<publisher>IEEE</publisher>
+							<date type="published" when="2009" />
+						</imprint>
+					</monogr>
+					<idno type="MD5">B8323343768FC7FC8A6425C58FBE9D2A</idno>
+					<idno type="DOI">10.1109/fskd.2009.648</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2024-02-03T16:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>A simple method, based on harmonic wavelets, is proposed for the decomposition of a suitable signal into a periodic function and a pulse. It will be shown that, under some general conditions, by a simple projection into two disjoint orthogonal space of functions the periodic component of the signal can be separated from the localized part. The proposed algorithm, gives an approximate (scale depending) decomposition and can be used also for an efficient denoising (as shown in the final examples).</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>The sparse representation of signals (see e.g. <ref type="bibr" coords="1,257.49,390.43,15.12,9.29" target="#b14">[15]</ref>, <ref type="bibr" coords="1,280.61,390.43,16.43,9.29" target="#b15">[16]</ref> and references therein) has been considered as a powerful tool for denoising, coding, compression, source separation <ref type="bibr" coords="1,56.47,425.94,10.47,9.29" target="#b3">[4]</ref>, <ref type="bibr" coords="1,73.78,425.94,15.12,9.29" target="#b9">[10]</ref>, <ref type="bibr" coords="1,96.02,425.94,15.12,9.29" target="#b13">[14]</ref>, <ref type="bibr" coords="1,118.26,425.94,15.12,9.29" target="#b16">[17]</ref>, <ref type="bibr" coords="1,140.50,425.94,15.12,9.29" target="#b21">[22]</ref>, <ref type="bibr" coords="1,162.75,425.94,15.12,9.29" target="#b22">[23]</ref>. The main idea is to decompose a given signal into a linear combination of functions each of which referring to a suitable basis. In other words, the functional space, taken into consideration, is the span of the union of two family of bases. Usually these bases give some redundant systems unless they are orthogonal each other. The functional space will be given as a direct sum of two orthogonal subspaces having as bases the Fourier harmonic functions and the Littlewood Paley functions respectively. Littlewood Paley functions <ref type="bibr" coords="1,191.28,532.45,15.12,9.29" target="#b10">[11]</ref>, <ref type="bibr" coords="1,212.58,532.45,15.12,9.29" target="#b11">[12]</ref>, <ref type="bibr" coords="1,233.88,532.45,15.12,9.29" target="#b17">[18]</ref>, also called harmonic wavelets <ref type="bibr" coords="1,133.26,544.29,10.47,9.29" target="#b4">[5]</ref>, <ref type="bibr" coords="1,149.97,544.29,10.47,9.29" target="#b5">[6]</ref>, <ref type="bibr" coords="1,166.67,544.29,10.47,9.29" target="#b6">[7]</ref>, <ref type="bibr" coords="1,183.38,544.29,15.12,9.29" target="#b18">[19]</ref>, <ref type="bibr" coords="1,205.01,544.29,15.12,9.29" target="#b19">[20]</ref>, <ref type="bibr" coords="1,226.64,544.29,15.12,9.29" target="#b20">[21]</ref>, despite their low decay in time, have been shown to be a good tool for studying processes which are sharply localized in frequency, as it happens in any kind of signal dealing with highly oscillating systems (vibrations). Harmonic wavelets are a family of basis functions, which enjoy many advantages: a) they are analytically defined and band limited; b) their connections coefficients (refinable integrals) can be easily and finitely computed <ref type="bibr" coords="1,98.67,638.98,11.50,9.29" target="#b4">[5]</ref> for any moment (any order derivative); c) the real part of the scaling coefficients are the Shannon wavelets and generalizes the corresponding sampling theorem <ref type="bibr" coords="1,271.36,662.65,10.68,9.29" target="#b5">[6]</ref>; d) they can be used to easily represent <ref type="bibr" coords="1,213.41,674.48,10.47,9.29" target="#b7">[8]</ref>, <ref type="bibr" coords="1,231.98,674.48,11.50,9.29" target="#b8">[9]</ref> and analyze self-similar (fractal) signals. It has been shown that wavelets can be a good tool for investigating the main features of fractals <ref type="bibr" coords="1,90.19,709.99,10.47,9.29" target="#b0">[1]</ref>, <ref type="bibr" coords="1,108.85,709.99,10.47,9.29" target="#b1">[2]</ref>, <ref type="bibr" coords="1,127.51,709.99,10.47,9.29" target="#b2">[3]</ref>, <ref type="bibr" coords="1,146.17,709.99,15.12,9.29" target="#b12">[13]</ref>, <ref type="bibr" coords="1,169.76,709.99,15.12,9.29" target="#b13">[14]</ref>, <ref type="bibr" coords="1,193.36,709.99,15.12,9.29" target="#b22">[23]</ref>. On the other hand, harmonic wavelets have a slow decay in time thus raising some doubts on their usefulness (comparing with other families of wavelets having e.g. the compact support). In the following, it will be shown that harmonic wavelets enjoy also the important property of being orthogonal to the Fourier basis. As a consequence it is possible to decompose the union of periodic functions and localized functions into a direct sum of orthogonal spaces, thus obtaining a sparse representation of the space. The orthogonal decomposition of the space will be applied to some examples of denoising. The next step will be to obtain the sparse representation for discrete sets, but this can be approached and achieved by the discrete harmonic wavelet transform <ref type="bibr" coords="1,480.68,366.76,15.12,9.29" target="#b20">[21]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Harmonic Wavelet Basis</head><formula xml:id="formula_0" coords="1,324.72,410.30,204.38,43.26">Let L 2 (R R R, C C C) be the space of functions f (x) : R R R → C C C , ∞ -∞ |f (x)| 2 dx 1/2 &lt; ∞ .</formula><p>The dilated and translated instances of the Littlewood-Paley basis <ref type="bibr" coords="1,363.58,469.44,15.12,9.29" target="#b11">[12]</ref>, <ref type="bibr" coords="1,386.17,469.44,16.43,9.29" target="#b20">[21]</ref> (harmonic wavelts) for the</p><formula xml:id="formula_1" coords="1,314.86,468.62,240.57,82.67">L 2 (R R R, C C C) functions are ⎧ ⎪ ⎪ ⎪ ⎨ ⎪ ⎪ ⎪ ⎩ ϕ n k (x) def = 2 n/2 e 2πi (2 n x-k) -1 2πi(2 n x -k) , ψ n k (x) def = 2 n/2 e 4πi(2 n x-k) -e 2πi(2 n x-k) 2πi(2 n x -k) ,<label>(1)</label></formula><p>being ϕ n k (x) and ψ n k (x) the scaling and wavelet functions respectively with n, k ∈ Z Z Z. Harmonic wavelets fulfill all axioms of multiresolution analysis <ref type="bibr" coords="1,457.44,580.58,10.47,9.29" target="#b4">[5]</ref>, <ref type="bibr" coords="1,474.86,580.58,15.12,9.29" target="#b20">[21]</ref>.</p><p>The corresponding Fourier transforms are (see e.g. <ref type="bibr" coords="1,533.89,592.10,10.52,9.29" target="#b4">[5]</ref>):</p><formula xml:id="formula_2" coords="1,331.75,609.41,219.84,64.10">⎧ ⎪ ⎪ ⎪ ⎨ ⎪ ⎪ ⎪ ⎩ ϕ n k (ω) = 2 -n/2 2π e -iωk/2 n χ(2π + ω/2 n ) ψ n k (ω) = 2 -n/2 2π e -iωk/2 n χ(ω/2 n ) , (<label>2</label></formula><formula xml:id="formula_3" coords="1,551.60,638.90,3.83,9.29">)</formula><p>where χ(ω) is the characteristic (box) function</p><formula xml:id="formula_4" coords="1,364.81,692.73,186.79,26.63">χ(ω) def = 1 , 2π ≤ ω ≤ 4π , 0 , elsewhere . (<label>3</label></formula><formula xml:id="formula_5" coords="1,551.60,701.60,3.83,9.29">)</formula><p>The inner product for the</p><formula xml:id="formula_6" coords="2,56.52,72.34,240.57,97.26">L 2 (R R R, C C C) functions f (x), g(x) is defined as f, g def = ∞ -∞ f (x) g (x)dx = 2π ∞ -∞ f (ω) g (ω)dω = 2π f, g ,<label>(4)</label></formula><p>where the bar stands for the complex conjugate. Harmonic wavelets are orthonormal functions <ref type="bibr" coords="2,256.56,187.59,10.47,9.29" target="#b4">[5]</ref>, <ref type="bibr" coords="2,274.36,187.59,16.43,9.29" target="#b20">[21]</ref> , in the sense that</p><formula xml:id="formula_7" coords="2,120.47,215.70,172.78,13.13">ψ n k (x) , ψ m h (x) = δ nm δ hk , (<label>5</label></formula><formula xml:id="formula_8" coords="2,293.25,217.67,3.83,9.29">)</formula><p>where δ nm (δ hk ) is the Kronecker symbol.</p><p>Analogously it can be easily shown that</p><formula xml:id="formula_9" coords="2,105.91,261.32,191.18,57.95">⎧ ⎪ ⎪ ⎨ ⎪ ⎪ ⎩ ϕ n k (x) , ϕ m h (x) = δ nm δ kh , ϕ n k (x) , ϕ m h (x) = δ nm δ kh , ψ n k (x) , ψ m h (x) = δ nm δ kh ,<label>(6)</label></formula><p>all other products of the scaling and wavelet functions (with the conjugate wavelets as well) being zero.</p><p>A characteristic feature of harmonic wavelets is that <ref type="bibr" coords="2,283.12,348.06,10.47,9.29" target="#b7">[8]</ref>, <ref type="bibr" coords="2,56.51,359.89,11.50,9.29" target="#b8">[9]</ref> Theorem 2.1: Harmonic wavelets are orthogonal to the set of functions {e 2πm i x } and {e -2 m+1 π i x }:</p><formula xml:id="formula_10" coords="2,80.10,399.92,20.69,13.14">ϕ n k (x</formula><p>) , e 2πm i x = 0 , ψ n k (x) , e 2πm i x = 0 and ϕ n k (x) , e -2 m+1 π i x = 0 , ψ n k (x) , e -2 m+1 πm i x = 0 with m ∈ N N N . Analogously for the conjugate bases</p><formula xml:id="formula_11" coords="2,56.51,467.00,81.90,22.55">ϕ n k (x), ψ n k (x). Proof: (Abridged)</formula><p>The Fourier transform of the harmonic basis is:</p><formula xml:id="formula_12" coords="2,130.21,509.26,93.19,10.48">e 2πm ix = δ(ω -2mπ)</formula><p>so that by performing the scalar product in the Fourier domain we have</p><formula xml:id="formula_13" coords="2,66.11,553.55,226.22,71.06">ϕ n k (x) , e 2πm ix = 2π ∞ -∞ 2 -n/2 2π e -iωk/2 n χ(2π + ω/2 n )δ(ω -2mπ) dω = 2 -n/2 e -i2mπk/2 n χ(2π + 2m/2 n ) . . .</formula><p>For the second formula ψ n k (x) , e 2πm i x = 0, according to (2), we have</p><formula xml:id="formula_14" coords="2,65.81,659.82,221.98,52.48">ψ n k (x) , e 2πm ix = 2π ∞ -∞ 2 -n/2 2π e -iωk/2 n χ(ω/2 n )δ(ω -2mπ) dω . . .</formula><p>As a consequence, Theorem 2.2: For any function u(x) : R R R → C C C, periodic with period 1, and such that</p><formula xml:id="formula_15" coords="2,314.91,125.13,240.57,64.42">u(x) = -1 + m∈N N N a m e 2πmix + b m e -2 m+1 πix (7) (with a m ∈ C C C , b m ∈ C C C ; N N N = 1, 2, . . .) there results ϕ n k (x) , u(x) = 0 , ψ n k (x) , u(x) = 0 .</formula><p>Analogously we get some vanishing inner products by the conjugate wavelet basis.</p><formula xml:id="formula_16" coords="2,324.77,233.04,94.21,10.60">Let us call L 1 ([0, 1], C C</formula><p>C) the space of periodic function, with period 1, represented by <ref type="bibr" coords="2,437.63,245.27,10.47,9.29" target="#b6">(7)</ref>.</p><p>Special cases of ( <ref type="formula" coords="2,397.02,257.27,3.83,9.29">7</ref>) are related to the Fourier series</p><formula xml:id="formula_17" coords="2,372.37,274.89,125.14,25.95">u * (x) = -1 + m∈N N N a m e 2πmix</formula><p>or to the self-similar Weierstrass-Mandelbrot function <ref type="bibr" coords="2,541.51,306.99,10.47,9.29" target="#b7">[8]</ref>,</p><formula xml:id="formula_18" coords="2,314.91,318.83,178.88,54.25">[9] u * * (x) = m∈N N N b m e -2 m+1 πix with (b m = b -mH , b ∈ R R R, b &gt; 1, H &gt; 1).</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Harmonic wavelet reconstruction</head><formula xml:id="formula_19" coords="2,324.77,412.79,85.14,11.02">Let f (x) ∈ L 2 (R R R, C C C)</formula><p>, so that its reconstruction in terms of harmonic wavelets is given by (see e.g. <ref type="bibr" coords="2,490.14,425.44,10.47,9.29" target="#b4">[5]</ref>, <ref type="bibr" coords="2,507.56,425.44,15.77,9.29" target="#b20">[21]</ref>)</p><formula xml:id="formula_20" coords="2,331.27,450.61,224.20,64.96">f (x) = ∞ k=-∞ α k ϕ 0 k (x) + ∞ n=0 ∞ k=-∞ β n k ψ n k (x) + ∞ k=-∞ α * k ϕ 0 k (x) + ∞ n=0 ∞ k=-∞ β * n k ψ n k (x)<label>(8)</label></formula><p>which involves the basis and its conjugate as well. By taking into account the orthonormality of the basis functions the wavelet coefficients can be computed as</p><formula xml:id="formula_21" coords="2,324.47,555.73,231.00,126.68">⎧ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎨ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎩ α k = f (x), ϕ 0 k (x) = ∞ -∞ f (x)ϕ 0 k (x)dx α * k = f (x), ϕ 0 k (x) = ∞ -∞ f (x)ϕ 0 k (x)dx β n k = f (x), ψ n k (x) = ∞ -∞ f (x)ψ n k (x)dx β * n k = f (x), ψ n k (x) = ∞ -∞ f (x)ψ n k (x)dx<label>(9)</label></formula><p>or, according to (2),( <ref type="formula" coords="2,405.29,688.62,3.49,9.29" target="#formula_6">4</ref>), with equivalent formulas in the Fourier domain:</p><formula xml:id="formula_22" coords="3,69.29,81.50,223.11,134.82">⎧ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎨ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎩ α k = 2π 0 f (ω)e iωk dω α * k = 2π 0 f (ω)e -iωk dω β n k = 2 -n/2 2 n+2 π 2 n+1 π f (ω)e iωk/2 n dω β * n k = 2 -n/2 2 n+2 π 2 n+1 π f (ω)e -iωk/2 n dω , (<label>10</label></formula><formula xml:id="formula_23" coords="3,55.94,146.50,240.57,90.44">) being f (x) = f (-ω) .</formula><p>The wavelet approximation is obtained by fixing the upper-lower limits in the series expansion <ref type="bibr" coords="3,230.37,251.31,10.47,9.29" target="#b7">(8)</ref>, so that with N &lt; ∞ , M &lt; ∞ we have</p><formula xml:id="formula_24" coords="3,60.87,280.24,239.27,66.43">Π N,M 2 f (x) = M k=0 α k ϕ 0 k (x) + N n=0 M k=-M β n k ψ n k (x) + M k=0 α * k ϕ 0 k (x) + N n=0 M k=-M β * n k ψ n k (x) .</formula><p>(11) The operator Π N,M 2 f (x) gives the projection, by the equations (9), of the function f (x) into a given scale approximation so that <ref type="bibr" coords="3,117.26,381.97,16.43,9.29" target="#b20">[21]</ref> lim</p><formula xml:id="formula_25" coords="3,100.16,399.22,148.69,17.05">N →∞ ,M →∞ f (x) -Π N M f (x) = 0</formula><p>If we apply the Fourier transform to the last equation, by defining</p><formula xml:id="formula_26" coords="3,55.94,447.99,220.16,101.13">f N M (ω) def = [Π N M f (x)] , we get f N M (ω) = M k=0 α k ϕ 0 k (ω) + N n=-N M k=-M β n k ψ n k (ω) + M k=0 α * k ϕ 0 k (ω) + N n=-N M k=-M β * n k ψ n k (ω)</formula><p>and, according to (2),</p><formula xml:id="formula_27" coords="3,60.87,573.59,233.21,137.67">f N M (ω) = 1 2π χ(2π + ω) M k=0 α k e -iωk + N n=0 2 -n/2 2π χ(2π + ω/2 n ) M k=-M β n k e -iωk/2 n + 1 2π χ(2π + ω) M k=0 α * k e iωk + N n=0 2 -n/2 2π χ(2π + ω/2 n ) M k=-M β * n k e iωk/2 n</formula><p>and for a real function</p><formula xml:id="formula_28" coords="3,314.33,100.15,240.98,173.23">f N M (ω) = 1 2π χ(2π + ω) M k=0 α k e -iωk + e iωk + N n=0 2 -n/2 2π χ(2π + ω/2 n ) M k=-M β n k e -iωk/2 n + e iωk/2 n that is, f N M (ω) = 1 2π χ(2π + ω) M k=0 α k cos(ωk) + N n=0 2 -n/2 π χ(2π + ω/2 n ) M k=-M β n k cos(ωk/2 n ) (12)</formula><p>This equation, it is interesting because it leads us quite naturally towards deterministic fractals (as shown in <ref type="bibr" coords="3,521.42,292.42,10.47,9.29" target="#b7">[8]</ref>, <ref type="bibr" coords="3,537.65,292.42,10.35,9.29" target="#b8">[9]</ref>). In fact, in a finite interval, let say 0 ≤ ω ≤ 2π, it is</p><formula xml:id="formula_29" coords="3,349.60,324.64,170.05,30.82">f N M (ω) = 1 2π χ(π + ω) M k=0 α k cos(ωk)</formula><p>and by the substitution</p><formula xml:id="formula_30" coords="3,368.07,378.84,133.09,12.17">α k → λ kH , k → 2 k , M → ∞</formula><p>we obtain the Weierstrass function</p><formula xml:id="formula_31" coords="3,319.26,413.09,250.18,49.52">f (x) def = ∞ k=0 a k cos 2πb k x , 0 &lt; a &lt; 1 , b = 2h + 1 &gt; 1 , ab &gt; 1 + 3 2 π , h ∈ N N N .</formula><p>Therefore the Weierstrass function is a special case of the harmonic wavelet reconstruction in the Fourier domain. This implies the following comments: 1) harmonic wavelets (1) have some kind of fractal behaviour 2) some fractal-like functions, as the Weierstrass function can be reconstructed by harmonic wavelets 3) Weierstrass function is a special case of the harmonic wavelet series. Thus suggesting us that formula (12) (for real functions) and the previous for complex functions can be used to define some other kind of fractals. It can be easily seen that the above includes also the so-called Cellérier functions</p><formula xml:id="formula_32" coords="3,338.34,627.21,178.82,80.93">∞ n=0 a n e iω n x , |a| &lt; 1 , ω ∈ R R R also known in the form ∞ n=1 a -n sin(a n x) , a &gt; 1 .</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Orthogonal wavelet decomposition of L 1 ∪L 2</head><p>According to theorem 2 we have that Theorem 4.1:</p><formula xml:id="formula_33" coords="4,108.43,115.56,184.55,36.18">For each u(x) ∈ L 1 ([0, 1], C C C) it is Π N,M 2 u(x) = 0 , ∀N, M ∈ N N N (<label>13</label></formula><formula xml:id="formula_34" coords="4,292.99,140.38,4.11,9.29">)</formula><p>As a consequence we have the following Theorem 4.2 (Orthogonal decomposition of</p><formula xml:id="formula_35" coords="4,56.52,191.23,240.58,107.16">L 1 ∪ L 2 ): Let f (x) ∈ L 1 ([0, 1], C C C) ∪ L 2 (R R R, C C C), we can decompose f (x) in the direct sum of orthogonal functions f (x) = f 1 (x) + f 2 (x) , f 1 (x), f 2 (x) = 0 with f 1 (x) = f (x) -Π N,M 2 f (x) , f 1 (x) ∈ L 1 ([0, 1], C C C)</formula><p>and</p><formula xml:id="formula_36" coords="4,66.39,325.55,192.03,50.96">f 2 (x) = Π N,M 2 f (x) , f 2 (x) ∈ L 2 (R R R, C C C) Since Π N,M 2 f (x)</formula><p>gives only the approximation into a given scale, the decomposition will improve by letting N ,M go to infinity. As a first example, let us consider a noised signal (Fig. <ref type="figure" coords="4,314.92,86.21,7.01,9.29" target="#fig_0">1,</ref><ref type="figure" coords="4,321.93,86.21,3.51,9.29">a</ref></p><formula xml:id="formula_37" coords="4,314.92,86.21,238.64,90.74">), ⎧ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎨ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎩ f (x) = f 1 (x) + f 2 (x) f 1 (x) = 1 60 -1 + 8 k=0 2 k e 2kπix + 6 k=0 2 k e -2 k+1 πix f 2 (x) = e -x 2</formula><p>from which we have to separate the smooth localized pulse. According to theorems 2.1,2,3 it is (see Fig. <ref type="figure" coords="4,513.96,196.19,7.26,9.29" target="#fig_0">1,</ref><ref type="figure" coords="4,521.22,196.19,7.26,9.29">b,</ref><ref type="figure" coords="4,528.48,196.19,7.26,9.29">c,</ref><ref type="figure" coords="4,535.74,196.19,3.63,9.29">d</ref>, at different scale approximations)</p><formula xml:id="formula_38" coords="4,322.77,224.16,224.88,18.13">f 2 (x) ∼ = Π N,M 2 f (x) , f 2 (x) = lim N →∞,M →∞ Π N,M 2 f (x)</formula><p>As a second example, let us consider the signal (see Fig. <ref type="figure" coords="4,314.92,261.78,7.53,9.29" target="#fig_1">2,</ref><ref type="figure" coords="4,322.45,261.78,3.77,9.29">a</ref>)</p><formula xml:id="formula_39" coords="4,371.73,264.07,120.84,81.13">⎧ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎨ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎩ f (x) = f 1 (x) + f 2 (x) f 1 (x) = cos 2πx f 2 (x) = 1 60 ϕ 6 0 (x)</formula><p>where the problem is to extract the localized high oscillating function</p><formula xml:id="formula_40" coords="4,352.64,358.61,136.07,14.38">f 2 (x). It is f 2 (x) ∼ = Π N,M 2 f (x)</formula><p>; already at the lower scale N = M = 0 we can single out the localized pulse (Fig. <ref type="figure" coords="4,361.55,385.31,7.23,9.29" target="#fig_1">2,</ref><ref type="figure" coords="4,368.78,385.31,3.62,9.29">b</ref>). As a third example, let us consider the signal (Fig. <ref type="figure" coords="4,535.57,573.64,7.53,9.29" target="#fig_2">3,</ref><ref type="figure" coords="4,543.10,573.64,3.77,9.29">a</ref>)</p><formula xml:id="formula_41" coords="4,371.73,584.33,120.84,73.76">⎧ ⎪ ⎪ ⎪ ⎪ ⎪ ⎨ ⎪ ⎪ ⎪ ⎪ ⎪ ⎩ f (x) = f 1 (x) + f 2 (x) f 1 (x) = 1 20 sin 2πx f 2 (x) = r(x)</formula><p>r(x) being a random function. Here the problem consists to extract the periodic function f 1 (x). The small amplitude smooth function f 1 (x) is obtained by f 1 (x) = f (x) -Π 2,5 2 f (x) (Fig. <ref type="figure" coords="4,378.02,701.66,7.23,9.29" target="#fig_2">3,</ref><ref type="figure" coords="4,385.25,701.66,3.62,9.29">b</ref>). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion</head><p>In this paper it is given a sparse representation of a noised signal into a periodic part and a pulse (localized in the origin). It has been proven that harmonic wavelets are orthogonal to the Fourier basis, so that a suitable orthogonal decomposition of the space was proposed (even if at a certain scale approximation). However, it should be noticed that the decomposition theorem 2 holds for the L 1 ([0, 1], C C C), that is for the periodic functions with period 1. In order to generalize this theorem to T -periodic functions L 1 ([0, T ], C C C) one has to consider the more general harmonic wavelet basis:</p><formula xml:id="formula_42" coords="5,74.11,383.85,156.89,54.25">⎧ ⎪ ⎪ ⎪ ⎨ ⎪ ⎪ ⎪ ⎩ ϕ n k (x) def = 2 n/2 e T i (2 n x-k) -1 T i(2 n x -k) ,</formula><p>ψ n k (x) def = 2 n/2 e 2T i(2 n x-k)e T i(2 n x-k) T i(2 n xk) ,</p><p>The sparse representation can be further generalized to digital signals by using the Newland discrete transform <ref type="bibr" coords="5,277.58,464.57,15.12,9.29" target="#b20">[21]</ref>.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="4,56.52,674.01,240.57,10.82;4,56.52,685.84,240.57,10.82;4,56.52,698.63,7.40,9.86;4,63.92,696.12,10.21,6.90;4,63.92,703.49,3.93,6.90;4,74.62,697.68,45.78,10.82;4,120.40,696.12,10.20,6.90;4,120.40,703.49,3.93,6.90;4,131.10,697.68,46.34,10.82;4,177.43,696.12,10.20,6.90;4,177.43,703.49,3.93,6.90;4,188.13,698.63,21.95,9.86"><head>Figure 1</head><label>1</label><figDesc>Figure 1. a) A noised signal f (x) and the harmonic wavelet projection of f (x) at different approximations b) Π 0,0 2 f (x) ; c) Π 0,2 2 f (x) ; d) Π 4,6 2 f (x).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="4,314.92,535.88,240.57,10.82;4,314.92,547.71,88.48,10.82;4,403.40,546.15,10.21,6.90;4,403.40,553.52,3.93,6.90;4,414.10,548.67,21.93,9.86"><head>Figure 2</head><label>2</label><figDesc>Figure 2. a) A noised signal f (x) ; b) the harmonic wavelet projection Π 0,0 2 f (x).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="5,55.91,196.78,240.57,10.82;5,55.91,208.62,124.80,11.56;5,180.71,207.05,10.21,6.90;5,180.71,214.42,3.93,6.90;5,191.42,209.58,21.93,9.86"><head>Figure 3</head><label>3</label><figDesc>Figure 3. a) A noised signal f (x) ; b) the smooth function as f 1(x) = f (x) -Π 2,52 f (x).</figDesc></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="5,71.20,512.55,225.28,10.29;5,71.20,524.19,185.00,8.51" xml:id="b0">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Abry</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Goncalves</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Évy-V Éhel</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename></persName>
+		</author>
+		<title level="m">Lois d&apos;éschelle, Fractales et ondelettes</title>
+		<imprint>
+			<publisher>Hermes</publisher>
+			<date type="published" when="2002">2002</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,71.20,541.77,225.19,10.29;5,71.20,553.42,225.29,8.51;5,71.20,563.43,83.09,8.36" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Wavelet Transform of Multifractals</title>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Arn Éado</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Grasseau</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Holschneider</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Phys. Review Letters</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="2281" to="2284" />
+			<date type="published" when="1988">1988</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,71.20,582.79,225.18,8.36;5,71.20,592.65,225.19,8.36;5,71.20,602.37,225.29,8.51;5,71.20,612.23,76.45,8.51" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">On the chirp decomposition of Weierstrass–Mandelbrot functions, and their time–frequency interpretation</title>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Borgnat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Patrick</forename><surname>Flandrin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/s1063-5203(03)00047-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Applied and Computational Harmonic Analysis</title>
+		<title level="j" type="abbrev">Applied and Computational Harmonic Analysis</title>
+		<idno type="ISSN">1063-5203</idno>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="134" to="146" />
+			<date type="published" when="2003-09">2003</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,71.20,631.74,225.18,8.36;5,71.20,641.60,225.18,8.36;5,71.20,651.31,225.29,8.51;5,71.20,661.18,96.54,8.51" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Practical Time-Frequency Analysis - Gabor and Wavelet Transforms with an Implementation in S</title>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Carmona</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W.-L</forename><surname>Hwang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">B</forename><surname>Torresani</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/s1874-608x(98)x8024-6</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Wavelet Analysis and its Applications</title>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="1998">1998</date>
+			<biblScope unit="volume">9</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,71.20,680.69,225.18,8.36;5,71.20,690.40,225.29,8.51;5,71.20,700.26,100.25,8.51" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Harmonic wavelets towards the solution of nonlinear PDE</title>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Cattani</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.camwa.2005.07.001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Mathematics with Applications</title>
+		<title level="j" type="abbrev">Computers &amp; Mathematics with Applications</title>
+		<idno type="ISSN">0898-1221</idno>
+		<imprint>
+			<biblScope unit="volume">50</biblScope>
+			<biblScope unit="issue">8-9</biblScope>
+			<biblScope unit="page" from="1191" to="1210" />
+			<date type="published" when="2005-10">2005</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,329.58,73.12,225.19,8.36;5,329.58,82.84,225.24,8.51;5,329.58,92.85,25.87,8.36" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Shannon Wavelets Theory</title>
+		<author>
+			<persName coords=""><forename type="first">Carlo</forename><surname>Cattani</surname></persName>
+		</author>
+		<idno type="DOI">10.1155/2008/164808</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mathematical Problems in Engineering</title>
+		<title level="j" type="abbrev">Mathematical Problems in Engineering</title>
+		<idno type="ISSN">1024-123X</idno>
+		<idno type="ISSNe">1563-5147</idno>
+		<imprint>
+			<biblScope unit="volume">2008</biblScope>
+			<biblScope unit="page" from="1" to="24" />
+			<date type="published" when="2008">2008. 2008</date>
+			<publisher>Hindawi Limited</publisher>
+		</imprint>
+	</monogr>
+	<note>24 pages</note>
+</biblStruct>
+
+<biblStruct coords="5,329.58,112.43,225.25,8.51;5,329.58,122.29,225.28,8.51;5,329.58,132.30,225.20,8.36;5,329.58,142.01,120.21,8.51" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Wavelet and Wave Analysis as Applied to Materials with Micro or Nanostructure</title>
+		<author>
+			<persName><forename type="first">Carlo</forename><surname>Cattani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jeremiah</forename><surname>Rushchitsky</surname></persName>
+		</author>
+		<idno type="DOI">10.1142/6497</idno>
+	</analytic>
+	<monogr>
+		<title level="s">Series on Advances in Mathematics for Applied Sciences</title>
+		<idno type="ISSN">1793-0901</idno>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<date type="published" when="2007-09">2007</date>
+			<publisher>WORLD SCIENTIFIC</publisher>
+			<pubPlace>Singapore</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,329.58,161.89,225.19,8.36;5,329.58,171.60,225.28,8.51;5,329.58,181.47,89.29,8.51" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Harmonic wavelet approximation of random, fractal and high frequency signals</title>
+		<author>
+			<persName coords=""><forename type="first">Carlo</forename><surname>Cattani</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11235-009-9208-3</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Telecommunication Systems</title>
+		<title level="j" type="abbrev">Telecommun Syst</title>
+		<idno type="ISSN">1018-4864</idno>
+		<idno type="ISSNe">1572-9451</idno>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="issue">3-4</biblScope>
+			<biblScope unit="page" from="207" to="217" />
+			<date type="published" when="2009-09-04">2009</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+	<note>to appear on Telecommunication Systems</note>
+</biblStruct>
+
+<biblStruct coords="5,329.58,201.34,225.19,8.36;5,329.58,211.06,225.24,8.51;5,329.58,220.92,90.05,8.51" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Wavelet Based Approach to Fractals and Fractal Signal Denoising</title>
+		<author>
+			<persName coords=""><forename type="first">Carlo</forename><surname>Cattani</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-642-10649-1_9</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Transactions on Computational Science VI</title>
+		<imprint>
+			<publisher>Springer Berlin Heidelberg</publisher>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="143" to="162" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,240.80,220.76,8.36;5,329.58,250.66,225.20,8.36;5,329.58,260.37,168.47,8.51" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Time-scale analysis of abrupt changes corrupted by multiplicative noise</title>
+		<author>
+			<persName><forename type="first">Marie</forename><surname>Chabert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jean-Yves</forename><surname>Tourneret</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Francis</forename><surname>Castanie</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/s0165-1684(99)00139-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Signal Processing</title>
+		<title level="j" type="abbrev">Signal Processing</title>
+		<idno type="ISSN">0165-1684</idno>
+		<imprint>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="397" to="411" />
+			<date type="published" when="2000-03">2000</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,280.10,220.81,8.51;5,329.58,290.11,68.09,8.36" xml:id="b10">
+	<monogr>
+		<title level="m" type="main">An Introduction to Wavelets</title>
+		<author>
+			<persName coords=""><forename type="first">C</forename><forename type="middle">K</forename><surname>Chui</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+			<publisher>Academic Press</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,309.69,220.81,8.51;5,329.58,319.70,62.32,8.36" xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Ten Lectures on Wavelets</title>
+		<author>
+			<persName coords=""><forename type="first">Ingrid</forename><surname>Daubechies</surname></persName>
+		</author>
+		<idno type="DOI">10.1137/1.9781611970104</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Ten Lectures on wavelets</title>
+		<meeting><address><addrLine>Philadelphia, PA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Society for Industrial and Applied Mathematics</publisher>
+			<date type="published" when="1992-01">1992</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,339.43,220.75,8.36;5,329.58,349.14,182.10,8.51" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Wavelets on Fractals</title>
+		<author>
+			<persName><forename type="first">Dorin</forename><surname>Dutkay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Palle</forename><surname>Jorgensen</surname></persName>
+		</author>
+		<idno type="DOI">10.4171/rmi/452</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Revista Matemática Iberoamericana</title>
+		<title level="j" type="abbrev">Rev. Mat. Iberoamericana</title>
+		<idno type="ISSN">0213-2230</idno>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="131" to="180" />
+			<date type="published" when="2006">2006</date>
+			<publisher>European Mathematical Society - EMS - Publishing House GmbH</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,368.87,220.79,8.51;5,329.58,378.73,225.29,8.51;5,329.58,388.74,59.54,8.36" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Analysis and Probability Wavelets, Signals, Fractals</title>
+		<author>
+			<persName coords=""><forename type="first">P</forename><forename type="middle">E T</forename><surname>Jorgensen</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-0-387-33082-2</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Analysis and Probability, Wavelets, Signals, Fractals</title>
+		<title level="s">Graduate Texts in Mathematics</title>
+		<imprint>
+			<publisher>Springer New York</publisher>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="volume">234</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,406.58,220.79,10.30;5,329.58,418.23,225.29,8.51;5,329.58,428.09,97.84,8.51" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">a Family of Random Waveform Models for Audio Coding</title>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Kowalski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Torresani</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/icassp.2006.1660693</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2006 IEEE International Conference on Acoustics Speed and Signal Processing Proceedings</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2006">2006</date>
+			<biblScope unit="volume">III</biblScope>
+			<biblScope unit="page" from="57" to="60" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,446.03,220.79,10.30;5,329.58,457.83,225.19,8.36;5,329.58,467.55,225.27,8.51;5,329.58,477.56,42.15,8.36" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Random Models for Sparse Signals Expansion on Unions of Bases With Application to Audio Signals</title>
+		<author>
+			<persName><forename type="first">Matthieu</forename><surname>Kowalski</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bruno</forename><surname>Torresani</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/tsp.2008.920144</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Signal Processing</title>
+		<title level="j" type="abbrev">IEEE Trans. Signal Process.</title>
+		<idno type="ISSN">1053-587X</idno>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="3468" to="3481" />
+			<date type="published" when="2008-08">2008</date>
+			<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.01,497.13,220.84,8.51;5,329.58,507.14,47.71,8.36" xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Wavelet bases</title>
+		<author>
+			<persName coords=""><forename type="first">Stéphane</forename><surname>Mallat</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/b978-012466606-1/50009-x</idno>
+	</analytic>
+	<monogr>
+		<title level="m">A Wavelet Tour of Signal Processing</title>
+		<imprint>
+			<publisher>Elsevier</publisher>
+			<date type="published" when="1998">1998</date>
+			<biblScope unit="page" from="220" to="320" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.01,526.72,220.84,8.51;5,329.58,536.73,25.87,8.36" xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Ondelettes, filtres miroirs en quadrature et traitement numerique de l&apos;image</title>
+		<author>
+			<persName coords=""><forename type="first">Yves</forename><surname>Meyer</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/bfb0083512</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Les Ondelettes en 1989</title>
+		<editor>
+			<persName><forename type="first">T</forename><forename type="middle">I</forename><surname>Hermann</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">Ed</forename></persName>
+		</editor>
+		<meeting><address><addrLine>Paris</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer Berlin Heidelberg</publisher>
+			<date type="published" when="1990">1990</date>
+			<biblScope unit="page" from="14" to="25" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,556.46,220.76,8.36;5,329.58,566.17,119.16,8.51" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Real-valued harmonic wavelets</title>
+		<author>
+			<persName><forename type="first">Hideaki</forename><surname>Mouri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hiroto</forename><surname>Kubotani</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/0375-9601(95)00210-t</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physics Letters A</title>
+		<title level="j" type="abbrev">Physics Letters A</title>
+		<idno type="ISSN">0375-9601</idno>
+		<imprint>
+			<biblScope unit="volume">201</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="53" to="60" />
+			<date type="published" when="1995-05">1995</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,586.05,220.75,8.36;5,329.58,595.76,225.29,8.51;5,329.58,605.77,60.03,8.36" xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Galerkin modelling of the Burgers equation using harmonic wavelets</title>
+		<author>
+			<persName coords=""><forename type="first">S</forename><forename type="middle">V</forename><surname>Muniandy</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">I</forename><forename type="middle">M</forename><surname>Moroz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/s0375-9601(97)00639-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physics Letters A</title>
+		<title level="j" type="abbrev">Physics Letters A</title>
+		<idno type="ISSN">0375-9601</idno>
+		<imprint>
+			<biblScope unit="volume">235</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="352" to="356" />
+			<date type="published" when="1997-11">1997</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,625.50,47.06,8.36;5,396.45,625.50,18.73,8.36;5,430.56,625.50,35.48,8.36;5,481.41,625.50,27.20,8.36;5,523.97,625.50,30.81,8.36;5,329.58,635.21,154.75,8.51" xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Harmonic wavelet analysis</title>
+		<author>
+			<persName coords=""><forename type="first">D</forename><forename type="middle">E</forename><surname>Newland</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rspa.1993.0140</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the Royal Society of London. Series A: Mathematical and Physical Sciences</title>
+		<title level="j" type="abbrev">Proc. R. Soc. Lond. A</title>
+		<idno type="ISSN">0962-8444</idno>
+		<idno type="ISSNe">2053-9177</idno>
+		<imprint>
+			<biblScope unit="volume">443</biblScope>
+			<biblScope unit="issue">1917</biblScope>
+			<biblScope unit="page" from="203" to="225" />
+			<date type="published" when="1993-10-08">1993</date>
+			<publisher>The Royal Society</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,655.09,220.74,8.36;5,329.58,664.80,125.72,8.51" xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Wavelets and signal processing</title>
+		<author>
+			<persName coords=""><forename type="first">O</forename><surname>Rioul</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Vetterli</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/79.91217</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Signal Processing Magazine</title>
+		<title level="j" type="abbrev">IEEE Signal Process. Mag.</title>
+		<idno type="ISSN">1053-5888</idno>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="14" to="38" />
+			<date type="published" when="1991-10">1991</date>
+			<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,334.03,684.53,220.78,8.51;5,329.58,694.39,141.04,8.51" xml:id="b22">
+	<analytic>
+		<title level="a" type="main">&lt;i&gt;Signal Processing with Fractals: A Wavelet Based Approach&lt;/i&gt;</title>
+		<author>
+			<persName><forename type="first">Gregory</forename><forename type="middle">W</forename><surname>Wornell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><forename type="middle">F</forename><surname>Gaumond</surname></persName>
+		</author>
+		<idno type="DOI">10.1121/1.424548</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of the Acoustical Society of America</title>
+		<idno type="ISSN">0001-4966</idno>
+		<idno type="ISSNe">1520-8524</idno>
+		<imprint>
+			<biblScope unit="volume">105</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="18" to="18" />
+			<date type="published" when="1996">1996</date>
+			<publisher>Acoustical Society of America (ASA)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Fuzzy logic based MPPT control for a PV system using SEPIC converter</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName coords="1,74.78,87.66,70.21,8.96"><forename type="first">Moulay</forename><surname>Abdellah</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,147.56,87.66,43.67,8.96;1,264.77,87.66,81.83,8.96"><forename type="first">Alhachemi</forename><forename type="middle">Mohammed</forename><surname>Habbab</surname></persName>
+							<email>alhachemi.abdellah@univ-bechar.dzhabbab.mohamed@univ-bechar.dzhazzab.abdeldjebar@etsmtl.ca</email>
+						</author>
+						<author>
+							<persName coords="1,437.47,87.66,82.04,8.96"><forename type="first">Abdeldjebar</forename><surname>Hazzab</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,99.86,162.18,66.26,8.96"><forename type="first">Mansour</forename><surname>Becahr</surname></persName>
+							<email>bechar.mensour@univ-bechar.dzhicham.gouabi.1@ens.etsmtl.ca</email>
+						</author>
+						<author>
+							<persName coords="1,273.89,162.18,63.45,8.96"><forename type="first">Hicham</forename><surname>Gouabi</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<orgName type="laboratory">Laboratory of CAOSEE Laboratoire de CAOSEE École de Technologie Supérieure Tahri Mohamed</orgName>
+								<orgName type="institution">Université</orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<orgName type="institution">Université Tahri Mohamed (ETS</orgName>
+								<address>
+									<addrLine>1100 Notre-dame Bechar</addrLine>
+									<settlement>Bechar, Montréal</settlement>
+									<country>Algeria, Algeria, Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<orgName type="laboratory">Laboratory of CAOSEE École de Technologie Supérieure Tahri Mohamed (ETS</orgName>
+								<orgName type="institution">Université</orgName>
+								<address>
+									<addrLine>1100 Notre-dame Bechar</addrLine>
+									<settlement>Montréal</settlement>
+									<country>Algeria, Canada</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Fuzzy logic based MPPT control for a PV system using SEPIC converter</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">4E6AC84E70F2150C99B450EDB7A3616B</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2024-02-03T16:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Fuzzy logic controller (FLC)</term>
+					<term>Maximum power point tracker (MPPT)</term>
+					<term>Photovoltaic (PV)</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>In this study, a novel single-ended primary inductor (SEPIC) converter-based fuzzy logic controller for maximum power point tracking is presented. By adding rules to the perturb and observing search strategy, the new controller enhances it while fuzzifying and removing its flaws. When compared to traditional maximum power point tracking techniques, fuzzy logic trackers enable an accurate and quick convergence to maximum power point under both steady-state and variable weather situations. The performance of the proposed maximum power point tracker is demonstrated in simulation.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>The non-renewable energy sources are rapidly running out, while the electricity demand is increasing daily. To solve this problem, efficient and efficient electric power generation from renewable energy sources is required <ref type="bibr" coords="1,197.47,471.83,10.66,8.96" target="#b0">[1]</ref>. Renewable energy is one of the forms of energy that society can rely on because It is unpolluted, pure, and has no limits. One type of power generation that uses renewable energy is the photovoltaic (PV) system <ref type="bibr" coords="1,76.90,524.75,10.66,8.96" target="#b1">[2]</ref>. To utilize less conventional energy, the PV system must subsequently be linked to the grid, either directly or via a backup battery bank. Since the power produced by PV systems depends on radiation and temperature change, the PV framework has destitute productivity, <ref type="bibr" coords="1,199.25,577.67,10.66,8.96" target="#b1">[2]</ref>.</p><p>For the control of the PV systems, there are different sorts of DC-DC converters such as Buck converters, Boost converters, and Buck-Boost converters. Due to its output pick-up adaptability, a single-ended primary-inductor converter (SEPIC) acts as a buck-boost DC/DC converter, where it changes its output voltage agreeing to its duty cycle. Unlike the customary buck-boost converter, the SEPIC converter includes a non-inverted output and it uses an arrangement capacitor to separate input from output <ref type="bibr" coords="1,167.91,708.73,10.66,8.96" target="#b2">[3]</ref>. The buck and buck-boost converters lose half of their input control due to input current arrangement exchange; for that reason, the two types of converters should be excluded from maximum power applications. The boost converter has a nonstop input current, but the output voltage is always bigger than the input, which may not accomplish maximum power exchange operation in a few cases, such as when the maximum voltage is less than the input <ref type="bibr" coords="1,336.14,325.29,10.67,8.96" target="#b2">[3]</ref>. This paper presents a fuzzy-based P&amp;O strategy for an MPPT standalone PV system. The proposed MPPT can abuse the preferences of the P&amp;O strategy and eliminate its drawbacks. Output has been separated into five fuzzy subsets. As the proposed strategy continuously exchanges maximum power from PV arrays, it optimizes the number of PV modules.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. MODELIGN OF PV SYSTEM</head><p>Photovoltaic is the technique and study connected to devices that directly convert sunlight into electricity utilizing photovoltaic semiconductors. Direct conversion of solar energy into DC electrical energy can be achieved by photovoltaic cells <ref type="bibr" coords="1,313.25,511.91,10.66,8.96" target="#b3">[4]</ref>. The photovoltaic panel is made up of numerous cells that are connected in series Ns or shunt Nsh. Where it may be mimicked by a current source coupled in parallel with a diode as described by and depicted in Figure <ref type="figure" coords="1,534.20,551.63,27.44,8.96" target="#fig_7">1 [5]</ref>. The following equations provide the output current:</p><formula xml:id="formula_0" coords="2,46.80,62.33,250.55,11.33">I = I ph -I D<label>(1)</label></formula><formula xml:id="formula_1" coords="2,46.80,86.41,171.54,19.35">I = I ph -I 0 [exp ( q(V+R s I) AK B T ) -1] - V+R s I R sh</formula><p>(2)</p><formula xml:id="formula_2" coords="2,46.80,117.79,251.73,69.84">I ph ∶ Photo -current A ∶ Ideality factor K B ∶ Constant of Boltzmann T ∶ Cell temperature I D ∶ Current via a diode R s ∶ Series resistance I 0 ∶ Current of Saturation q ∶ Electronic charge R sh ∶ Shunt resistance V ∶ Cell voltage I ∶ Current of cell</formula><p>The shunt resistance (R sh ) is typically orders of magnitude larger than the series resistance (R s ) <ref type="bibr" coords="2,213.41,215.22,10.66,8.96" target="#b5">[6]</ref>. Therefore, it is common for the shunt and series resistances of a solar cell can be neglected to simplify the model. The resulting ideal voltagecurrent characteristic of the solar cell is given by equation ( <ref type="formula" coords="2,284.45,255.09,3.58,8.96" target="#formula_3">3</ref>).</p><formula xml:id="formula_3" coords="2,46.80,266.46,251.99,17.37">I = I ph -I 0 [e ( qV KT ) -1]<label>(3)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. SEPIC CONVERTER</head><p>Power electronics researchers are working hard to create DC-DC converters with simpler designs and greater efficiency <ref type="bibr" coords="2,284.26,332.25,10.75,8.96" target="#b6">[7]</ref>. To maintain a constant output voltage, the suggested DC-to-DC converter employs a single-ended primary-inductor converter (SEPIC) architecture. The SEPIC converter is made up of a duty cycle switch S, a diode, two inductors (L1 and L2), two capacitors (C1 and C2), and a load resistor. Figure <ref type="figure" coords="2,248.46,398.37,4.98,8.96" target="#fig_1">2</ref> depicts the circuit diagram of a SEPIC converter. A SEPIC is a DC-DC converter <ref type="bibr" coords="2,88.88,424.91,10.66,8.96" target="#b7">[8]</ref>. SEPIC are DC-DC converters that can output voltages that are B, larger than, or equal to the input voltage. The duty cycle of the control transistor affects the SEPIC converter's output voltage. The SEPIC converter is two converters in one: a boost converter followed by a buck-boost converter. It has the advantages of having a non-inverted output (the output voltage has the same polarity as the input voltage) , using a series capacitor to couple energy from the input to the output (which makes it more responsive to short-circuits), and being able to shut down completely: when the switch "S" is turned off, the output voltage drops to 0 V, accompanied by a significant transient discharge of charge.   When the switch is turned on, the input inductor is charged from the source, and the second inductor is charged from the first capacitor. No energy is supplied to the load capacitor during this time. The inductor current and capacitor voltage polarities are marked in this Figure . When the power switch is turned off, the energy stored in the inductor is transferred. The energy stored is transferred through the diode and supplies the energy to the load <ref type="bibr" coords="2,391.60,449.15,15.45,8.96" target="#b9">[10]</ref>, as shown in Figure <ref type="figure" coords="2,496.31,449.15,3.82,8.96" target="#fig_2">3</ref>. b. The second inductor is also connected to the load during this time. The output capacitor sees a pulse of current during the off time, making it inherently noisier than a buck converter. The amount that the SEPIC converters increase or decrease the voltage depends primarily on the duty cycle and the parasitic elements in the circuit. The output of an ideal SEPIC converter is:</p><formula xml:id="formula_4" coords="2,313.25,540.90,251.86,17.88">V out = D 1-D V in<label>(4)</label></formula><p>A SEPIC converter is to process the electricity from the PV system. This converter either increases or decreases the PV system voltage at the load. The proposed SEPIC converter operates in buck mode.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. FUZZY LOGIC CONTROL</head><p>In the fuzzy logic maximum power point tracking (MPPT) algorithm, the voltage and current at each instant k are measured to calculate the active power. The active power is then compared with the power at the previous instant (k-1) to obtain the change in power (ΔP(k)). Similarly, the voltage at instant k is compared with the voltage at instant k-1 to obtain the voltage error (ΔV(k)) <ref type="bibr" coords="3,150.38,52.72,15.34,8.96" target="#b10">[11]</ref>. The power error is then divided by the current error to obtain the error (E). The error is then compared with the previous error to calculate the change in error (ΔE(k)). The error (E(k)) and the change in error (ΔE(k)) are then used as the crisp inputs to the fuzzy logic controller. The flow chart for the fuzzy logic MPPT algorithm is shown in Figure <ref type="figure" coords="3,76.52,132.06,3.76,8.96" target="#fig_4">4</ref>. In this work, the Mamdani inference technique, Atype membership functions, and a 25-element rule base were used for the fuzzy logic control. The Mamdani inference technique is efficient and straightforward in defining the fuzzy output sets, and it is more popular among researchers than other inference techniques <ref type="bibr" coords="3,147.50,198.18,15.42,8.96" target="#b11">[12]</ref>. The A-type or triangular membership function is used because it is simpler to split into low and high membership functions (MFs) than other membership functions. Additionally, it has been observed that the triangular membership function has a faster response and less overshoot than other functions <ref type="bibr" coords="3,186.14,264.33,15.45,8.96" target="#b12">[13]</ref>. A 25-element rule base was used because it has been shown to perform well <ref type="bibr" coords="3,258.29,277.53,31.97,8.96">[14][15]</ref>. The following are the fuzzy rules in Table <ref type="table" coords="3,228.53,654.14,3.71,8.96">1</ref>, which are used for the desired MPP of push-pull converter PWM. The membership for input variables (DPpv, DVpv) are shown in Figure <ref type="figure" coords="3,76.82,688.69,3.77,8.96" target="#fig_5">5</ref>, and the membership for output variable (DVpv*) is shown in Figure <ref type="figure" coords="3,112.42,700.21,3.78,8.96" target="#fig_6">6</ref>. All the functions are defined on a normalized interval [-1 1].   </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. SIMULATION RESULTS</head><p>The characteristics of the photovoltaic array that we use in this paper are given in Table <ref type="table" coords="4,163.56,323.85,3.71,8.96">2</ref>. Current at maximum power I max = 6.9 A Table <ref type="table" coords="4,80.61,502.07,4.98,8.96">3</ref> shows the SEPIC converter settings utilized in this study. The SEPIC converter is linked to the PV panel in the full model, and the duty cycle is regulated by the Fuzzy Logic Controller. The results are provided under standard test conditions; G=1000 W/m2; T=25°C and it is shown in figure <ref type="figure" coords="4,513.15,65.92,3.80,8.96" target="#fig_8">7</ref>.   Overall, using MPPT and fuzzy logic to a SEPIC converter for a PV system result in considerable performance gains. Increased power output, higher efficiency, decreased ripple, enhanced transient response, and resilience are examples of these enhancements.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table. 2. Electrical data</head><p>Ⅵ. CONCLUSIONS This paper presents the design of an off-grid photovoltaic system with a fuzzy logic MPPT-controlled push-pull boost converter. The proposed system was simulated in MATLAB/Simulink and tested under various weather conditions. The results showed that the fuzzy logic algorithm outperformed the conventional algorithms in terms of MPPT accuracy and minimization of fluctuations, regardless of rapid changes in irradiance.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="1,385.03,701.53,118.54,8.96;1,313.20,562.47,262.18,135.20"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Circuit for a PV array.</figDesc><graphic coords="1,313.20,562.47,262.18,135.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="2,69.86,683.90,215.77,8.96;2,56.90,594.40,241.05,85.49"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Simple circuit diagram of the SEPIC converter</figDesc><graphic coords="2,56.90,594.40,241.05,85.49" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="2,377.47,190.02,123.60,8.96;2,313.20,103.30,241.00,82.60"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3.a. The switch turned on.</figDesc><graphic coords="2,313.20,103.30,241.00,82.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="2,376.27,302.61,125.69,8.96;2,323.69,315.93,231.00,8.96;2,379.15,329.13,120.12,8.96;2,313.20,214.07,241.02,84.50"><head>Fig. 3 . 3 .</head><label>33</label><figDesc>Fig. 3.b. The switch turned off. Fig. 3. Equivalent circuit diagram of the SEPIC converter when the switch is on and off.</figDesc><graphic coords="2,313.20,214.07,241.02,84.50" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="3,52.68,619.70,53.36,8.96;3,131.03,619.70,161.54,8.96;3,151.10,631.22,43.15,8.96;3,46.80,320.88,252.23,281.90"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Fuzzy maximum power point tracking (MPPT) flow chart.</figDesc><graphic coords="3,46.80,320.88,252.23,281.90" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5" coords="3,359.11,711.85,160.20,8.96;3,313.20,488.94,251.09,220.60"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Membership for input variables.</figDesc><graphic coords="3,313.20,488.94,251.09,220.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6" coords="4,92.06,273.33,161.40,8.96;4,52.05,50.40,241.20,220.70"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. Membership for output variable.</figDesc><graphic coords="4,52.05,50.40,241.20,220.70" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7" coords="4,179.38,358.29,86.04,8.96;4,93.74,381.81,34.41,8.96;4,226.97,381.81,23.74,8.96;4,76.10,397.65,69.47,8.96;4,208.97,397.06,5.66,9.96;4,213.29,401.44,14.12,6.96;4,230.69,397.06,38.21,9.96;4,70.22,413.03,81.41,8.96;4,212.33,412.44,6.02,9.96;4,217.49,416.82,7.69,6.96;4,228.41,412.44,37.10,9.96;4,70.70,429.83,80.33,8.96;4,214.61,429.24,3.23,9.96;4,217.85,433.62,6.85,6.96;4,228.05,429.24,35.25,9.96;4,54.96,449.75,111.69,8.96;4,209.09,449.16,6.02,9.96;4,214.25,453.54,14.12,6.96;4,231.65,449.16,37.10,9.96"><head>1 V</head><label>1</label><figDesc>Short circuit current I sc = 200 AVoltage at maximum power V max = 29.3 V</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8" coords="4,404.47,273.57,69.32,8.96;4,313.90,284.40,250.60,198.00"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7.a. Current.</figDesc><graphic coords="4,313.90,284.40,250.60,198.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9" coords="4,403.63,486.47,71.10,8.96;4,313.20,497.35,252.63,193.70"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7.b. Voltage.</figDesc><graphic coords="4,313.20,497.35,252.63,193.70" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10" coords="4,407.35,695.17,63.78,8.96;4,316.49,708.37,245.19,8.96;4,399.55,721.57,79.43,8.96"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7.c. Power. Fig. 7. Voltage, current, and power output results; at G=1000 W/m2 and T=25°C.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" coords="3,314.21,66.16,249.76,177.10"><head>Table . 1</head><label>.</label><figDesc>. Fuzzy logic rules for the push-pull converter. NB, negative big; NS, negative small; ZE, zero; PS, positive small;</figDesc><table coords="3,318.89,89.10,236.83,154.16"><row><cell></cell><cell></cell><cell cols="2">PB, positive big.</cell><cell></cell><cell></cell><cell></cell></row><row><cell>∆Vpv*[o/p]</cell><cell></cell><cell></cell><cell cols="2">∆Vpv*[i/p]</cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell>NB</cell><cell>NS</cell><cell>ZE</cell><cell>PS</cell><cell>PB</cell></row><row><cell></cell><cell>NB</cell><cell>PS</cell><cell>NB</cell><cell>NB</cell><cell>NB</cell><cell>NS</cell></row><row><cell>∆Ppv*[i/p]</cell><cell>NS</cell><cell>PS</cell><cell>PS</cell><cell>NS</cell><cell>NS</cell><cell>NS</cell></row><row><cell></cell><cell>ZE</cell><cell>ZE</cell><cell>ZE</cell><cell>ZE</cell><cell>ZE</cell><cell>ZE</cell></row><row><cell></cell><cell>PS</cell><cell>NS</cell><cell>NS</cell><cell>PS</cell><cell>PS</cell><cell>PS</cell></row><row><cell></cell><cell>PB</cell><cell>NS</cell><cell>NB</cell><cell>PB</cell><cell>PB</cell><cell>PS</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" coords="4,69.98,566.51,200.45,149.75"><head>Table . 3</head><label>.</label><figDesc>. The SEPIC converter parameters.</figDesc><table coords="4,69.98,580.22,200.45,136.04"><row><cell>Variable</cell><cell>Value</cell></row><row><cell>Switching frequency</cell><cell>20 KH Z</cell></row><row><cell>Load resistance</cell><cell>R Load = 4.29 Ω</cell></row><row><cell>Inductance L1</cell><cell>L1 = 3.6 MH</cell></row><row><cell>Inductance L2</cell><cell>L2 = 0.9 MH</cell></row><row><cell>Capacitor C1</cell><cell>C1 = 180 µF</cell></row><row><cell>Capacitor C2</cell><cell>C2 = 6000 µF</cell></row></table></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="5,64.82,266.99,234.06,9.05;5,64.82,281.72,233.95,7.24;5,64.82,293.12,113.60,7.24" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Ant Colony Optimized Tuned DC-DC converter</title>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Mahendran</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">K</forename><forename type="middle">V</forename><surname>Kandaswamy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Computer Applications</title>
+		<imprint>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="45" to="50" />
+			<date type="published" when="2013">0975-8887. 2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,304.07,233.85,9.05;5,64.82,316.80,233.97,7.31;5,64.82,329.24,234.13,7.24;5,64.82,340.64,233.83,7.24;5,64.82,351.32,173.02,7.24" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Performance Comparison between ĆUK and SEPIC Converters for Maximum Power Point Tracking Using Incremental Conductance Technique in Solar Power Applications</title>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Dunia</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Mwinyiwiwa</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Electrical, Computer, Energetic, Electronic and Communication Engineering</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="2510" to="2517" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,362.27,233.94,9.05;5,64.82,375.08,234.05,7.24;5,64.82,387.44,233.99,7.24;5,64.82,398.84,113.23,7.24" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Growing Neural Gas (GNG)-Based Maximum Power Point Tracking for High-Performance Wind Generator With an Induction Machine</title>
+		<author>
+			<persName><forename type="first">Maurizio</forename><surname>Cirrincione</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marcello</forename><surname>Pucci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gianpaolo</forename><surname>Vitale</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/tia.2010.2102994</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Industry Applications</title>
+		<title level="j" type="abbrev">IEEE Trans. on Ind. Applicat.</title>
+		<idno type="ISSN">0093-9994</idno>
+		<imprint>
+			<biblScope unit="volume">47</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="861" to="872" />
+			<date type="published" when="2011-03">2011</date>
+			<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,409.79,234.04,9.05;5,64.82,422.74,234.02,7.24;5,64.82,433.30,233.93,7.24;5,64.82,443.86,158.27,7.24" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Modeling and Simulation of a Solar Photovoltaic System, Its Dynamics and Transient Characteristics in LABVIEW</title>
+		<author>
+			<persName><forename type="first">Musa</forename><surname>Abdulkadir</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><forename type="middle">S</forename><surname>Samosir</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ahn</forename><forename type="middle">H M</forename><surname>Yatim</surname></persName>
+		</author>
+		<idno type="DOI">10.11591/ijpeds.v3i2.2422</idno>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Power Electronics and Drive Systems (IJPEDS)</title>
+		<idno type="ISSN">2088-8694</idno>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="185" to="192" />
+			<date type="published" when="2013-06-22">2013</date>
+			<publisher>Institute of Advanced Engineering and Science</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,454.42,234.08,7.24;5,64.82,465.37,234.01,9.05;5,64.82,480.10,234.18,7.24;5,64.82,491.50,14.11,7.24" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Fuzzy Logic Space Vector Direct Torque Control of PMSM for Photovoltaic Water Pumping System</title>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Bouzeria</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Fetha</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Bahi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">I</forename><surname>Abadlia</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Layate</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Lekhchine</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.egypro.2015.07.812</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Energy Procedia</title>
+		<title level="j" type="abbrev">Energy Procedia</title>
+		<idno type="ISSN">1876-6102</idno>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="page" from="760" to="771" />
+			<date type="published" when="2015-08">2015</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,502.45,233.89,9.05;5,64.82,517.06,234.06,7.24;5,64.82,528.46,130.64,7.24" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Multi-Input Inverter for Grid-Connected Hybrid PV/Wind Power System</title>
+		<author>
+			<persName><forename type="first">Yaow-Ming</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuan-Chuan</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shih-Chieh</forename><surname>Hung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chung-Sheng</forename><surname>Cheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/tpel.2007.897117</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Power Electronics</title>
+		<title level="j" type="abbrev">IEEE Trans. Power Electron.</title>
+		<idno type="ISSN">0885-8993</idno>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1070" to="1077" />
+			<date type="published" when="2007-05">2007</date>
+			<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,539.41,233.94,9.05;5,64.82,554.14,234.10,7.24;5,64.82,565.54,233.90,7.24;5,64.82,576.10,107.36,7.24" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">A Maximum Power Point Tracker for PV Panels Using SEPIC Converter</title>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Ganesh</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Janani</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">G</forename><forename type="middle">B</forename><surname>Angel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Electrical, Computer, Energetic, Electronic and Communication Engineering</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="637" to="642" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,587.08,233.98,9.05;5,64.82,601.69,233.95,7.24;5,64.82,613.21,196.30,7.24" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Z Source Inverter for Photovoltaic System with Fuzzy Logic Controller</title>
+		<author>
+			<persName coords=""><forename type="first">R</forename><surname>Vijayabalan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Ravivarman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Power Electronics and Drive System (IJPEDS)</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="371" to="379" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,623.77,233.98,7.24;5,64.82,636.13,234.15,7.24;5,64.82,647.53,233.79,7.24;5,64.82,658.09,107.36,7.24" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Analysis of Single Phase AC-DC SEPIC Converter using Closed Loop Techniques</title>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Ramkumar</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Svs</forename><surname>Florence</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Advanced Research in Electrical, Electronics and Instrumentation Engineering</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="193" to="201" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,668.57,234.06,7.32;5,64.82,679.33,233.81,7.24;5,64.82,689.88,233.92,7.24;5,64.82,700.44,28.77,7.24" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Analysis of SEPIC for PV-Applications using PI Controller and Current Mode Control</title>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Tadi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><surname>Ramamurthyraju</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">International Journal for Scientific Research &amp; Development</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="175" to="180" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,64.82,711.39,233.98,9.05;5,64.82,724.20,233.97,7.24;5,331.27,52.23,233.80,7.24;5,331.27,62.79,197.16,7.24" xml:id="b10">
+	<analytic>
+		<title level="a" type="main">A novel stand-alone PV generation system based on variable step size INC MPPT and SVPWM control</title>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2009 IEEE 6th International Power Electronics and Motion Control Conference</title>
+		<meeting>the 2009 IEEE 6th International Power Electronics and Motion Control Conference<address><addrLine>Wuhan, China</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2009-05-20">17-20 May 2009</date>
+			<biblScope unit="page" from="2155" to="2160" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,331.27,73.74,234.05,9.05;5,331.27,88.49,234.07,7.24;5,331.27,99.89,153.29,7.24" xml:id="b11">
+	<monogr>
+		<title level="m" type="main">A Study of Membership Functions on Mamdani-Type Fuzzy Inference System for Industrial Decision-Making</title>
+		<author>
+			<persName coords=""><forename type="first">C</forename><surname>Wang</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+			<pubPlace>Bethlehem, PA, USA</pubPlace>
+		</imprint>
+		<respStmt>
+			<orgName>Lehigh University</orgName>
+		</respStmt>
+	</monogr>
+	<note type="report_type">Master&apos;s thesis</note>
+</biblStruct>
+
+<biblStruct coords="5,331.27,110.84,233.96,9.05;5,331.27,123.65,233.83,7.24;5,331.27,136.01,233.71,7.24;5,331.27,147.41,234.09,7.24;5,331.27,158.09,116.29,7.24" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Design and performance of solar tracking system with fuzzy logic controller used different membership functions</title>
+		<author>
+			<persName coords=""><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ö</forename><surname>Usta</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">İ</forename><forename type="middle">H</forename><surname>Akyazi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Altaş</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2011 7th International Conference on Electrical and Electronics Engineering (ELECO)</title>
+		<meeting>the 2011 7th International Conference on Electrical and Electronics Engineering (ELECO)<address><addrLine>Bursa, Turkey</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2011-12-04">1-4 December 2011</date>
+			<biblScope unit="page" from="381" to="385" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,447.56,158.09,117.78,7.24;5,331.27,168.65,234.07,7.24;5,331.27,179.21,63.93,7.24" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">A robust self-tuning scheme for PI- and PD-type fuzzy controllers</title>
+		<author>
+			<persName coords=""><forename type="first">R</forename><forename type="middle">K</forename><surname>Mudi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">N</forename><forename type="middle">R</forename><surname>Pal</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/91.746295</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Fuzzy Systems</title>
+		<title level="j" type="abbrev">IEEE Trans. Fuzzy Syst.</title>
+		<idno type="ISSN">1063-6706</idno>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="2" to="16" />
+			<date type="published" when="1999">1999</date>
+			<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,331.27,190.16,225.91,9.05;5,331.27,204.77,236.09,7.24;5,331.27,216.17,16.76,7.24" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">A robust self-tuning scheme for PI-and PDtype fuzzy controllers</title>
+		<author>
+			<persName coords=""><surname>Rk</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">N</forename><forename type="middle">R</forename><surname>Mudi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Pal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Fuzzy Systems</title>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="2" to="16" />
+			<date type="published" when="1999">1999</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="5,331.27,227.24,231.84,9.05;5,331.27,241.85,222.40,7.24;5,331.27,253.28,233.95,7.24;5,331.27,263.84,128.96,7.24" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Vibration Control of Active Vehicle Suspension System Using Fuzzy Logic Controller</title>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Shehata</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Metered</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Walid</forename><forename type="middle">A H</forename><surname>Oraby</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-09918-7_35</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Mechanisms and Machine Science</title>
+		<editor>
+			<persName><forename type="first">W</forename><forename type="middle">A</forename><surname>Oraby</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Berlin, Heidelberg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer International Publishing</publisher>
+			<date type="published" when="2015">2015</date>
+			<biblScope unit="page" from="389" to="399" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

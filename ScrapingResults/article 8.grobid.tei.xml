@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">A Low-Complexity Algorithm for Intrusion Detection in a PIR-Based Wireless Sensor Network</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName coords="1,105.35,130.42,51.70,9.50"><forename type="first">Abu</forename><surname>Sajana</surname></persName>
+						</author>
+						<author>
+							<persName coords="1,190.78,130.42,116.45,9.50;1,310.37,129.66,1.87,5.24"><forename type="first">Ramanathan</forename><surname>Subramanian</surname></persName>
+							<email>sramanathan@csa.iisc.ernet.in</email>
+							<affiliation key="aff3">
+								<orgName type="department">CSA Department</orgName>
+								<orgName type="institution">Indian Institute of Science Bangalore</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,336.37,130.42,57.80,9.50"><forename type="first">Vijay</forename><surname>Kumar</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">ECE Department</orgName>
+								<orgName type="institution">Indian Institute of Science Bangalore</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">CSA Department</orgName>
+								<orgName type="institution">Indian Institute of Science Bangalore</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,417.82,130.42,68.98,9.50"><forename type="first">Syam</forename><surname>Krishnan</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">ECE Department</orgName>
+								<orgName type="institution">Indian Institute of Science Bangalore</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,123.26,143.73,88.94,9.50"><forename type="first">Bharadwaj</forename><surname>Amrutur</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">ECE Department</orgName>
+								<orgName type="institution">Indian Institute of Science Bangalore</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,232.04,143.73,70.18,9.50"><forename type="first">Jeena</forename><surname>Sebastian</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">ECE Department</orgName>
+								<orgName type="institution">Indian Institute of Science Bangalore</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<address>
+									<addrLine>jeena_sebastian</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,322.06,143.73,60.89,9.50"><forename type="first">Malati</forename><surname>Hegde</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">ECE Department</orgName>
+								<orgName type="institution">Indian Institute of Science Bangalore</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff2">
+								<address>
+									<settlement>malati</settlement>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,402.79,143.73,68.84,9.50"><forename type="first">S</forename><forename type="middle">V R</forename><surname>Anand</surname></persName>
+							<email>8anand@ece.iisc.ernet.in</email>
+							<affiliation key="aff0">
+								<orgName type="department">ECE Department</orgName>
+								<orgName type="institution">Indian Institute of Science Bangalore</orgName>
+								<address>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">A Low-Complexity Algorithm for Intrusion Detection in a PIR-Based Wireless Sensor Network</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">3E78B50936388AA1F4D0D0D02170CF53</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2024-02-03T16:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We present a low-complexity algorithm for intrusion detection in the presence of clutter arising from wind-blown vegetation, using Passive Infra-Red (PIR) sensors in a Wireless Sensor Network (WSN). The algorithm is based on a combination of Haar Transform (HT) and Support-Vector-Machine (SVM) based training and was field tested in a network setting comprising of 15-20 sensing nodes. Also contained in this paper is a closed-form expression for the signal generated by an intruder moving at a constant velocity. It is shown how this expression can be exploited to determine the direction of motion information and the velocity of the intruder from the signals of three well-positioned sensors.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>In this paper, the challenging problem of intrusion detection using PIR sensors in the presence of clutter arising from windblown vegetation is addressed <ref type="bibr" coords="1,174.17,430.08,10.58,8.64" target="#b0">[1]</ref>. Manufacturers recommend careful placement of their PIR detectors to prevent false alarms resulting from vegetation, air currents, etc <ref type="bibr" coords="1,223.95,453.99,10.58,8.64">[2]</ref>. In <ref type="bibr" coords="1,253.14,453.99,10.58,8.64" target="#b1">[3]</ref>, <ref type="bibr" coords="1,270.64,453.99,11.62,8.64" target="#b2">[4]</ref> and <ref type="bibr" coords="1,48.96,465.95,10.58,8.64" target="#b3">[5]</ref>, the PIR signal is first high-pass filtered to remove the low frequency components resulting from slow environment changes and then the signal energy is compared against an adaptive threshold. In particular, they use an unsupervised adaptation technique to adjust the energy threshold for target detection. Most other works either use simple thresholding on the PIR signal or thresholding on the energy computed in a window in declaring a detection. In the current paper, we present a low-complexity SVM-training based algorithm that uses the HT to separate intruder from clutter. We believe that training of the form, inherent in SVM, should form an essential part of any solution, given the large variations in intruder and clutter signatures possible. Also SVM makes possible a more fine-grain frequency-domain approach to separating intruder from clutter. The PIR sensor under study in this paper is the analog Panasonic Motion Sensor AM N 24111. But our results can readily be extended to other sensors. Training and testing were carried out on actual experimental data and the algorithm was found to exhibit good performance. The lowcomplexity nature of the algorithm serves to achieve a key objective in WSN, namely the extension of network lifetime. Also contained in the paper is a closed-form expression for the signal generated by an intruder moving at constant velocity. It is shown how this expression can be exploited to determine the direction of motion and the velocity of the intruder from the signals of three well-positioned sensors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. ALGORITHM</head><p>We assume that the intruder to be a human traveling in the vicinity of the sensor and use the term clutter to describe the sensor's output as a result of the wind-blown vegetation caused by the wind.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Choice of the Sensor</head><p>We were initially faced with a choice between the Digital Panasonic Motion Sensor AM N 14121 and the analog sensor mentioned above. We preferred the analog sensor to the digital PIR sensor as it was easier to distinguish between the spectrum of intruder and clutter from the output of the analog sensor (see Fig. <ref type="figure" coords="1,350.77,463.73,3.60,8.64" target="#fig_0">1</ref>). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Overview of the Algorithm</head><p>For the purpose of maximizing battery life, it was decided to use HT for computing the spectrum of intruder and clutter signals in preference to the computationally more complex Discrete Fourier Transform as only additions and subtractions suffice to compute the HT. An alternative would have been to use Walsh Hadamard Transform (WHT) but HT was preferred as it is less complex compared to WHT, it has ability to reuse past computed HT coefficients for the next window and can potentially be used to yield time-frequency localization information. A sampling frequency (f s ) of 12.5Hz was chosen based on the frequency content of intruder and clutter waveforms (see Fig. <ref type="figure" coords="2,138.53,357.29,3.60,8.64" target="#fig_0">1</ref>). A functional block diagram of the algorithm appears in Fig. <ref type="figure" coords="2,156.04,369.25,3.74,8.64" target="#fig_1">2</ref>. A block of 128 (N ) consecutive samples is transformed by HT. The energy in each of these transformed components are binned into 8 frequency bins. The resultant binned vector is passed on to a classifier (obtained by offline SVM training) which classifies it as either intruder or clutter. This entire process is repeated every 16 (L) samples.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. The Haar Transform and Frequency Binning</head><p>Since the Haar transform is wavelet based, coefficients are designed to provide both frequency and time localization information. As a result, the breakdown of 128 Haar coefficients is as follows: there is one coefficient assigned to frequency 0 (the DC component) and 2 k coefficients attached to signals of frequency 2 k , 0 ≤ k ≤ 6. Thus, there are a total of log(N ) + 1 = 8 frequencies in all and in our algorithm, we collect together the energy in each of these 8 frequency "bins". The Haar signals associated with an example N = 8sample transform are shown in Fig. <ref type="figure" coords="2,201.03,573.01,3.74,8.64" target="#fig_2">3</ref>. The time localization information allows reuse of most of the components of the last transformed vector for the current window if there is overlap of the current window with the previous window.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Support Vector Machine</head><p>SVM is a machine-learning technique used for classification which when input with two labeled sets of data (here binned vectors) returns a decision surface which tends to maximize the margin between the two data sets <ref type="bibr" coords="2,204.26,681.14,10.58,8.64" target="#b4">[6]</ref>. Under linear SVM, the decision surface is chosen by SVM to be the hyperplane in the input space that maximizes the margin, i.e., that maximizes the distance between the hyperplane and the input data sets. In our case, the input space is 8 dimensional. The optimal hyperplane is typically found in practice by reformulating it as a quadratic programming optimization problem which can be efficiently solved. If the input data in linear SVM are not separable by a hyperplane, we allow training errors to occur. The tradeoff between the margin and the training errors can be controlled by a parameter C in SVM. The larger the value of C, the lesser the number of training errors leading to a smaller margin. An alternative means of handling training errors is to use a nonlinear separating surface. In quadratic SVM, the optimal decision surface is chosen to be the hyperplane in a larger dimension space which maximizes the margin from points in the larger dimension space to which points in the data set are mapped. Each coordinate in the larger dimension space is associated to a unique monomial of degree 1 or 2 in the variables attached to the input space. Thus the larger space is of dimension 8 2 +8+8=44. It is to be noted that there is a risk of over-fitting the data with a high degree separating surface that will perfectly separate the training data but it is likely to fail on any new data (see Fig. <ref type="figure" coords="2,475.85,717.00,3.60,8.64" target="#fig_3">4</ref>). </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>E. Computational Complexity</head><p>Since training of the SVM was done offline, in estimating the computational complexity, we consider only the computations carried out online in the mote on the incoming data. We consider linear SVM classifiers initially and quadratic SVM classifiers subsequently. SVM classification involves calculating γ=w T x + b where w is the normal to the hyperplane, b represents the affine shift of the hyperplane and x is the binned vector. Thus γ is proportional to the distance of x to the hyperplane. The number of computations required for the online part of the algorithm for both linear and quadratic SVM appears in Fig. <ref type="figure" coords="3,114.08,392.28,3.74,8.64" target="#fig_4">5</ref>. It is to be noted that the computations are in the order of input size 'N'. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>F. Training and Testing</head><p>The data used for training SVM was collected in a laboratory (i.e., clutter-free) environment (see Fig. <ref type="figure" coords="3,243.07,609.41,4.15,8.64" target="#fig_7">6</ref>) in the case of intruder and across 20 outdoor locations on the forested campus of the Indian Institute of Science (IISc) (see Fig. <ref type="figure" coords="3,291.73,633.32,4.15,8.64" target="#fig_8">7</ref>) in the case of clutter. The training data set for intruder includes data collected from making a human walk along different straight lines oriented in a variety of ways w.r.t. the sensor. The clutter data was accumulated over the 6-month period from October 2008 to March 2009. This would involve setting down many nodes on the ground in selected clutter-prone areas and letting them observe and record data. The data streams collected were partitioned into two sets, one used for training, the other for testing. The data streams from some of the more challenging environments (for example, a sensor placed in the close proximity of large fern, or an intruder moving with high velocity) was used for training. From the data streams to be used for training, a total of 224 blocks were extracted, 112 each representing intruder and clutter. Each block is a vector containing 128 consecutive time samples. The offline training of SVM was done using LIBSVM <ref type="bibr" coords="3,540.12,155.11,11.62,8.64" target="#b5">[7]</ref> in MATLAB. Linear SVM, with C set a high value, was used.</p><p>The training performance recorded 7/112 = 6.3% misses and 4/112 = 3.6% false alarms. It should be noted that the training set deliberately includes some data that was hard to classify. Not surprisingly, testing performance was significantly better than training performance. The testing performance recorded 3/500 = 0.5% misses and 2000/160000 = 1.25% false alarms. Some representative samples appear in Fig. <ref type="figure" coords="3,538.39,250.75,4.98,8.64" target="#fig_5">8</ref> and Fig. <ref type="figure" coords="3,330.66,262.71,3.74,8.64" target="#fig_6">9</ref>. Fig. <ref type="figure" coords="3,359.74,262.71,4.98,8.64" target="#fig_5">8</ref> shows four intrusions when the intruder sprinted four times in front of the sensor over a period of 70 seconds, all of which are successfully detected by the algorithm. Fig. <ref type="figure" coords="3,558.06,286.62,4.98,8.64" target="#fig_6">9</ref> shows clutter data collected over a period of 80 seconds, the clutter was successfully rejected.    </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>G. Limitations and Future Work</head><p>As mentioned, the data reported above was for the period October 2008 to March 2009. However, when we carried out testing around noontime in April 2009, at the height of the summer in Bangalore, we observed a significantly larger false alarm rate. Fig. <ref type="figure" coords="4,114.14,308.02,9.96,8.64" target="#fig_9">10</ref> shows a sample waveform recorded in this period. When such summer noontime data was also included in the training set, linear SVM recorded a training performance of 60/275 = 21.8% misses and 22/275 = 8% false alarms. Testing performance recorded 30/300 = 10% misses and 6100/100000 = 6.1% false alarms. Replacing the linear SVM with a quadratic SVM, was able to improve the record on training data to 47/275 = 17% misses and 15/275 = 5.5% false alarms. The improvement with regard to testing data was far more pronounced. We feel that the use of multiple sensors would permit reduction of the false alarm rate since the false alarms were often caused by the movement of vegetation in close proximity to a sensor. An alternative approach would be to detect intruders based on a better understanding of the signature waveform of the intruder and clutter. The next section provides some analysis in this direction. A closed-form expression for a good approximation to the intruder waveform is provided and it is shown how this can be used to determine how to optimally place multiple sensors so as to estimate the path of a human being in motion.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. ANALYTICAL MODEL FOR INTRUDER SIGNATURE</head><p>The Panasonic PIR sensor has a quad of sensing elements and a multilens which creates a virtual pixel array (VPA) <ref type="bibr" coords="4,288.41,585.50,11.62,8.64" target="#b6">[8]</ref> in its field of vision. When an intruder cuts across the virtual beams, the infra-red signal incident on the sensing element can be modeled as a triangular waveform whose period is inversely proportional to the angular velocity ω of the intruder [9]. The sensing element acts upon this infrared signal as a band-pass filter which we will assume filters out all but the fundamental frequency component, whose frequency is thus proportional to ω. Let κ denote the proportionality constant. The intruder is assumed to walk with a uniform velocity along a straight line path in the vicinity of the sensor. This is a reasonable assumption as the sensing range of the sensor is around 6m. Let v be the speed of the intruder walking along a straight line making an angle φ with the sensor's axis and at a distance of d from the sensor (see Fig. <ref type="figure" coords="4,415.07,467.63,7.89,8.64" target="#fig_10">11</ref>). Let 2θ be the horizontal angular coverage of the sensor equal to 110 • in for the sensor under study. The sensor responds to the intrusion for t &gt; 0. The duration of the signal is limited either by the sensing range or by the angular coverage of the sensor. The instantaneous frequency f (t) of the intruder signature from OBC is given by,</p><formula xml:id="formula_0" coords="4,348.16,552.95,178.70,22.31">f (t) = κω(t) = κ v cos ψ(t) r(t) = κ vd sin φ r 2 (t) .</formula><p>Using OAB we can substitute for r(t) to get</p><formula xml:id="formula_1" coords="4,327.63,607.90,235.40,27.23">f (t) = κvd sin φ v 2 t 2 + d 2 sin 2 φ sin 2 (φ+θ) + 2vtd sin φ cot(φ + θ)<label>(1)</label></formula><formula xml:id="formula_2" coords="4,311.97,644.68,112.39,16.65">Let λ = v d sin φ = v d min</formula><p>and cot(φ + θ) = -λt 0 . Thus 0 &lt; λ &lt; ∞ when v &gt; 0, d &gt; 0 and 0 &lt; φ &lt; π. Also, d min is the distance of the closest approach of the intruder to the sensor (see Fig. <ref type="figure" coords="4,379.71,684.85,7.89,8.64" target="#fig_1">12</ref>). We can now rewrite (1) as Note that the maximum frequency f max = κλ occurs at t 0 = -cot(φ+θ) λ</p><formula xml:id="formula_3" coords="4,387.63,704.61,175.40,23.23">f (t) = κλ (λ(t -t 0 )) 2 + 1<label>(2)</label></formula><p>. The intruder signature is thus given by,  </p><formula xml:id="formula_4" coords="5,74.47,259.64,225.55,52.44">s(t) = sin 2π t 0 f (t)dt = sin 2πκ arctan λt 1 -λ 2 t 0 (t -t 0 )<label>(3)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Observations made from the Model</head><p>The constant κ corresponds to the density of the beams in the plane of the intruder motion. Hence the analytical expression naturally extends to other differential PIR sensors in general as κ abstracts the lens. λ and t 0 determine the intruder's analytical waveform. λ contains all the information required to track the intruder but λ for different triplets of (v, d, φ) can be the same. So to track the intruder, many sensor nodes spaced apart will be required.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. TRACKING</head><p>The goal in this section is to determine an optimal locationing of multiple sensor nodes, having coordinates (x i , y i ) respectively, that will enable them to reliably estimate the velocity and direction of motion of the intruder. Set η i = 1/λ i . We assume on the basis of (3) that the ith sensor node reliably estimates η i . where d min,i is the distance from the i th node to the straight-line path of the intruder. With this we obtain the system of equations in the 3 unknowns r, α and v:</p><formula xml:id="formula_5" coords="5,373.04,323.78,189.99,22.31">η i = sin α v x i + cos α v y i + 1 vr<label>(4)</label></formula><p>After some work, it can be shown that 3 sensing nodes will suffice in estimating r, α and v and thus in reliably tracking the intruder.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Optimal Positioning of the Sensor Nodes</head><p>Tracking involves the transformation: (η 1 , η 2 , η 3 ) → (r, α, v). The impact of error in the estimates of η i 's on r, α and v should be kept minimum for reliable tracking. Thus, our interest is in maximizing the Jacobian of the transformation carrying out the mapping: (r, α, v) → (η 1 , η 2 , η 3 ). Without loss of generality, we assume a coordinate system whose origin is equidistant from the three sensors. Thus we may assume that each sensor is at a constant distance R from the origin. We change variables by writing x i = R cos(β i ), y i = R sin(β i ) where β i = arctan( yi xi ). With this, (4) becomes</p><formula xml:id="formula_6" coords="5,354.31,540.15,208.72,22.31">η i = R v sin(α + β i ) + 1 vr , 1 ≤ i ≤ 3.<label>(5)</label></formula><p>After some work, it can be shown that the Jacobian is given by</p><formula xml:id="formula_7" coords="5,315.46,597.53,244.09,65.15">J . = ∂η1 ∂r ∂η2 ∂r ∂η3 ∂r ∂η1 ∂α ∂η2 ∂α ∂η3 ∂α ∂η1 ∂v ∂η2 ∂v ∂η3 ∂v = R 2 r 2 v 2 [sin(β 3 -β 2 ) + sin(β 1 -β 3 ) + sin(β 2 -β 1 )]</formula><p>The value of J is clearly maximized when</p><formula xml:id="formula_8" coords="5,311.97,668.86,251.06,21.61">β 3 -β 2 = β 1 -β 3 = β 2 -β 1 = 2π</formula><p>3 and when R is made as large as possible. This suggests that the nodes should be arranged in an equilateral triangle with R as large as possible, subject to the desired node density.</p><p>V. FIELD TESTING Field testing was conducted on the lawns of Electrical Communication Engineering (ECE) Department in IISc campus. In the field tests, three sensors were mounted onto a single node each with an angular spacing of 120 • . When combined with the approximately 110 • angular field of view of each sensor, this essentially gave each node an omni-directional sensing range (see Fig. <ref type="figure" coords="6,113.66,158.83,7.89,8.64" target="#fig_14">14</ref>). Data emanating from the 3 sensors were fed to the 3 ADC channels of the TelosB motes. The initial decision was to deploy the sensor nodes in the form of a linear array with inter-node spacing chosen to maximize the area covered by a single node while ensuring that every point in the sensing range was covered by at least 3 nodes. The idea here was that the sensing nodes would serve as a wireless trip wire (see Fig. <ref type="figure" coords="6,108.05,242.52,7.89,8.64" target="#fig_14">14</ref>). Larger areas can be covered by interlacing many such wireless trip wires. It was found that a single linear array would on occasion, fail to detect intruder moving at highspeeds, possibly because at high speeds, the intruder was in the field of view for only a very short duration. With this in mind, the decision was made to create a double array comprising of two identical, linear and parallel arrays spaced apart by 5m (which is just 1m under the maximum sensing radius of 6m). Decisions were made locally as follows: If a node detected an intruder in its vicinity using the HT-cum-SVM based algorithm outlined earlier, it would broadcast its local detection (via the Zigbee protocol available on TelosB motes) to all of its neighbors. A node was permitted to declare a confirmed detection if in addition to making a local detection, it also received news of local detection from any other node within a distance of twice the sensing range of each sensor. The confirmed detection was then relayed back to the base station using an appropriately designed network routing algorithm. At the base station, a graphical user interface (GUI) would display the information regarding the nodes that detected and the route of the confirmed detection. This algorithm is scalable as the detection of an intruder results from the consensus of a few neighboring nodes. When tested over a period of several hours across the week, the network performed flawlessly by detecting every intrusion at speeds ranging from that of a slow crawl to a sprint at 5m/sec. There were also no false alarms in the period over which testing was conducted. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="1,311.97,579.26,251.05,6.91;1,311.97,588.23,119.45,6.91;1,313.36,484.52,122.40,76.02"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Spectral signatures of intruder and clutter at the output of the digital and analog PIR sensors respectively.</figDesc><graphic coords="1,313.36,484.52,122.40,76.02" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="2,220.50,282.74,171.00,6.91;2,151.28,54.01,309.43,215.99"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Functional block diagram of the algorithm.</figDesc><graphic coords="2,151.28,54.01,309.43,215.99" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="2,327.91,436.45,219.19,7.17;2,319.84,315.96,235.33,108.00"><head>Fig. 3 .</head><label>3</label><figDesc>Fig. 3. Frequency bins corresponding to the 8-point Haar matrix.</figDesc><graphic coords="2,319.84,315.96,235.33,108.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="3,48.96,210.74,251.05,6.91;3,48.96,219.46,13.41,6.99;3,52.84,54.00,243.30,144.00"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Illustration of overfitting SVM with higher degree polynomials in 2D.</figDesc><graphic coords="3,52.84,54.00,243.30,144.00" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="3,87.78,545.41,173.41,6.91;3,48.96,425.20,252.00,107.46"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Computational complexity of the algorithm.</figDesc><graphic coords="3,48.96,425.20,252.00,107.46" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5" coords="3,369.63,495.78,135.74,6.91;3,315.10,331.83,244.80,151.20"><head>Fig. 8 .</head><label>8</label><figDesc>Fig. 8. Linear SVM: Intrusion detected.</figDesc><graphic coords="3,315.10,331.83,244.80,151.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6" coords="3,373.61,697.94,127.77,6.91;3,315.11,533.99,244.80,151.20"><head>Fig. 9 .</head><label>9</label><figDesc>Fig. 9. Linear SVM: Clutter rejected.</figDesc><graphic coords="3,315.11,533.99,244.80,151.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7" coords="4,129.71,196.34,143.99,6.91;4,129.71,205.31,74.42,6.91;4,129.71,54.01,172.78,129.59"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. The indoor location used for accumulating intruder data.</figDesc><graphic coords="4,129.71,54.01,172.78,129.59" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8" coords="4,338.28,197.15,143.99,6.91;4,338.28,206.12,96.60,6.91;4,338.28,54.82,172.78,129.59"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7. A location in IISc where a part of clutter data was accumulated.</figDesc><graphic coords="4,338.28,54.82,172.78,129.59" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_9" coords="4,354.67,402.47,165.67,6.91;4,315.11,238.53,244.80,151.20"><head>Fig. 10 .</head><label>10</label><figDesc>Fig. 10. Quadratic SVM on summer clutter data.</figDesc><graphic coords="4,315.11,238.53,244.80,151.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_10" coords="5,158.51,181.94,115.20,6.91;5,158.51,190.91,77.96,6.91;5,338.28,186.17,115.20,7.82;5,338.28,58.48,132.01,115.20"><head>Fig. 11 .</head><label>11</label><figDesc>Fig. 11. Geometry used for modeling intruder signature.Fig. 12. Illustrating t 0 and d min .</figDesc><graphic coords="5,338.28,58.48,132.01,115.20" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_11" coords="5,48.96,318.24,251.07,8.64;5,48.96,330.20,39.02,8.64;5,62.89,350.01,223.20,129.60"><head>Fig. 13</head><label>13</label><figDesc>Fig. 13 compares analytical and actual signals for an intruder signature.</figDesc><graphic coords="5,62.89,350.01,223.20,129.60" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_12" coords="5,79.76,490.65,189.45,8.62"><head>Fig. 13 .</head><label>13</label><figDesc>Fig. 13. Intruder signature for (v, d, φ) = (0.3, 2, 50 • ).</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_13" coords="5,311.97,229.42,166.61,8.59;5,321.94,245.38,241.10,8.96;5,311.97,257.94,38.16,8.96;5,355.18,250.26,6.55,6.12;5,361.72,255.35,21.22,6.73;5,367.53,263.41,3.56,6.12;5,388.71,257.94,68.03,8.96;5,464.15,256.06,4.32,6.12;5,464.56,263.41,3.50,6.12;5,474.24,258.26,88.80,8.64;5,311.97,271.32,171.24,9.65;5,487.18,268.31,20.30,6.12;5,495.46,276.80,3.98,6.12"><head>A</head><label></label><figDesc>. Minimum Number of Nodes Required Let the intruder path equation be ax + by + c = 0, which with r = √ a 2 +b 2 c and α = arctan a b , can be rewritten as: xr sin α+yr cos α+1 = 0. Note that η i = dmin,i v</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_14" coords="6,75.88,699.05,197.23,6.91;6,25.58,576.36,141.56,106.17"><head>Fig. 14 .</head><label>14</label><figDesc>Fig. 14. Three sensors platform and the wireless trip-wire.</figDesc><graphic coords="6,25.58,576.36,141.56,106.17" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0" coords="1,36.00,761.50,178.43,10.00;1,522.99,762.38,53.06,8.79"><p>978-1-4244-3518-0/09/$25.00 © 2009 IEEE ISSNIP 2009</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGEMENT</head><p>We would like to thank several people for their support and encouragement: <rs type="person">Professors V. K. Aatre</rs>, <rs type="person">A. Kumar</rs>, <rs type="person">J. Kuri</rs>, <rs type="person">R. Sundaresan</rs> and <rs type="person">V. Naik</rs> of <rs type="affiliation">IISc</rs>, <rs type="person">Dr. N. Ramamurthy</rs> from <rs type="affiliation">CAIR</rs>, <rs type="person">Prof. A. Arora</rs> from <rs type="affiliation">Ohio State University</rs>. Thanks are also due to the WSN team at <rs type="institution">IISc</rs>, in particular, <rs type="person">K. Shalini</rs>, <rs type="person">S. Patil</rs>, <rs type="person">A. Ranjan</rs>, <rs type="person">S. Kumar</rs>, <rs type="person">V. L. Poornima</rs>, <rs type="person">R. Santhosh</rs> and <rs type="person">A. Prasad. Finally</rs>, thanks are due to <rs type="person">Dr. A. V. Krishna</rs> from <rs type="affiliation">PESIT</rs> for introducing SVM to this team.</p></div>
+			</div>			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="6,326.25,193.02,236.78,6.91;6,326.25,201.84,236.78,7.05;6,326.25,210.81,58.97,7.05" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Installation of External Intrusion Detectors in Harsh Environments</title>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Thomas</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Andrews</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">International Carnahan Conference on Security Technology</title>
+		<imprint>
+			<date type="published" when="1993">1993</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="6,326.25,237.85,236.78,6.91;6,326.25,246.68,236.78,7.05;6,326.25,255.64,213.61,7.05" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Moving Targets Detection and Localization in Passive Infrared Sensor Networks</title>
+		<author>
+			<persName coords=""><forename type="first">Zhiqiang</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Xuebin</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Biswas</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Kang</forename><surname>Jian</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Wu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">The 10th International Conference on Information Fusion</title>
+		<imprint>
+			<date type="published" when="2007-07">July 2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="6,326.25,264.75,236.78,6.91;6,326.25,273.72,236.78,6.91;6,326.25,282.68,236.78,6.91;6,326.25,291.51,192.04,7.05" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Lightweight detection and classification for wireless sensor networks in realistic environments</title>
+		<author>
+			<persName coords=""><forename type="first">Lin</forename><surname>Gu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Dong</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Pascal</forename><surname>Vicaire</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ting</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Liqian</forename><surname>Luo</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ajay</forename><surname>Tirumala</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Qing</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Tian</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">John</forename><forename type="middle">A</forename><surname>Stankovic</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Tarek</forename><surname>Abdelzaher</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Bruce</forename><forename type="middle">H</forename><surname>Krogh</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1098918.1098941</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 3rd international conference on Embedded networked sensor systems</title>
+		<meeting>the 3rd international conference on Embedded networked sensor systems</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2005-11-02">Nov. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="6,326.25,300.62,236.78,6.91;6,326.25,309.58,236.78,6.91;6,326.25,318.55,236.78,6.91;6,326.25,327.52,236.78,6.91;6,326.25,336.48,236.78,6.91;6,326.25,345.45,236.78,6.91;6,326.25,354.42,236.78,6.91;6,326.25,361.67,236.78,8.62;6,326.25,372.21,236.78,6.87;6,326.25,381.17,64.25,7.05" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">ExScal: Elements of an Extreme Scale Wireless Sensor Network</title>
+		<author>
+			<persName coords=""><forename type="first">Anish</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Rajiv</forename><surname>Ramnath</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Emre</forename><surname>Ertin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Prasun</forename><surname>Sinha</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Sandip</forename><surname>Bapat</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Vinayak</forename><surname>Naik</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Vinod</forename><surname>Kulathumani</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hongwei Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hui Cao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Mukundan</forename><surname>Sridharan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Santosh</forename><surname>Kumar</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Nick</forename><surname>Seddon</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Chris</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ted</forename><surname>Herman</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Nishank</forename><surname>Trivedi</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Chen Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Mikhail</forename><surname>Nesterenko</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Romil</forename><surname>Shah</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Sandeep</forename><surname>Kulkarni</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Mahesh</forename><surname>Aramugam</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Limin Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Mohamed</forename><surname>Gouda</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Young-Ri Choi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">David</forename><surname>Culler</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Prabal</forename><surname>Dutta</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Cory</forename><surname>Sharp</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Gilman</forename><surname>Tolle</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Mike</forename><surname>Grimmer</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Bill</forename><surname>Ferriera</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ken</forename><surname>Parker</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/rtcsa.2005.47</idno>
+	</analytic>
+	<monogr>
+		<title level="m">11th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA&apos;05)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2005-08">Aug. 2005</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="6,326.25,390.28,236.78,6.91;6,326.25,399.10,236.78,7.05;6,326.25,408.07,236.78,7.05;6,326.25,417.18,39.54,6.91" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">A training algorithm for optimal margin classifiers</title>
+		<author>
+			<persName coords=""><forename type="first">Bernhard</forename><forename type="middle">E</forename><surname>Boser</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Isabelle</forename><forename type="middle">M</forename><surname>Guyon</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Vladimir</forename><forename type="middle">N</forename><surname>Vapnik</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/130385.130401</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the fifth annual workshop on Computational learning theory</title>
+		<meeting>the fifth annual workshop on Computational learning theory</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="1992-07">1992</date>
+			<biblScope unit="page" from="144" to="152" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="6,326.25,426.15,236.78,6.91;6,326.25,435.11,236.78,6.91;6,326.25,444.08,134.70,6.91" xml:id="b5">
+	<monogr>
+		<title level="m" type="main">LIBSVM: a Library for Support Vector Machines</title>
+		<author>
+			<persName coords=""><forename type="first">Chih-Chung</forename><surname>Chang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Chih-Jen</forename><surname>Lin</surname></persName>
+		</author>
+		<ptr target="http://www.csie.ntu.edu.tw/∼cjlin/libsvm" />
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="6,326.25,453.05,236.78,6.91;6,326.25,462.01,142.59,6.91" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">HHE determination report no. HHE-72-67-87, Westinghouse Electric Corporation - Lamp Division, Bloomfield, New Jersey.</title>
+		<idno type="DOI">10.26616/nioshhhe726787</idno>
+	</analytic>
+	<monogr>
+		<title level="m">MP Motion Sensor (AMN 1,2,4) Data Sheet</title>
+		<meeting><address><addrLine>New Jersey, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>U.S. Department of Health, Education, and Welfare, Public Health Service, Centers for Disease Control, National Institute for Occupational Safety and Health</publisher>
+			<date type="published" when="1973-10-01" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

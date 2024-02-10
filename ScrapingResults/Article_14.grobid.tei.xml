@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Improved stochastic subset optimization method for structural design optimization</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Elsevier BV</publisher>
+				<availability status="unknown"><p>Copyright Elsevier BV</p>
+				</availability>
+				<date type="published" when="2024-02">12 December 2023 0965</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Mohd</forename><forename type="middle">Aman</forename><surname>Khalid</surname></persName>
+							<idno type="ORCID">0000-0002-3148-2618</idno>
+						</author>
+						<author>
+							<persName coords="1,164.63,212.20,30.47,11.72"><forename type="first">Sahil</forename><surname>Bansal</surname></persName>
+							<idno type="ORCID">0000-0002-4968-2079</idno>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Civil Engineering</orgName>
+								<orgName type="institution">Indian Institute of Technology Delhi</orgName>
+								<address>
+									<postCode>110016</postCode>
+									<settlement>New Delhi</settlement>
+									<country key="IN">India</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Improved stochastic subset optimization method for structural design optimization</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Advances in Engineering Software</title>
+						<title level="j" type="abbrev">Advances in Engineering Software</title>
+						<idno type="ISSN">0965-9978</idno>
+						<imprint>
+							<publisher>Elsevier BV</publisher>
+							<biblScope unit="volume">188</biblScope>
+							<biblScope unit="page">103568</biblScope>
+							<date type="published" when="2024-02">12 December 2023 0965</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">39F70BAB61B83D742AD942464B33B0B4</idno>
+					<idno type="DOI">10.1016/j.advengsoft.2023.103568</idno>
+					<note type="submission">Received 5 June 2023; Received in revised form 2 October 2023; Accepted 24 November 2023</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2024-02-03T16:13+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>Stochastic subset optimization Voronoi tessellation Stochastic simulation</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The Stochastic Subset Optimization (SSO) algorithm was proposed for optimal reliability problems that minimizes the probability of system failure over the admissible space for the design parameters. It is based on the simulation of samples of the design parameters from an auxiliary Probability Density Function (PDF) and exploiting the information contained in these samples to identify subregions for the optimal design parameters within the original design space. This paper presents an improved version of SSO, named iSSO to overcome the shortcomings in the SSO. In the improved version, the Voronoi tessellation is implemented to partition the design space into non-overlapping subregions using the pool of samples distributed according to the auxiliary PDF. A double-sort approach is then used to identify the subregions for the optimal design. The iSSO is presented as a generalized design optimization approach primarily tailored for the stochastic structural systems but also adaptable to deterministic systems. Several optimization problems are considered to illustrate the effectiveness and efficiency of the proposed iSSO.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="7" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="8" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="9" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="10" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="11" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="12" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+		<surface n="13" ulx="0.0" uly="0.0" lrx="595.276" lry="793.701"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1.">Introduction</head><p>Structural optimization may be defined as the rational establishment of an economical structural design with the available resources while satisfying specific performance criteria. In general terms, the economy may be characterized by minimum weight, minimum cost, maximum utility, or even minimum probability of failure. Broadly, structural optimization can be categorized into deterministic and stochastic optimization <ref type="bibr" coords="1,72.17,501.88,10.09,8.85" target="#b0">[1,</ref><ref type="bibr" coords="1,82.26,501.88,6.73,8.85" target="#b1">2]</ref>. The classical statement of unconstraint deterministic optimization is mathematically expressed as: minimize : φ∈Φ g(φ) <ref type="bibr" coords="1,278.19,528.13,10.48,8.85" target="#b0">(1)</ref> where, φ = [φ 1 ⋯φ nφ ] T ∈ Φ⊂R nφ is a set of deterministic adjustable parameters that define the structural design, referred to herein as design parameters, g(φ) : R nφ →R is the objective function to be minimized, and Φ denotes the bounded admissible design space. The deterministic constraints can be considered by the appropriate definition of the admissible design space Φ for deterministic design parameters φ, as mentioned in <ref type="bibr" coords="1,86.63,615.16,10.10,8.85" target="#b2">[3]</ref>. In the deterministic structural optimization problem, the uncertainties in parameters are ignored, and fixed values are assumed for all the parameters. There are numerous optimizations approaches available in the literature, however, but it's worth noting that no one-size-fits-all optimization approach is ideal for all sorts of problems <ref type="bibr" coords="1,341.18,439.13,7.31,8.85" target="#b3">[4]</ref><ref type="bibr" coords="1,348.49,439.13,3.66,8.85" target="#b4">[5]</ref><ref type="bibr" coords="1,348.49,439.13,3.66,8.85" target="#b5">[6]</ref><ref type="bibr" coords="1,352.14,439.13,7.31,8.85" target="#b6">[7]</ref>. The choice of optimization method is often determined by the specific characteristics of the problem, such as its complexity, dimensionality, constraints, and the nature of the objective function. As a result, there is always a scope for new approaches to be developed or the adaptation of existing methods to better suit specific problem classes. A detailed discussion of deterministic optimization approaches can be found in the literature <ref type="bibr" coords="1,398.32,501.89,10.09,8.85" target="#b7">[8,</ref><ref type="bibr" coords="1,408.41,501.89,6.73,8.85" target="#b8">9]</ref>. In any practical situation, several parameters, such as loadings, structural parameters, geometric parameters, operation conditions, etc., are either not known at the design stage or are subjected to random fluctuations that give rise to performance variability and affect the performance of a system <ref type="bibr" coords="1,398.60,554.16,14.36,8.85" target="#b9">[10]</ref>. These parameters are characterized as uncertain parameters. Deterministic structural optimization discards the impact of uncertainty and can result in improper design. Therefore, it is desirable to account for the uncertainty in the parameters during optimization by using the rational methods of probabilistic structural analysis <ref type="bibr" coords="1,339.93,606.48,14.36,8.85" target="#b10">[11]</ref>. Such structural optimization that accounts for uncertainties is called stochastic optimization <ref type="bibr" coords="1,465.84,616.91,14.36,8.85" target="#b11">[12]</ref>. Although stochastic optimization refers to any method that employs randomness within some communities, in this paper, we will only consider settings where the objective function is random. Stochastic optimization or optimal design under uncertainty has been widely applied in many practical engineering fields, including civil engineering structures <ref type="bibr" coords="2,257.78,76.40,11.59,8.85" target="#b12">[13]</ref><ref type="bibr" coords="2,269.37,76.40,3.86,8.85" target="#b13">[14]</ref><ref type="bibr" coords="2,273.23,76.40,11.59,8.85" target="#b14">[15]</ref>, composite structures <ref type="bibr" coords="2,112.87,86.89,14.58,8.85" target="#b15">[16,</ref><ref type="bibr" coords="2,127.45,86.89,10.93,8.85" target="#b16">17]</ref>, and vehicles <ref type="bibr" coords="2,190.54,86.89,14.58,8.85" target="#b17">[18,</ref><ref type="bibr" coords="2,205.12,86.89,10.93,8.85" target="#b18">19]</ref>.</p><p>Consider an engineering system that involves deterministic design parameters φ, and uncertain variables θ = [θ 1 ⋯θ nθ ] T ∈ Θ⊂R nθ following a joint PDF p(θ|φ), where Θ denotes the parameter space of the uncertain variables. The classical statement of stochastic optimization is mathematically expressed as:</p><formula xml:id="formula_0" coords="2,37.59,156.63,251.08,11.51">minimize : φ∈Φ E θ [h(φ, θ)]<label>(2)</label></formula><p>where, h(φ, θ) : R nθ +nφ →R is the structural performance function, and E θ [ ⋅ ] denotes expectation with respect to the PDF for θ. Note that the objective function in the optimization problem in <ref type="bibr" coords="2,213.90,201.81,10.48,8.85" target="#b1">(2)</ref> is the expectation E θ [h(φ, θ)] which is a deterministic function. It's worth mentioning that stochastic optimization may also involve other stochastic measures such as variance or quantile values. However, these stochastic measures can rarely be evaluated analytically; therefore, several methods have been proposed for solving stochastic optimization problems. These specialized methods include, for example, sample average approximation, stochastic approximation, stochastic subset optimization, and approaches based on the use of Taylor series expansion <ref type="bibr" coords="2,248.31,285.49,14.68,8.85" target="#b14">[15,</ref><ref type="bibr" coords="2,262.99,285.49,11.01,8.85" target="#b19">20,</ref><ref type="bibr" coords="2,274.00,285.49,11.01,8.85" target="#b20">21]</ref>, response surface, and metamodels <ref type="bibr" coords="2,161.40,295.92,11.59,8.85" target="#b21">[22]</ref><ref type="bibr" coords="2,172.99,295.92,3.86,8.85" target="#b22">[23]</ref><ref type="bibr" coords="2,172.99,295.92,3.86,8.85" target="#b23">[24]</ref><ref type="bibr" coords="2,176.86,295.92,11.59,8.85" target="#b24">[25]</ref>. Specific to structural engineering, there are two broad categories of problems involving design optimization under uncertainty <ref type="bibr" coords="2,162.08,316.84,11.59,8.85" target="#b25">[26]</ref><ref type="bibr" coords="2,173.67,316.84,3.86,8.85" target="#b26">[27]</ref><ref type="bibr" coords="2,173.67,316.84,3.86,8.85" target="#b27">[28]</ref><ref type="bibr" coords="2,173.67,316.84,3.86,8.85" target="#b28">[29]</ref><ref type="bibr" coords="2,173.67,316.84,3.86,8.85" target="#b29">[30]</ref><ref type="bibr" coords="2,173.67,316.84,3.86,8.85" target="#b30">[31]</ref><ref type="bibr" coords="2,173.67,316.84,3.86,8.85" target="#b31">[32]</ref><ref type="bibr" coords="2,173.67,316.84,3.86,8.85" target="#b32">[33]</ref><ref type="bibr" coords="2,173.67,316.84,3.86,8.85" target="#b33">[34]</ref><ref type="bibr" coords="2,177.54,316.84,11.59,8.85" target="#b34">[35]</ref>: Reliability-Based Design Optimization (RBDO) and Robust Design Optimization (RDO). The objective of RBDO is to find an optimal solution that minimizes some deterministic, objective function under observance of probabilistic constraints instead of conventional deterministic constraints <ref type="bibr" coords="2,259.54,358.73,14.58,8.85" target="#b35">[36,</ref><ref type="bibr" coords="2,274.11,358.73,10.93,8.85" target="#b36">37]</ref>.</p><p>On the other hand, RDO aims to find an optimal solution that is insensitive (or less sensitive) to input variations. It improves the design quality by minimizing performance variation without eliminating uncertainty <ref type="bibr" coords="2,71.38,400.57,14.58,8.85" target="#b28">[29,</ref><ref type="bibr" coords="2,85.95,400.57,10.93,8.85" target="#b37">38]</ref>. Taflanidis and Beck <ref type="bibr" coords="2,122.68,411.00,15.72,8.85" target="#b38">[39]</ref> introduced a novel algorithm for optimal reliability problem, the so-called SSO. SSO involves formulating an augmented problem where the design parameters are artificially considered uncertain and defining an auxiliary PDF that includes the structural performance function and the PDF of the uncertain variables. Next, SSO involves generating a pool of samples distributed according to this auxiliary PDF and identifying a subregion in the original design space, which, on average, improves the value of the objective function. By repeating this procedure several times, it is possible to determine at each step a smaller subregion in the design space, which in turn improves the value of the objective function. Ultimately, this subregion will be sufficiently small to directly identify the optimal solution or provide sufficient information to launch another optimization algorithm, such as the sample average approximation or stochastic approximation. The implementation of the SSO method closely resembles the Subset Simulation (SS) algorithm <ref type="bibr" coords="2,155.56,567.93,15.72,8.85" target="#b39">[40]</ref> for reliability analysis. Since SSO is based on simulation, it can deal with linear or nonlinear problems and, at least theoretically, an unbounded number of design parameters. The numerical effort for solving a given optimization problem is independent of the number of uncertain variables, and it grows linearly with the number of design parameters.</p><p>Since the introduction of SSO, several extensions of SSO have been proposed. An extension of SSO termed Non-Parametric SSO, which adopts kernel density estimation to approximate the objective function, is presented in <ref type="bibr" coords="2,92.75,662.04,14.36,8.85" target="#b40">[41]</ref>. In <ref type="bibr" coords="2,123.42,662.04,14.36,8.85" target="#b41">[42]</ref>, efficient integration of the Moving Least Squares approximation within SSO is introduced to reduce the computational effort in SSO. In <ref type="bibr" coords="2,124.27,682.96,10.10,8.85" target="#b2">[3]</ref>, an augmented formulation is presented for the RDO of structures using SSO. SSO or its variants have also been applied to solve structural optimization problems. SSO has been used for reliability optimization and sensitivity analysis in system design in <ref type="bibr" coords="2,270.71,714.36,14.36,8.85" target="#b38">[39]</ref>. A framework for RDO of Tuned Mass Dampers (TMD) by SSO is discussed in <ref type="bibr" coords="2,72.17,735.28,14.36,8.85" target="#b42">[43]</ref>. Even though SSO has proved to be efficient for meeting various challenging optimization problems, it has two shortcomings. First, the effectiveness of SSO is dependent on the correct selection of the geometrical shape of the admissible subsets. Here, it is pertinent to mention that choosing a geometrical shape that effectively investigates the sensitivity of the objective function to each design variable is essential. The shapes, such as hyper-rectangle and hyper-ellipse are suggested in the literature for the admissible subsets. However, as shown later via the illustrative example, these shapes fail to include the optimal solution in cases with complex design spaces or problems with multiple optimal solutions. And second, identifying the optimal subset that contains the smallest volume density involves a non-smooth optimization problem which is quite challenging.</p><p>In this paper, an improved version of SSO is developed to overcome the shortcomings of the original SSO. This new version of the algorithm, as mentioned earlier, is named iSSO (improved SSO). Voronoi tessellation is implemented to partition the design space into non-overlapping subregions (a set of Voronoi cells) using the pool of samples distributed according to the auxiliary PDF. The admissible set (a set of all admissible subregions) is then defined as a set containing all subsets of the set of Voronoi cells. This approach is able to capture the regions with lower objective function values even if they are disjointed or when the design space is complex. The details of the Voronoi tessellation are presented in Appendix A. A double-sort algorithm is then implemented to identify the optimal subset containing the smallest volume density.</p><p>In the next section, the original SSO is reviewed. Section 3 presents the general theoretical and computational framework for the iSSO algorithm. Section 4 considers several optimization problems to illustrate the effectiveness and efficiency of the proposed iSSO algorithm.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Original stochastic subset optimization</head><p>In SSO, say at the i + 1th iteration, the design space is represented by a subset I (i) , where I (i) ∈ I (i -1) ⋅⋅⋅ ∈ I (0) ∈ Φ. Following the augmented formulation concept initially discussed in <ref type="bibr" coords="2,460.57,400.69,15.72,8.85" target="#b43">[44]</ref> for RBDO, the design parameters φ, are artificially considered uncertain variables with a prescribed PDF p(φ|I (i) ) over the design space I (i) <ref type="bibr" coords="2,478.04,421.61,14.36,8.85" target="#b44">[45]</ref>. For convenience, p(φ|I (i) ) = 1/V (i) is considered, where V (i) is the volume of I (i) . In this setting of the augmented stochastic design problem, the auxiliary PDF is defined as:</p><formula xml:id="formula_1" coords="2,306.60,463.11,251.08,26.02">π ( φ, θ ⃒ ⃒ I (i) ) = h(φ, θ)p ( φ, θ ⃒ ⃒ I (i) ) E φ,θ [h s (φ, θ)] ∝h(φ, θ)p ( φ, θ ⃒ ⃒ I (i) )<label>(3)</label></formula><p>where, p(φ, θ|I (i) ) = p(θ|φ)p(φ|I (i) ). Note that if h(φ, θ)≤ 0, it must be suitably transformed to ensure that π(φ, θ|I (i) ) ≥ 0. One way to do this is</p><formula xml:id="formula_2" coords="2,306.60,521.95,210.54,9.33">to define h s (φ,θ) = h(φ, θ) -s, since E θ [h s (φ,θ)] = E θ [h(φ,θ)]</formula><p>s, that is, the two expected values differ only by a constant, and the optimization of the expected value of h( ⋅ ) is equivalent, in terms of the optimal design choice, to optimization for the expected value for h s ( ⋅ ). In the above equation, the denominator is a normalizing constant given by:</p><formula xml:id="formula_3" coords="2,306.60,573.66,247.59,24.49">E φ,θ [h(φ, θ)] = ∫ Φ ∫ Θ h(φ, θ)p ( φ, θ ⃒ ⃒ I (i) ) dθdφ. (<label>4</label></formula><formula xml:id="formula_4" coords="2,554.19,584.43,3.49,8.85">)</formula><p>Although this expected value is not explicitly needed, it can be determined using any state-of-the-art stochastic simulation method. The objective function E θ [h s (φ, θ)] in this context of the auxiliary PDF is expressed as:</p><formula xml:id="formula_5" coords="2,306.60,646.91,251.08,26.21">E θ [h(φ, θ)] = π ( φ ⃒ ⃒ I (i) ) p ( φ ⃒ ⃒ I (i) )E φ,θ [h(φ, θ)],<label>(5)</label></formula><p>where, the marginal π(φ|I (i) ) is given by: π</p><formula xml:id="formula_6" coords="2,310.85,695.95,45.45,24.55">( φ ⃒ ⃒ I (i) ) = ∫ I (i)</formula><p>π(φ, θ)dθ. <ref type="bibr" coords="2,547.20,706.77,10.48,8.85" target="#b5">(6)</ref> In <ref type="bibr" coords="2,328.31,727.63,9.53,8.85" target="#b4">(5)</ref>, since</p><formula xml:id="formula_7" coords="2,363.97,727.64,193.68,8.85">E φ,θ [h(φ, θ)] is a normalizing constant, minimization of E θ [h(φ, θ)]</formula><p>is equivalent to minimization of J(φ), which is equal to:</p><formula xml:id="formula_8" coords="3,37.59,65.58,120.27,26.21">J ( φ ⃒ ⃒ I (i) ) = E θ [h s (φ, θ)] E φ,θ [h s (φ, θ)] = π ( φ ⃒ ⃒ I (i) ) p ( φ ⃒ ⃒ I (i)</formula><p>).</p><p>The estimation of the marginal π(φ|I (i) ) in ( <ref type="formula" coords="3,205.72,101.12,3.49,8.85" target="#formula_9">7</ref>) is necessary to minimize J(φ|I (i) ). Analytical approximations of π(φ|I (i) ) based on kernel density approaches or the maximum entropy method might be arduous in case of complex problems, such as when design parameters n φ are large, or the sensitivity for some design parameters is complex <ref type="bibr" coords="3,261.18,142.96,14.36,8.85" target="#b43">[44]</ref>. In the SSO framework, such approximation of π(φ|I (i) ) is avoided. In SSO, samples distributed as π(φ|I (i) ) are obtained, and the information in these samples is exploited to identify a smaller subset of the design space with a high likelihood of containing the optimal design parameters.</p><p>Samples distributed as π(φ, θ|I (i) ) are obtained using any appropriate stochastic sampling algorithm, such as Markov Chain Monte Carlo (MCMC) sampling <ref type="bibr" coords="3,105.68,216.15,14.36,8.85" target="#b45">[46]</ref>. The φ component of these samples then corresponds to samples from the marginal distribution π(φ|I (i) ).</p><p>The sensitivity of objective function E θ [h s (φ, θ)] to φ is determined by evaluating the average value (or equivalently volume density) of J(φ| I (i) ) over any subset I in I (i) , which is denoted by H(I) and defined as:</p><formula xml:id="formula_10" coords="3,37.59,268.43,251.08,26.02">H(I) = 1 V I ∫ I J ( φ|I (i) ) dφ = 1 V I ∫ I π ( φ|I (i) ) p ( φ|I (i) ) dφ = V I (i) V I ∫ I π ( φ|I (i) ) dφ (8)</formula><p>where, V I is the volume of subset I. Based on the samples distributed according to π(φ|I (i) ) belonging to I (i) , an estimate of H(I) is provided by:</p><formula xml:id="formula_11" coords="3,37.59,333.40,251.08,19.28">H(I) = N I /V I N I (i) /V I (i) ,<label>(9)</label></formula><p>where, N I (i) is the number of samples distributed as π(φ|I (i) ) belonging to I (i) , and N I denotes the number of samples from π(φ|I (i) ) belonging to the , where</p><formula xml:id="formula_12" coords="3,37.59,382.58,251.08,11.85">I (N I &lt; N I (i-1) since I⊂I (k -1) ). Say N I = p 0 N I (i-1) . A smaller value of ρ re-</formula><formula xml:id="formula_13" coords="3,232.95,437.84,18.55,11.32">A (i+1)</formula><p>ρ is a set of admissible subsets in I (i) , that contains the smallest volume density N I / V I , that is,</p><formula xml:id="formula_14" coords="3,307.95,55.72,245.99,43.07">I (i+1) = argmin I∈Aρ H(I) = arg min I∈A (i+1) ρ N I / V I A (i+1) ρ = { I⊂I (i) : ρ = N I / N (i) } . (<label>10</label></formula><formula xml:id="formula_15" coords="3,553.94,76.35,3.74,8.85">)</formula><p>The effectiveness of SSO is dependent on the correct selection of the geometrical shape and size of the admissible subsets. Choosing a geometrical shape that effectively investigates the sensitivity of the objective function to each design variable is essential. The optimization in <ref type="bibr" coords="3,315.44,148.86,14.97,8.85" target="#b9">(10)</ref> determines the subset with the smallest average value of J(φ|I (i) ) (or equivalently E θ [h s (φ, θ)]) within the admissible set A (i+1) ρ . I (i + 1) is a subset of the design space I (i) with a high likelihood of containing the optimal design parameters. The above steps are repeated until the stopping criterion is met. This way, SSO adaptively converges to a relatively small subregion within the original design space. The implementation of SSO is demonstrated in Fig. <ref type="figure" coords="3,452.35,213.77,3.36,8.85" target="#fig_1">1</ref>. The reader may refer to the original publication for a detailed explanation of SSO <ref type="bibr" coords="3,497.99,224.20,14.36,8.85" target="#b38">[39]</ref>.</p><formula xml:id="formula_16" coords="3,306.60,234.49,251.08,21.69">H(I (i) ) expresses the average relative sensitivity of E θ [h(φ,θ)] to φ. A low value of H(I (i) ) indicates that E θ [h(φ,θ)</formula><p>] is more sensitive to φ, and vice versa. A high value of H(I (i) ), close to 1 corresponds to a sample density in design space I (i) that approximates a uniform distribution and suggests that the identified subset I (i) has a low likelihood of containing φ* <ref type="bibr" coords="3,317.99,291.33,14.36,8.85" target="#b38">[39]</ref>. Therefore, the SSO is stopped when H(I (i) ) exceeds a threshold value. A threshold value of 0.75-0.80 has been found to give satisfactory results <ref type="bibr" coords="3,332.00,312.25,14.36,8.85" target="#b38">[39]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.">Proposed approach</head><p>In the proposed approach, the Voronoi tessellation is implemented to partition the design space into non-overlapping subregions (a set of Voronoi cells) using the pool of samples distributed according to this auxiliary PDF. Conceptually, Voronoi tessellation involves partitioning a space into convex polygons, called Voronoi cells, such that each cell contains exactly one sample, called a cell-generating sample. Every sample in a given polygon is closer to its generating sample compared to any other. In the proposed approach, the admissible set (a set of all admissible subspaces) is defined as a set containing all subsets of the set of Voronoi cells. An alternative approach to identify the optimal subset without performing any non-smooth deterministic optimization is also presented. The general theoretical and computational framework for the iSSO algorithm is presented in the following subsections, and the algorithm is demonstrated in Fig. <ref type="figure" coords="4,157.94,55.48,3.36,8.85">2</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1.">Partitioning of design space</head><p>In the proposed approach, at the i + 1th iteration, say N (i) is the number of samples distributed as π(φ|I (i) ) belonging to the design space</p><formula xml:id="formula_17" coords="4,37.59,117.14,109.09,11.17">I (i) . Let n v = N (i) /(1 + γ), γ ≥</formula><p>0 be the number of unique samples. If sampling techniques such as accept rejection, importance sampling, etc., are used, then γ = 0, and each sample in the design space will be unique. However, if MCMC sampling techniques are used, the resulting samples will be correlated, that is γ &gt; 0, and we will have repeated samples.</p><p>Assume that the design space</p><formula xml:id="formula_18" coords="4,143.72,171.44,73.59,11.32">I (i) is divided into v (i)</formula><p>k , k = 1⋅⋅⋅n v , Voronoi cells using n v unique samples, and say the Voronoi cell v</p><formula xml:id="formula_19" coords="4,238.00,184.88,50.17,12.93">(i) k contains η (i)</formula><p>k repeated samples, then, an estimate of π(φ|I (i) ) is provided by:</p><formula xml:id="formula_20" coords="4,37.59,214.12,247.35,23.25">π ( φ|I (i) ) = η (i) k N (i) V (i) k ≥ 0, ∀ φ ∈ v (i) k , (<label>11</label></formula><formula xml:id="formula_21" coords="4,284.94,221.65,3.74,8.85">)</formula><p>where,</p><formula xml:id="formula_22" coords="4,64.06,248.09,11.16,11.32">V (i)</formula><p>k is the volume of the k th Voronoi cell. Obviously,</p><formula xml:id="formula_23" coords="4,37.59,244.17,251.10,26.41">∫ I (i) π(φ|I (i) ) dφ = 1.</formula><p>Similar to the original SSO, the sensitivity of the objective function J (φ|I (i) ) to φ is determined by evaluating the average value of J(φ|I (i) ) over any subspace I of the design space I (i) . Subset I is any subset of n v Voronoi cells (these cells may be disjointed). Since the design space is partitioned into n v subspaces or Voronoi cells, the number of admissible subsets (proper subsets) is given by 2 nν -1. Based on the estimate π(φ|I (i) ) provided in <ref type="bibr" coords="4,110.04,336.00,13.76,8.85" target="#b10">(11)</ref>, an estimate of H(I) is provided as:</p><formula xml:id="formula_24" coords="4,37.59,347.80,251.09,25.06">H(I) = V (i) V I ∫ I π ( φ|I (i) ) dφ = V (i) V I ∑ I η (i) i N (i) = V (i) V I N I N (i)<label>(12)</label></formula><p>where, V I is the volume of the subset I and N I is the number of samples belonging to it. Let I = {v</p><formula xml:id="formula_25" coords="4,130.56,394.02,39.79,11.49">(i) (1) , v (i)<label>(2) ⋯v (i)</label></formula><p>(S) }, where S is the number of Voronoi cells defining the subset I. Note that the parentheses are used in the subscript to differentiate between the Voronoi cell number defined in the previous section from the Voronoi cell index describing the subset I. An estimate of H(I) is then provided as:</p><formula xml:id="formula_26" coords="4,37.59,451.21,115.26,29.23">H(I) = V (i) N (i) [ η (i) (1) + η (i) (2) + ⋯ + η (i) (S) V (i) (1) + V (i) (2) + ⋯ + V (i) (S)</formula><p>] .</p><p>(13)</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2.">Identification of an optimal subset</head><p>A deterministic optimization needs to be performed to identify a subset I that contains the smallest volume density N I /V I . In the case of unique samples, since η (i) (⋅) = 1, the solution to the minimization problem in <ref type="bibr" coords="4,315.33,118.47,14.97,8.85" target="#b9">(10)</ref> is a set of ρN (i) Voronoi cells with the largest volume. For the case with repeated samples, the optimization can be performed using methods appropriate for non-smooth optimization problems, such as sub-gradient methods, bundle methods, gradient sampling methods, etc.</p><p>In this study, we propose an alternative approach to identify the optimal subset without performing any non-smooth deterministic optimization. A double-sort algorithm is proposed, which involves sorting the Voronoi cells in ascending order of the sample counts and then in groups of cells with the same sample count in descending order of cell volume. Finally, the top cells containing ρN (i) samples are selected as an approximate optimal solution from the sorted list.</p><p>One may argue that the optimal subset can be obtained by first sorting the Voronoi cells in ascending order of the cell density, defined as η (i)</p><formula xml:id="formula_27" coords="4,320.20,254.27,21.43,12.88">k /V (i)</formula><p>k , and then by selecting the top cells containing ρN (i) samples from the sorted list. However, this argument is erroneous because the objective is to minimize</p><formula xml:id="formula_28" coords="4,392.32,274.72,64.13,15.95">∑ S s=1 η (i) (s) / ∑ S s=1 V (i) (s)</formula><p>and not</p><formula xml:id="formula_29" coords="4,487.73,274.72,48.82,15.95">∑ S s=1 (η (i) (s) /V (i) (s)</formula><p>). The effectiveness of the proposed double-sort algorithm is demonstrated in Section 4 with the help of examples.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3.">Simulation of conditional samples</head><p>At the i + 1th iteration, ρN (i) samples distributed as π(φ|I (i + 1) ) are available from the previous iteration. Using these samples as seeds, additional (1 -ρ)N (i + 1) are simulated. The proposed method to simulate additional samples involves two steps: (a) randomly selecting a Voronoi cell within the subset I (i + 1) based on the estimate π(φ|I (i) ) and (b) applying the Metropolis-Hastings algorithm within the selected Voronoi cell.</p><p>A Voronoi cell is selected according to the following weights in the first step:</p><formula xml:id="formula_30" coords="4,306.60,440.72,247.35,38.67">w (i) k = η (i) k / V (i) k ∑ k η (i) k / V (i) k . (<label>14</label></formula><formula xml:id="formula_31" coords="4,553.94,457.72,3.74,8.85">)</formula><p>Fig. <ref type="figure" coords="4,229.95,736.56,3.25,7.96">2</ref>. Illustration of the proposed iSSO algorithm.</p><p>To simulate a new sample within a selected Voronoi cell, the sample that generated the selected Voronoi cell or the last simulated sample in the selected Voronoi cell is used as the seed sample, and the Metropolis-Hastings algorithm is implemented. A candidate sample [φ c ,θ c ] is simulated using the proposal q(φ c ,θ c |φ,θ) and is accepted with the probability min(1, a 0 ), where, a 0 is given as:</p><formula xml:id="formula_32" coords="5,37.59,123.58,247.35,19.45">a 0 = h(φ c , θ c )p(φ c , θ c )q(φ, θ|φ c , θ c ) h(φ, θ)p(φ, θ)q(φ c , θ c |φ, θ) . (<label>15</label></formula><formula xml:id="formula_33" coords="5,284.94,129.02,3.74,8.85">)</formula><p>In the present study, the proposed PDF is equal to the uniform PDF for design parameters and the initial PDF for uncertain variables, i.e., q (φ, θ|φ c ,θ c ) = p(φ, θ). Therefore, on simplifying <ref type="bibr" coords="5,209.42,171.19,13.76,8.85" target="#b14">(15)</ref>, a 0 is given as:</p><formula xml:id="formula_34" coords="5,37.59,186.96,247.35,18.22">a 0 = h(φ c , θ c ) h(φ, θ) . (<label>16</label></formula><formula xml:id="formula_35" coords="5,284.94,192.34,3.74,8.85">)</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.4.">Stopping criteria</head><p>A new stopping criterion is proposed in this study. The convergence of the expected value of the performance measure h(φ, θ) with respect to the PDF for φ and θ in consecutive iterations is used as the stopping criterion. Mathematically the proposed stopping criterion is represented by:</p><formula xml:id="formula_36" coords="5,37.59,292.81,251.09,15.64">⃒ ⃒ E φ,θ [h(φ, θ)] i -E φ,θ [h(φ, θ)] i-1 ⃒ ⃒ ≤ ε (17)</formula><p>where, ε is a user-specified tolerance limit. Other stopping criteria, as indicated in <ref type="bibr" coords="5,82.03,330.39,14.58,8.85" target="#b38">[39,</ref><ref type="bibr" coords="5,96.61,330.39,10.93,8.85" target="#b46">47]</ref>, can also be chosen.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.5.">Implementation issues</head><p>An important issue for the effective implementation of the iSSO is the creation of the Voronoi cells at the current iteration bounded within the Voronoi cell created at the previous iterations. Although it is possible to create such bounded Voronoi cells, due to the geometrical complexities, it is usually unfeasible for the higher dimensional problems (n φ &gt;2). An alternative approach is proposed in the present study for creating the Voronoi cells at any iteration of the iSSO. The proposed approach involves creating Voronoi cells using the samples generated at the current and all previous iterations and then by considering Voronoi cells corresponding to the samples from the current iteration. This is shown in Fig. <ref type="figure" coords="5,321.85,181.00,3.36,8.85">3</ref>, where Fig. <ref type="figure" coords="5,369.70,181.00,3.63,8.85">3</ref>(a) shows the N samples at the first iteration and the corresponding Voronoi cells. Fig. <ref type="figure" coords="5,428.49,191.49,3.73,8.85">3</ref>(b) shows the ρN selected Voronoi cells leading to the smallest volume density and the additional (1 -ρ)N samples being generated using these ρN samples as seeds. Fig. <ref type="figure" coords="5,543.46,212.41,14.19,8.85">3(c)</ref> shows that the Voronoi cells are generated using all N + (1 -ρ)N samples that are generated in the two iterations. The Voronoi cells corresponding to the N samples for consideration at the second iteration are also highlighted in Fig. <ref type="figure" coords="5,402.86,254.25,9.86,8.85">3(c</ref>). Fig. <ref type="figure" coords="5,436.76,254.25,14.98,8.85">3(d)</ref> shows a zoomed-in version of Fig. <ref type="figure" coords="5,321.39,264.68,3.55,8.85">3</ref>(c) where it can be observed that the area covered by the N Voronoi cells considered in the second iteration is not the same as the area covered by the ρN Voronoi cells selected in the first iteration. On the contrary, the area covered by the Voronoi cells in the second iteration is more than the area covered by the Voronoi cells corresponding to the seed samples from the first iteration. This is because a new sample within the Voronoi cell between an existing sample and the existing Voronoi cell edge results in the relocation of the Voronoi cell edge in a Fig. <ref type="figure" coords="5,223.60,736.56,3.25,7.96">3</ref>. Implementation of Voronoi tessellation in iSSO.</p><p>direction away from the new sample. The increase at each iteration introduces a bias in the estimate of π(φ|I (i) ) in <ref type="bibr" coords="6,190.26,65.97,13.76,8.85" target="#b10">(11)</ref>. However, this does not affect the performance of the proposed approach as the objective is not to simulate the samples distributed as π(φ|I (i) ) but to identify the subsets for an optimal solution. In addition, the increase is not substantial, as seen later in the illustrative examples in Section 4.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.6.">Special case: deterministic optimization</head><p>In the iSSO framework, a deterministic optimization problems can also be handled with the vector of uncertain variables θ set equal to a null vector (n θ = 0). Since the determination of the subset at each iSSO iteration is solely dependent on the samples distributed as π(φ), no modification to the iSSO algorithm is required to solve a deterministic optimization problem, and the entire formulation remains valid.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.">Illustrative examples</head><p>In this section, typical optimization problems are considered to demonstrate the effectiveness and efficiency of the proposed approach. First, deterministic optimization problems are considered. These problems include several local and global minima. Next, stochastic optimization problems are illustrated. The second example presents an RDO problem of the TMD. In this example, the variance minimization of the protected structure's displacement (TMD attached to the structure) is performed. In the third example, the mean minimization of 120 bars truss problems is explored to demonstrate the applicability of the proposed approach to a high-dimensional stochastic design problem. Finally, the fourth example investigates the reliability-based optimization of a base isolation system for a 10-story building.</p><p>In this study, after implementing iSSO, the optimal design solution is identified as follows. Let θ j , j = 1⋅⋅⋅n be a set of independent, identically distributed realizations of θ, and let h(φ, θ j ) be the structural performance function realization for θ j . The expected structural performance function is approximated by the average of the realizations as:</p><formula xml:id="formula_37" coords="6,306.60,164.17,247.35,22.56">E θ [h(φ, θ)] ≈ 1 n ∑ n j=1 h ( φ, θ j ) . (<label>18</label></formula><formula xml:id="formula_38" coords="6,553.94,171.70,3.74,8.85">)</formula><p>E θ [h(φ, θ)] is evaluated for all unique φ samples obtained at the last iteration of the iSSO, and the φ sample resulting in the smallest value of E θ [h(φ, θ)] is taken as the optimal solution. Alternatively, as the righthand side of ( <ref type="formula" coords="6,363.74,227.15,7.48,8.85" target="#formula_37">18</ref>) is deterministic, any deterministic optimization method can also be used to solve the optimization problem with the approximate expectation.</p><p>In the following examples, both iSSO and SSO are implemented with N = 1000n φ , ρ = 0.20 and the stopping criteria as stated in <ref type="bibr" coords="6,513.35,268.99,13.76,8.85" target="#b16">(17)</ref>. Here, a value of ε = 10 -3 is adopted.</p><p>Fig. <ref type="figure" coords="6,244.97,736.56,3.25,7.96">4</ref>. Results for the Griewank function.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1.">Multimodal deterministic optimization problems</head><p>In this section, three two-dimensional benchmark deterministic optimization problems are considered. Results are also compared with the SSO. The test functions are: a) Griewank function:</p><formula xml:id="formula_39" coords="7,50.85,548.32,237.83,40.90">minh(φ) = ∑ d i=1 φ 2 i 4000 - ∏ d i=1 cos ( φ i ̅ ̅ i √ ) + 1, s.t.φ = [ -10, 10]<label>(19)</label></formula><p>b) Cross-in-Tray function:</p><formula xml:id="formula_40" coords="7,50.85,623.16,223.55,26.80">minh(φ) = -0.0001 (⃒ ⃒ ⃒ ⃒ ⃒ sin(φ 1 )sin(φ 2 )exp (⃒ ⃒ ⃒ ⃒ ⃒ 100 - ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅ φ 2 1 + φ 2 2 √ π ⃒ ⃒ ⃒ ⃒ ⃒ )⃒ ⃒ ⃒ ⃒ ⃒ +<label>1</label></formula><formula xml:id="formula_41" coords="7,50.86,623.44,239.13,55.50">) 0.1 , s.t.φ = [ -10, 10]<label>(20)</label></formula><p>c) Holder Table <ref type="table" coords="7,97.97,699.23,28.07,8.85">function</ref>:</p><formula xml:id="formula_42" coords="7,319.86,474.11,237.82,45.71">minh(φ) = - ⃒ ⃒ ⃒ ⃒ ⃒ sin(φ 1 )cos(φ 2 )exp (⃒ ⃒ ⃒ ⃒ ⃒ 1 - ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅ φ 2 1 + φ 2 2 √ π ⃒ ⃒ ⃒ ⃒ ⃒ )⃒ ⃒ ⃒ ⃒ ⃒ , s.t.φ = [ -10, 10]<label>(21))</label></formula><p>The results for the Griewank function are presented in Fig. <ref type="figure" coords="7,520.84,552.91,3.36,8.85">4</ref>. Fig. <ref type="figure" coords="7,543.91,552.91,13.77,8.85">4(a,</ref><ref type="figure" coords="7,306.60,563.39,3.71,8.85">b</ref>) shows that the function has multiple closely spaced local minima with a single global minimum. Fig. <ref type="figure" coords="7,413.35,573.83,13.43,8.85">4(c,</ref><ref type="figure" coords="7,428.94,573.83,3.75,8.85">d</ref>) shows the SSO optimization using hyper-rectangle and hyper-ellipse as shapes of admissible subsets. It is seen that these shapes fail to capture the region containing the optimal design due to the presence of multiple local minima. Next, the iSSO is implemented, where the Voronoi cells selected at the first and last iteration are shown in Fig. <ref type="figure" coords="7,399.52,626.15,13.62,8.85">4(e,</ref><ref type="figure" coords="7,414.94,626.15,2.61,8.85">f</ref>). It is observed that at the first iteration, the selected Voronoi cells effectively capture both the local and global minima and in the subsequent iterations, the selected cells are more concentrated near the global minimum. The region selected at the last iteration captures the optimal global solution.</p><p>The Cross-in-Tray function has a relatively complex design space compared to the Griewank function. Fig. <ref type="figure" coords="7,456.55,688.91,13.77,8.85" target="#fig_2">5(a,</ref><ref type="figure" coords="7,473.33,688.91,3.71,8.85">b</ref>) shows multiple local and global minima. Minimization by using SSO is demonstrated in Fig. <ref type="figure" coords="7,553.15,699.40,4.49,8.85;7,306.60,709.83,8.94,8.85" target="#fig_2">5  (c,</ref><ref type="figure" coords="7,318.73,709.83,3.24,8.85">d</ref>). It is found that both the hyper-rectangle and hyper-ellipse are trapped around any one of the global minima. At the same time, the iSSO is able to capture the regions that include all of the global minima, as seen in Fig. <ref type="figure" coords="8,80.39,473.31,13.62,8.85" target="#fig_2">5(e,</ref><ref type="figure" coords="8,96.38,473.31,2.61,8.85">f</ref>).</p><p>The Holder Table function has multiple local and global minima; the global minima are placed at the boundary of the design space, as shown in Fig. <ref type="figure" coords="8,62.65,504.66,13.77,8.85" target="#fig_3">6(a,</ref><ref type="figure" coords="8,78.92,504.66,3.22,8.85">b</ref>). Once again, it is seen that both the hyper-rectangle and hyper-ellipse are trapped around any of one of the global minima, and on the other hand, the iSSO is able to capture the regions that include all of the global minima, as seen in Fig. <ref type="figure" coords="8,168.60,536.07,13.62,8.85" target="#fig_3">6(e,</ref><ref type="figure" coords="8,184.59,536.07,2.61,8.85">f</ref>).</p><p>The results from the three examples demonstrate that the proposed iSSO is able to capture the regions containing the optimal solution effectively.</p><p>Next, the statistics of the results of 50 independent runs, both for SSO and iSSO are presented in Table <ref type="table" coords="8,148.65,588.40,3.36,8.85" target="#tab_0">1</ref>. It also includes the results obtained by using state-of-the-art approaches, such as the Genetic algorithm, particle swarm optimization, and the gradient based optimization approach (interior-point algorithm). The proposed iSSO outperforms all other approaches as more successes in determining the optimal solution are observed in all three optimization problems. It is also seen that both SSO and iSSO result in a similar value of volume reduction for the same stopping criterion; however, with SSO, the number of iterations required to achieve this volume reduction are relatively higher. The proposed approach outperformed the state-of-the-art approaches, as indicated by the number of successes. These examples demonstrate that the main advantage of implementing Voronoi tessellation is an effective exploration of the design space.</p><p>Next, the performance of the proposed "double sort algorithm" for selecting the optimal subset is studied by using the above-mentioned three functions. Fig. <ref type="figure" coords="8,382.28,474.39,4.49,8.85" target="#fig_5">7</ref> shows the value of H(I (1) ) for the 50 independent simulation runs, which is estimated by implementing the proposed double sort algorithm and by using the Genetic algorithm. It can be noted that for each run, the H(I (1) ) values obtained using the proposed double sort algorithm and Genetic algorithm are well matched, thereby confirming the adequacy of the proposed double sort algorithm.</p><p>At any iteration of iSSO, new samples are simulated using the seed samples. In the proposed approach, the volume of the Voronoi cells corresponding to the seed and new samples is greater than the volume of the Voronoi cells corresponding only to the seed samples. Fig. <ref type="figure" coords="8,529.17,569.63,4.49,8.85" target="#fig_6">8</ref> shows</p><formula xml:id="formula_43" coords="8,306.60,579.74,124.73,13.17">this change in volume V (seeds+new) -V (seeds) V (seeds)</formula><p>due to the creation of Voronoi cells at any generation of iSSO using the procedure mentioned in Section 3.4. The increase is observed to be small which further reduces with an increase in the iteration number. It is also observed that the increase in volume decreases with an increase in sample size at each iteration and increases with an increase in the dimension of the problem.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2.">Robust design optimization of the tuned mass damper</head><p>This example considers a stochastic design problem involving a Tuned Mass Damper (TMD) attached to a Single Degree of Freedom (SDOF) system. The problem is taken from <ref type="bibr" coords="8,459.55,703.94,15.72,8.85" target="#b47">[48]</ref> and is shown in Fig. <ref type="figure" coords="8,550.94,703.94,3.36,8.85">9</ref>.</p><p>In this problem, the system is excited by a white noise signal with a mean zero and unit variance. The performance measure is the variance of the displacement of the system σ 2 xs . The mass m S , stiffness k S , and     </p><formula xml:id="formula_44" coords="9,350.48,712.22,203.58,17.69">E θ [h(θ, φ, φ)] = E θ [( σ 2 xs (θ, φ) -φ )] 2 , (<label>22</label></formula><formula xml:id="formula_45" coords="9,554.06,721.00,3.74,8.85">)</formula><formula xml:id="formula_46" coords="10,277.45,300.00,11.23,8.85">)<label>23</label></formula><p>Table <ref type="table" coords="10,71.49,315.82,4.49,8.85" target="#tab_1">2</ref> presents the optimal design parameter values as well as the objective function value that solve the optimization problem in <ref type="bibr" coords="10,271.44,326.25,13.76,8.85" target="#b21">(22)</ref>. Results obtained using SSO, Sample Average Approximation (SAA), and iSSO are shown. SAA is applied with a sample size of 10 3 , as mentioned in <ref type="bibr" coords="10,316.58,65.97,14.36,8.85" target="#b42">[43]</ref>. The results demonstrate that iSSO is effective in locating the optimal solution. SSO implemented with hyper-ellipse gives an optimal solution but has a higher computational cost.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3.">120-bars truss structure</head><p>The third example involves minimizing the mean of the compliance of a 120-bar linear elastic truss structure shown in Fig. <ref type="figure" coords="10,510.63,143.24,8.97,8.85" target="#fig_1">10</ref> under the weight constraint W ≤ 15, 000kg. Because of structural symmetry, design parameters corresponding to the cross-sectional areas of elements are divided into seven groups, each with a minimum area of 10 -4 m 2 . The Young's modulus for the bar groups are assumed as uncorrelated normal random variables with mean values equal to 210 GPa and the c. o.v equal to 0.10 respectively. The density of the material is 7971.89 kg/ m 3 . The dome is subjected to concentrated vertical loads acting downward at the top node, normally distributed with a mean equal to 60 kN and c.o.v equal to 0.20. In addition, the mass of bars is concentrated at the nodes. The problem is taken from <ref type="bibr" coords="10,441.69,247.84,14.36,8.85" target="#b47">[48]</ref>.</p><p>Table <ref type="table" coords="10,339.82,258.27,4.49,8.85">3</ref> presents the best of 10 independent run results obtained with SSO and iSSO. Once again, the SSO and iSSO solutions agree well, thereby demonstrating the effectiveness of the proposed approach. At the same time, the number of function evaluations is substantially less in the case of iSSO, indicating the efficiency of the proposed approach.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.4.">Reliability-based design of a base isolated structure</head><p>This example, adapted from <ref type="bibr" coords="10,428.60,346.03,14.36,8.85" target="#b48">[49]</ref>, involves the reliability-based Fig. <ref type="figure" coords="10,104.31,258.58,3.25,7.96">9</ref>. TMD attached to a SDOF system <ref type="bibr" coords="10,220.87,258.58,12.92,7.96" target="#b47">[48]</ref>. Fig. <ref type="figure" coords="10,242.25,633.44,7.13,7.96" target="#fig_1">10</ref>. 120-bar dome truss structure <ref type="bibr" coords="10,351.89,633.44,12.92,7.96" target="#b47">[48]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Table 3</head><p>Results for the 120 bars truss structure.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Method Design parameters</head><p>μg(φ * ) optimization of a base-isolation system attached to a 10-story building as shown in Fig. <ref type="figure" coords="11,95.36,427.67,7.47,8.85" target="#fig_8">11</ref>. This optimization problem includes maximizing the reliability of the base-isolated structure which is performed by the minimization of its failure probability and mathematically expressed as:</p><formula xml:id="formula_47" coords="10,100.57,684.18,436.05,25.12">(Nm) σ 2 g (φ * ) (Nm) 2 FE A 1 (cm 2 ) A 2 (cm 2 ) A 3 (cm 2 ) A 4 (cm 2 ) A 5 (cm 2 ) A 6 (cm 2 ) A 7 (cm</formula><formula xml:id="formula_48" coords="11,37.59,458.46,251.09,29.09">minimize : φ∈Φ P(F|φ) = E θ [I F (φ, θ)] = ∫ Θ I F (φ, θ)p(φ, θ)dθ,<label>(24)</label></formula><p>where, I F (φ,θ) is the function that indicates failure, and it equals 1 when the system fails, i.e., when unacceptable performance occurs. Notably, in this problem h(φ, θ) = I F (φ,θ). The 10-story building is considered as a shear structure with uncertain inter-story stiffness and damping. Each story has a total mass of 207 ton. The inter-story stiffness k i of all stories are parameterized by </p><formula xml:id="formula_49" coords="11,37.59,551.60,250.59,21.74">k i = ki θ i , i = 1, …,</formula><formula xml:id="formula_50" coords="11,37.59,632.45,247.35,15.30">E [ (θ i -θi ) ( θ j -θj )] = (0.2) 2 exp [ -(j -i) 2 / 2 2 ] . (<label>25</label></formula><formula xml:id="formula_51" coords="11,284.94,638.91,3.74,8.85">)</formula><p>The damping ratios are considered independent Gaussian variables with mean values of 0.025 and c.o.v of 0.10 for all modes. The Kanai-Tajimi model is used to simulate the ground excitation modelled as a filtered white noise process, with the power spectral density function given as:</p><formula xml:id="formula_52" coords="11,37.59,712.55,247.35,26.44">S(ω) = S 0 ω 4 g + 4ζ 2 g ω 2 g ω 2 ( ω 2 g -ω 2 ) 2 + 4ζ 2 g ω 2 g ω 2 , (<label>26</label></formula><formula xml:id="formula_53" coords="11,284.94,720.44,3.74,8.85">)</formula><formula xml:id="formula_54" coords="11,306.59,293.77,247.35,30.62">S 0 = σ 2 ω 2ζ g πω g ( 4ζ 2 g + 1 )m 2 / s 3 , (<label>27</label></formula><formula xml:id="formula_55" coords="11,553.94,307.31,3.74,8.85">)</formula><p>where, ω g , ζ g and σ ω are the resonant frequency, damping, and RMS of the acceleration input of the filter, respectively. These are also considered uncertain variables with mean values of [2πrad/s, 0.5, 0.2g] and a c.o.v equal to 0.20. The non-stationarity of the excitation is modeled by multiplying the filter output with the envelope function as:</p><formula xml:id="formula_56" coords="11,306.60,395.28,251.09,10.17">e(t) = λ 3 t λ1 exp( -λ 2 t),<label>(28)</label></formula><p>with parameters λ 1 = 1.25, λ 2 = 0.2 and λ 3 = 0.353 chosen to simulate strong earthquake excitation for a duration of 40 s with a sampling time of 0.02 s. The base-isolation system considered is a lead-rubber bilinear isolator with an additional viscous damper. The base has a 247-ton mass.</p><p>The design parameters φ for the base isolation structure system are the stiffness before yielding K pr and after yielding K p , the yield force is F y , and the damping coefficient c d . The reader may refer to <ref type="bibr" coords="11,517.15,478.87,15.38,8.85" target="#b38">[39,</ref><ref type="bibr" coords="11,532.54,478.87,11.54,8.85" target="#b49">50]</ref> for additional details regarding the base isolation structure system adopted in this study. Failure is indicated when any of the normalized base displacements or inter-story drifts exceeds unity. The normalization constants are 0.5 m and 0.033 m respectively. The design interval for each variable is specified as K pr = [50, 600] MN/m, F y = [1, 8] MN, K p = [5, 60] MN/m, and c d = [0.1, 10]MNs/m. In this example, iSSO and SSO are implemented with six number of iterations.</p><p>Table <ref type="table" coords="11,340.72,572.98,4.49,8.85" target="#tab_3">4</ref> shows the optimization results for the best 10 independent simulation runs. The comparison of the results obtained using SSO, SAA (with a sample size of 10 3 ), and iSSO shows that the optimal design obtained using the proposed approach iSSO is in good agreement. The failure probability of the structure is reduced from 0.95 (without the base isolation system) to 0.0326 after installing the optimally designed base isolation system.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.">Conclusion</head><p>This study attempts to provide an optimization approach called "iSSO", which is an improved version of SSO, primarily for stochastic optimization problems while it retains utility for deterministic optimization problems as well. Two novel ideas are introduced in this study: first, a better characterization of the design space is offered by partitioning the design space into non-overlapping subregions using Voronoi  tessellation which improves the effectiveness and efficiency of the proposed iSSO considerably in comparison to SSO. Second, a novel "double sort" approach is proposed, eliminating the need for optimization to identify the subregions for the optimal design at each iSSO iteration. Several mathematical and engineering design examples, including TMD, 120 bars truss structure, and base-isolated structure, are included in this study to demonstrate the efficacy of the proposed iSSO. The results show that the proposed iSSO effectively identifies the reduced design space for complex design problems with multiple global and local minima. This is attributable to the Voronoi tessellation, which eliminates the requirement of the presumed admissible design space form to resemble the contour of the original design. Voronoi tessellation enabled better design space exploration, allowing multiple global minima scattered throughout the design pace to be effectively identified. Due to the discretization of the design space via Voronoi tessellation, computation demand is significantly reduced as the number of function evaluations for all examples is lower vis-a-vis the original SSO. Moreover, the novel idea of the double sort approach achieves the requisite precision in identifying the subregions for optimal solutions and makes iSSO implementation simple and effective. The applicability of the approach is dependent on the creation of the Voronoi cells. At present the methods available in the literation for creating the Voronoi tessellation are computationally demanding when considering problems of very high dimension. Future work will focus on developing a method for creating the Voronoi tessellation in higher dimensions, particularly those greater than ten.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CRediT authorship contribution statement</head><p>Mohd Aman Khalid: Investigation, Methodology, Formal analysis, Software, Visualization, Writingoriginal draft. Sahil Bansal: Conceptualization, Methodology, Supervision.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="3,37.59,395.24,251.10,8.85;3,37.59,405.38,251.05,9.14;3,37.59,416.16,53.21,8.85;3,49.55,427.56,239.10,8.85;3,37.59,440.31,152.54,8.85;3,190.09,437.84,13.22,4.74;3,190.09,442.90,2.81,5.39"><head></head><label></label><figDesc>sults in a faster decrease in the size of the identified subsets but with poorer accuracy. The use of ρ equal to 0.1 -0.2 is suggested in the literature<ref type="bibr" coords="3,72.85,416.16,14.36,8.85" target="#b38">[39]</ref>.A deterministic optimization, based on the estimate H(I) of H(I), is next performed to identify the subset I ∈ A (i+1) ρ</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="3,218.21,736.56,158.89,7.96;3,99.67,504.04,396.00,222.19"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Illustration of the original SSO algorithm.</figDesc><graphic coords="3,99.67,504.04,396.00,222.19" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="7,224.11,451.56,147.08,7.96;7,105.62,55.41,384.05,385.78"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Results for the Cross-in-Tray function.</figDesc><graphic coords="7,105.62,55.41,384.05,385.78" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="8,224.39,451.39,146.45,7.96;8,105.62,55.44,384.05,385.63"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. Results for the Holder Table function.</figDesc><graphic coords="8,105.62,55.44,384.05,385.63" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="9,37.70,342.32,520.06,7.96;9,37.70,351.90,520.06,7.96;9,37.70,361.48,171.11,7.96"><head>GA</head><label></label><figDesc>= genetic algorithm, PSO = particle swarm optimization, GBA = gradient-based optimization approach, NF = no. of. failure, NS = no. of. success, BV = best value, WV = worst value, AV = average value, c.o.v = coefficient of variation, FE = no. of. function evaluations, Gen = generations, VR = volume reduction percentage, * = efficiently applicable only for deterministic problems.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5" coords="9,176.37,504.23,242.77,7.96;9,99.78,389.37,396.00,104.54"><head>Fig. 7 .</head><label>7</label><figDesc>Fig. 7. Comparison of double sort algorithm and Genetic algorithm results.</figDesc><graphic coords="9,99.78,389.37,396.00,104.54" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6" coords="9,200.92,654.02,193.64,7.96;9,99.78,531.80,396.00,111.89"><head>Fig. 8 .</head><label>8</label><figDesc>Fig. 8. Percentage change in volume at each iSSO iteration.</figDesc><graphic coords="9,99.78,531.80,396.00,111.89" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7" coords="11,94.34,564.36,194.32,8.85;11,37.59,574.74,251.11,11.28;11,37.59,587.66,251.09,9.28;11,37.59,598.09,251.06,8.85;11,37.59,610.56,101.45,8.85;11,141.45,608.47,147.20,10.94;11,37.59,621.05,9.46,8.85"><head></head><label></label><figDesc>10 where the most probable values of the inter-story stiffness are [ ki ] = [687.1, 613.1, 540.1, 481.1, 421.7, 353.7, 286.6, 225.6, 184.5, 104.5] MN/m. The entity θ i is a set of non-dimensional uncertain variables that are considered to be correlated Gaussian variables with a unit mean value θi = 1, ∀i and a covariance matrix defined as:</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_8" coords="11,128.81,273.72,337.71,7.96;11,105.62,55.40,384.05,207.94"><head>Fig. 11 .</head><label>11</label><figDesc>Fig. 11. (left) 10-story base isolated shear model, and (right) force-deformation of bilinear isolator [49].</figDesc><graphic coords="11,105.62,55.40,384.05,207.94" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" coords="4,99.67,501.88,396.00,224.35"><head></head><label></label><figDesc></figDesc><graphic coords="4,99.67,501.88,396.00,224.35" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" coords="5,105.62,370.56,384.05,355.68"><head></head><label></label><figDesc></figDesc><graphic coords="5,105.62,370.56,384.05,355.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" coords="6,105.62,334.56,384.05,391.68"><head></head><label></label><figDesc></figDesc><graphic coords="6,105.62,334.56,384.05,391.68" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0" coords="9,37.70,56.42,514.11,279.39"><head>Table 1</head><label>1</label><figDesc>Statistics of optimization results for multimodal deterministic optimization problems.</figDesc><table coords="9,43.71,79.68,508.10,256.13"><row><cell>Example</cell><cell></cell><cell>SSO</cell><cell></cell><cell>iSSO</cell><cell>GA*</cell><cell>PSO*</cell><cell>GBA*</cell></row><row><cell></cell><cell></cell><cell>Hyper-Rectangle</cell><cell>Hyper-Ellipse</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Griewank</cell><cell>NF</cell><cell>30</cell><cell>32</cell><cell>5</cell><cell>38</cell><cell>35</cell><cell>47</cell></row><row><cell></cell><cell>NS</cell><cell>20</cell><cell>18</cell><cell>45</cell><cell>12</cell><cell>15</cell><cell>3</cell></row><row><cell></cell><cell>BV</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell></row><row><cell></cell><cell>WV</cell><cell>0.1028</cell><cell>0.1161</cell><cell>0.0270</cell><cell>0.0296</cell><cell>0.0232</cell><cell>0.0296</cell></row><row><cell></cell><cell>AV</cell><cell>0.0190</cell><cell>0.0292</cell><cell>0.0110</cell><cell>0.0094</cell><cell>0.0057</cell><cell>0.0173</cell></row><row><cell></cell><cell>c.o.v</cell><cell>1.1663</cell><cell>1.0168</cell><cell>0.5137</cell><cell>0.9603</cell><cell>0.8763</cell><cell>0.05971</cell></row><row><cell></cell><cell>FE</cell><cell>22,702</cell><cell>15,223</cell><cell>12,426</cell><cell>3385</cell><cell>1432</cell><cell>33</cell></row><row><cell></cell><cell>Gen</cell><cell>7</cell><cell>5</cell><cell>4</cell><cell></cell><cell>N/A</cell><cell></cell></row><row><cell></cell><cell>VR</cell><cell>94.025</cell><cell>84.79</cell><cell>93.56</cell><cell></cell><cell></cell><cell></cell></row><row><cell>Cross-In-Tray</cell><cell>NF</cell><cell>50</cell><cell>50</cell><cell>1</cell><cell>50</cell><cell>50</cell><cell>50</cell></row><row><cell></cell><cell>NS</cell><cell>0</cell><cell>0</cell><cell>49</cell><cell>0</cell><cell>0</cell><cell>0</cell></row><row><cell></cell><cell>BV</cell><cell>-2.0576</cell><cell>-2.0626</cell><cell>-2.0624</cell><cell>-2.0626</cell><cell>-2.0626</cell><cell>-2.0626</cell></row><row><cell></cell><cell>WV</cell><cell>-2.0472</cell><cell>-2.0481</cell><cell>-2.0260</cell><cell>-2.0626</cell><cell>-2.0626</cell><cell>-1.3853</cell></row><row><cell></cell><cell>AV</cell><cell>-2.0527</cell><cell>-2.0621</cell><cell>-2.0522</cell><cell>-2.0626</cell><cell>-2.0626</cell><cell>-1.7360</cell></row><row><cell></cell><cell>c.o.v</cell><cell>0.0133</cell><cell>0.001</cell><cell>0.0042</cell><cell>0</cell><cell>0</cell><cell>0.0977</cell></row><row><cell></cell><cell>FE</cell><cell>27,563</cell><cell>21,595</cell><cell>9982</cell><cell>3178</cell><cell>933</cell><cell>32</cell></row><row><cell></cell><cell>Gen</cell><cell>9</cell><cell>7</cell><cell>3</cell><cell></cell><cell>N/A</cell><cell></cell></row><row><cell></cell><cell>VR</cell><cell>99.89</cell><cell>98.95</cell><cell>88.71</cell><cell></cell><cell></cell><cell></cell></row><row><cell>Holder-Table</cell><cell>NF</cell><cell>50</cell><cell>50</cell><cell>3</cell><cell>50</cell><cell>50</cell><cell>50</cell></row><row><cell></cell><cell>NS</cell><cell>0</cell><cell>0</cell><cell>47</cell><cell>0</cell><cell>0</cell><cell>0</cell></row><row><cell></cell><cell>BV</cell><cell>-19.2085</cell><cell>-17.5025</cell><cell>-19.2085</cell><cell>-19.2085</cell><cell>-19.2085</cell><cell>-19.2085</cell></row><row><cell></cell><cell>WV</cell><cell>-18.8916</cell><cell>-1.1419</cell><cell>-17.3030</cell><cell>-9.5047</cell><cell>-15.1402</cell><cell>-1.1831</cell></row><row><cell></cell><cell>AV</cell><cell>-19.0916</cell><cell>-8.432</cell><cell>-18.8798</cell><cell>-19.0144</cell><cell>-18.9745</cell><cell>-6.5493</cell></row><row><cell></cell><cell>c.o.v</cell><cell>0.0025</cell><cell>0.3898</cell><cell>0.0182</cell><cell>0.0722</cell><cell>0.0443</cell><cell>0.8358</cell></row><row><cell></cell><cell>FE</cell><cell>40,700</cell><cell>24,684</cell><cell>18,142</cell><cell>3413</cell><cell>988</cell><cell>30</cell></row><row><cell></cell><cell>Gen</cell><cell>13</cell><cell>8</cell><cell>6</cell><cell>N/A</cell><cell></cell><cell></cell></row><row><cell></cell><cell>VR</cell><cell>99.59</cell><cell>99.42</cell><cell>94.37</cell><cell></cell><cell></cell><cell></cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" coords="10,37.59,369.25,514.08,77.80"><head>Table 2</head><label>2</label><figDesc>Variance minimization of TMD-structure.</figDesc><table coords="10,430.47,392.46,121.20,7.08"><row><cell>FE</cell><cell>NS</cell><cell>NF</cell></row></table><note coords="10,43.60,392.46,21.60,7.08;10,110.89,392.46,69.08,7.08;10,221.55,392.46,52.28,7.08;10,345.60,392.47,34.90,5.86;10,345.60,401.08,16.42,7.08;10,361.98,399.53,26.95,8.63"><p><p>Method</p>Admissible Subset shape Design parameters Eθ[h(θ, φ, φ)] (× 10 -16 mm 4 )</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3" coords="11,37.59,302.41,251.09,95.94"><head>Table 4</head><label>4</label><figDesc>Base isolation structure system optimization results (best of 10 independent runs).</figDesc><table coords="11,43.60,343.82,210.90,54.53"><row><cell></cell><cell></cell><cell>F y</cell><cell>K p (MN/</cell><cell>c d (MNs/</cell><cell></cell></row><row><cell></cell><cell></cell><cell>(MN)</cell><cell>m)</cell><cell>m)</cell><cell></cell></row><row><cell>SSO</cell><cell>425.33</cell><cell>1.20</cell><cell>15.52</cell><cell>6.54</cell><cell>0.0340</cell></row><row><cell>[39]</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>SAA</cell><cell>414.68</cell><cell>1.16</cell><cell>16.15</cell><cell>6.26</cell><cell>0.0324</cell></row><row><cell>iSSO</cell><cell>418.34</cell><cell>1.11</cell><cell>15.88</cell><cell>7.08</cell><cell>0.0366</cell></row></table><note coords="11,43.60,335.20,102.57,7.08;11,234.76,335.20,19.77,7.08;11,234.76,343.82,31.15,7.08;11,234.76,352.38,18.22,7.26;11,79.77,343.82,25.96,7.31;11,79.77,352.43,7.82,7.08"><p><p><p>Method</p>Design parameters (φ*) Failure probability P F (φ*)</p>K pr (MN/ m)</p></note></figure>
+		</body>
+		<back>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p>No data was used for the research described in the article.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Declaration of Competing Interest</head><p>The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Appendix-A: Voronoi Tessellation</head><p>Voronoi tessellation is a mathematical concept named after the Russian mathematician Georgy Voronoi. It is also known as the Voronoi diagram or Dirichlet tessellation. A Voronoi tessellation of a set of points P in a plane is a partition of the plane into a set of non-overlapping convex polygons, with each polygon including precisely one point of P and each point in a polygon being closer to its associated point in P than to any other point in P. Each polygon is referred to as a Voronoi cell or a Dirichlet region. The boundary of each cell is constituted of points that are equidistant to two or more points in P. Fig. <ref type="figure" coords="12,95.58,362.19,8.97,8.85">12</ref> shows the Voronoi diagram in a two-dimensional design space. There are several efficient algorithms for creating Voronoi diagrams. One such basic algorithm is to start with a set of points and then compute the Voronoi cells by dividing the space into regions based on the distance to the nearest point. The Bowyer-Watson algorithm <ref type="bibr" coords="12,473.21,554.66,14.36,8.85" target="#b50">[51]</ref>, which generates a Delaunay triangulation in any number of dimensions, can be applied while creating a Voronoi diagram. The Delaunay triangulation is a triangulation of the point in which no point falls within the circumcircle of any triangle. The polygon generated by the intersection of the half-planes defined by the edges of the Delaunay triangles enclosing the point is therefore obtained as the Voronoi cell of a point.</p><p>It can be summarized that Voronoi tessellation is a powerful mathematical concept that aids in dividing space into regions based on the distance to a set of points. Voronoi tessellation finds widespread applications in areas such as image processing <ref type="bibr" coords="12,409.21,606.94,14.36,8.85" target="#b51">[52]</ref>, spatial topology analysis <ref type="bibr" coords="12,523.16,606.94,14.36,8.85" target="#b52">[53]</ref>, and microstructure study <ref type="bibr" coords="12,113.84,617.42,14.36,8.85" target="#b51">[52]</ref>. The MATLAB command "Voronoin" from the "Parallel Computing Toolbox" <ref type="bibr" coords="12,395.09,617.42,15.72,8.85" target="#b53">[54]</ref> has been used in this study to create the Voronoi cells.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="12,53.97,681.71,186.73,7.08" xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Stochastic Optimization Methods</title>
+		<author>
+			<persName coords=""><forename type="first">Kurt</forename><surname>Marti</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-540-79458-5</idno>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<publisher>Springer Berlin Heidelberg</publisher>
+			<pubPlace>Berlin</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,53.97,689.64,219.09,7.08;12,53.97,697.64,123.92,7.08" xml:id="b1">
+	<monogr>
+		<title level="m" type="main">Structural Design Optimization Considering Uncertainties</title>
+		<author>
+			<persName coords=""><forename type="first">Y</forename><surname>Tsompanakis</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">N</forename><forename type="middle">D</forename><surname>Lagaros</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Papadrakakis</surname></persName>
+		</author>
+		<idno type="DOI">10.1201/b10995</idno>
+		<imprint>
+			<date type="published" when="2008-02-07">2008</date>
+			<publisher>CRC Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,53.97,705.57,232.73,7.08;12,53.97,713.57,232.71,7.08;12,53.97,721.50,169.43,7.08" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">An augmented formulation for robust design optimization of structures using stochastic simulation method</title>
+		<author>
+			<persName><forename type="first">Mohd</forename><forename type="middle">Aman</forename><surname>Khalid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sahil</forename><surname>Bansal</surname></persName>
+			<idno type="ORCID">0000-0002-4968-2079</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Varun</forename><surname>Ramamohan</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00163-022-00405-z</idno>
+		<ptr target="https://doi.org/10.1007/s00163-022-00405-z" />
+	</analytic>
+	<monogr>
+		<title level="j">Research in Engineering Design</title>
+		<title level="j" type="abbrev">Res Eng Design</title>
+		<idno type="ISSN">0934-9839</idno>
+		<idno type="ISSNe">1435-6066</idno>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="179" to="200" />
+			<date type="published" when="2023">2023</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,322.98,661.47,222.60,7.08;12,322.98,669.22,220.95,7.26;12,322.98,677.40,224.65,7.08" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">A Comparative Study of Metaheuristic Algorithms for Reliability-Based Design Optimization Problems</title>
+		<author>
+			<persName><forename type="first">Zeng</forename><surname>Meng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gang</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xuan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sadiq</forename><forename type="middle">M</forename><surname>Sait</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ali</forename><forename type="middle">Rıza</forename><surname>Yıldız</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11831-020-09443-z</idno>
+		<ptr target="https://doi.org/10.1007/s11831-020-09443-z" />
+	</analytic>
+	<monogr>
+		<title level="j">Archives of Computational Methods in Engineering</title>
+		<title level="j" type="abbrev">Arch Computat Methods Eng</title>
+		<idno type="ISSN">1134-3060</idno>
+		<idno type="ISSNe">1886-1784</idno>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="1853" to="1869" />
+			<date type="published" when="2021">2021</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,322.98,685.39,200.88,7.08;12,322.98,693.33,221.85,7.08;12,322.98,701.32,216.31,7.08;12,322.98,709.26,232.71,7.08;12,322.98,717.25,38.17,7.08" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Meta-heuristic optimization algorithms for solving real-world mechanical engineering design problems: a comprehensive survey, applications, comparative analysis, and results</title>
+		<author>
+			<persName><forename type="first">Laith</forename><surname>Abualigah</surname></persName>
+			<idno type="ORCID">0000-0002-2203-4549</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Mohamed</forename><forename type="middle">Abd</forename><surname>Elaziz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ahmad</forename><forename type="middle">M</forename><surname>Khasawneh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohammad</forename><surname>Alshinwan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rehab</forename><forename type="middle">Ali</forename><surname>Ibrahim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohammed</forename><forename type="middle">A A</forename><surname>Al-Qaness</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seyedali</forename><surname>Mirjalili</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Putra</forename><surname>Sumari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Amir</forename><forename type="middle">H</forename><surname>Gandomi</surname></persName>
+			<idno type="ORCID">0000-0002-2798-0104</idno>
+		</author>
+		<idno type="DOI">10.1007/s00521-021-06747-4</idno>
+		<ptr target="https://doi.org/10.1007/s00521-021-06747-4" />
+	</analytic>
+	<monogr>
+		<title level="j">Neural Computing and Applications</title>
+		<title level="j" type="abbrev">Neural Comput &amp; Applic</title>
+		<idno type="ISSN">0941-0643</idno>
+		<idno type="ISSNe">1433-3058</idno>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="4081" to="4110" />
+			<date type="published" when="2022-01-16">2022</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="12,322.98,725.19,218.12,7.08;12,322.98,733.18,223.64,7.08;13,53.97,55.48,229.70,7.08;13,53.97,63.47,25.36,7.08" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Developed comparative analysis of metaheuristic optimization algorithms for optimal active control of structures</title>
+		<author>
+			<persName><forename type="first">Javad</forename><surname>Katebi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mona</forename><surname>Shoaei-Parchin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mahdi</forename><surname>Shariati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nguyen</forename><forename type="middle">Thoi</forename><surname>Trung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Majid</forename><surname>Khorami</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00366-019-00780-7</idno>
+		<ptr target="https://doi.org/10.1007/s00366-019-00780-7" />
+	</analytic>
+	<monogr>
+		<title level="j">Engineering with Computers</title>
+		<title level="j" type="abbrev">Engineering with Computers</title>
+		<idno type="ISSN">0177-0667</idno>
+		<idno type="ISSNe">1435-5663</idno>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1539" to="1558" />
+			<date type="published" when="2020">2020</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,53.97,71.41,221.81,7.08;13,53.97,79.40,223.71,7.08;13,53.97,87.34,196.47,7.08" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">A survey of recently developed metaheuristics and their comparative analysis</title>
+		<author>
+			<persName coords=""><forename type="first">Abdulaziz</forename><surname>Alorf</surname></persName>
+			<idno type="ORCID">0000-0002-2747-528X</idno>
+		</author>
+		<idno type="DOI">10.1016/j.engappai.2022.105622</idno>
+		<ptr target="https://doi.org/10.1016/j.engappai.2022.105622" />
+	</analytic>
+	<monogr>
+		<title level="j">Engineering Applications of Artificial Intelligence</title>
+		<title level="j" type="abbrev">Engineering Applications of Artificial Intelligence</title>
+		<idno type="ISSN">0952-1976</idno>
+		<imprint>
+			<biblScope unit="volume">117</biblScope>
+			<biblScope unit="page">105622</biblScope>
+			<date type="published" when="2023-01">2023</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,53.97,95.33,232.70,7.08;13,53.97,103.32,16.14,7.08" xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Structural optimization: fundamentals and applications</title>
+		<author>
+			<persName coords=""><forename type="first">U</forename><surname>Kirsch</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>Springer-Verlag</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,53.97,111.26,205.33,7.08" xml:id="b8">
+	<monogr>
+		<title level="m" type="main">Encyclopedia of Optimization</title>
+		<author>
+			<persName coords=""><forename type="first">C</forename><forename type="middle">A</forename><surname>Floudas</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">P</forename><forename type="middle">A</forename><surname>Pardalos</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/0-306-48332-7</idno>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<publisher>Springer US</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,119.26,222.26,7.08;13,54.14,127.19,186.87,7.08" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Aleatory or epistemic? Does it matter?</title>
+		<author>
+			<persName><forename type="first">Armen</forename><forename type="middle">Der</forename><surname>Kiureghian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ove</forename><surname>Ditlevsen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.strusafe.2008.06.020</idno>
+		<ptr target="https://doi.org/10.1016/j.strusafe.2008.06.020" />
+	</analytic>
+	<monogr>
+		<title level="j">Structural Safety</title>
+		<title level="j" type="abbrev">Structural Safety</title>
+		<idno type="ISSN">0167-4730</idno>
+		<imprint>
+			<biblScope unit="volume">31</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="105" to="112" />
+			<date type="published" when="2009-03">2009</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,135.19,221.19,7.08;13,54.14,143.18,222.45,7.08;13,54.14,151.12,126.52,7.08" xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Computational methods in optimization considering uncertainties – An overview</title>
+		<author>
+			<persName coords=""><forename type="first">G</forename><forename type="middle">I</forename><surname>Schuëller</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><forename type="middle">A</forename><surname>Jensen</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cma.2008.05.004</idno>
+		<ptr target="https://doi.org/10.1016/j.cma.2008.05.004" />
+	</analytic>
+	<monogr>
+		<title level="j">Computer Methods in Applied Mechanics and Engineering</title>
+		<title level="j" type="abbrev">Computer Methods in Applied Mechanics and Engineering</title>
+		<idno type="ISSN">0045-7825</idno>
+		<imprint>
+			<biblScope unit="volume">198</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="2" to="13" />
+			<date type="published" when="2008-11">2008</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,159.11,192.29,7.08" xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Stochastic Global Optimization</title>
+		<author>
+			<persName coords=""><forename type="first">J</forename><surname>Schneider</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Kirkpatrick</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-0-387-74740-8</idno>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>Springer US</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,167.05,232.53,7.08;13,54.14,175.04,226.98,7.08;13,54.14,182.98,183.95,7.08" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">A random search for discrete robust design optimization of linear-elastic steel frames under interval parametric uncertainty</title>
+		<author>
+			<persName><forename type="first">Bach</forename><surname>Do</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Makoto</forename><surname>Ohsaki</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compstruc.2021.106506</idno>
+		<ptr target="https://doi.org/10.1016/j.compstruc.2021.106506" />
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Structures</title>
+		<title level="j" type="abbrev">Computers &amp; Structures</title>
+		<idno type="ISSN">0045-7949</idno>
+		<imprint>
+			<biblScope unit="volume">249</biblScope>
+			<biblScope unit="page">106506</biblScope>
+			<date type="published" when="2021-06">2021</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,190.97,232.52,7.08;13,54.14,198.96,232.54,7.08;13,54.14,206.90,144.11,7.08" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Robust topology optimization of structures with uncertainties in stiffness – Application to truss structures</title>
+		<author>
+			<persName><forename type="first">Alireza</forename><surname>Asadpoure</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mazdak</forename><surname>Tootkaboni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">K</forename><surname>Guest</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compstruc.2010.11.004</idno>
+		<ptr target="https://doi.org/10.1016/j.compstruc.2010.11.004" />
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Structures</title>
+		<title level="j" type="abbrev">Computers &amp; Structures</title>
+		<idno type="ISSN">0045-7949</idno>
+		<imprint>
+			<biblScope unit="volume">89</biblScope>
+			<biblScope unit="issue">11-12</biblScope>
+			<biblScope unit="page" from="1131" to="1141" />
+			<date type="published" when="2011-06">2011</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,214.90,216.98,7.08;13,54.14,222.83,229.13,7.08;13,54.14,230.83,51.08,7.08" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Robust design of structures using optimization methods</title>
+		<author>
+			<persName><forename type="first">Ioannis</forename><surname>Doltsinis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhan</forename><surname>Kang</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cma.2003.12.055</idno>
+		<ptr target="https://doi.org/10.1016/j.cma.2003.12.055" />
+	</analytic>
+	<monogr>
+		<title level="j">Computer Methods in Applied Mechanics and Engineering</title>
+		<title level="j" type="abbrev">Computer Methods in Applied Mechanics and Engineering</title>
+		<idno type="ISSN">0045-7825</idno>
+		<imprint>
+			<biblScope unit="volume">193</biblScope>
+			<biblScope unit="issue">23-26</biblScope>
+			<biblScope unit="page" from="2221" to="2237" />
+			<date type="published" when="2004-06">2004</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,238.82,229.35,7.08;13,54.14,246.76,226.13,7.08;13,54.14,254.75,162.76,7.08" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Dimensional reduction applied to the reliabilitybased robust design optimization of composite structures</title>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Carneiro</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">N</forename><surname>Das</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><forename type="middle">C</forename><surname>António</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compstruct.2020.112937</idno>
+		<ptr target="https://doi.org/10.1016/j.compstruct.2020.112937" />
+	</analytic>
+	<monogr>
+		<title level="j">Compos Struct</title>
+		<imprint>
+			<biblScope unit="volume">255</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,262.69,216.80,7.08;13,54.14,270.68,232.53,7.08;13,54.14,278.62,185.53,7.08" xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Reliability-based Design Optimization of Laminated Composite Structures under Delamination and Material Property Uncertainties</title>
+		<author>
+			<persName><forename type="first">Haichao</forename><surname>An</surname></persName>
+			<idno type="ORCID">0000-0002-6643-5002</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Byeng</forename><forename type="middle">D</forename><surname>Youn</surname></persName>
+			<idno type="ORCID">0000-0003-0135-3660</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Heung</forename><forename type="middle">Soo</forename><surname>Kim</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ijmecsci.2021.106561</idno>
+		<ptr target="https://doi.org/10.1016/j.ijmecsci.2021.106561" />
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Mechanical Sciences</title>
+		<title level="j" type="abbrev">International Journal of Mechanical Sciences</title>
+		<idno type="ISSN">0020-7403</idno>
+		<imprint>
+			<biblScope unit="volume">205</biblScope>
+			<biblScope unit="page">106561</biblScope>
+			<date type="published" when="2021-09">2021</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,286.61,232.52,7.08;13,54.14,294.60,232.53,7.08;13,54.14,302.54,196.77,7.08" xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Lightweight and crashworthiness design of an electric vehicle using a six-sigma robust design optimization method</title>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><forename type="middle">B</forename><surname>Duan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><forename type="middle">G</forename><surname>Cheng</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><forename type="middle">P</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">W</forename><surname>Yao</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/0305215x.2018.1521396</idno>
+		<ptr target="https://doi.org/10.1080/0305215X.2018.1521396" />
+	</analytic>
+	<monogr>
+		<title level="j">Engineering Optimization</title>
+		<title level="j" type="abbrev">Engineering Optimization</title>
+		<idno type="ISSN">0305-215X</idno>
+		<idno type="ISSNe">1029-0273</idno>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page" from="1393" to="1411" />
+			<date type="published" when="2019">2019</date>
+			<publisher>Informa UK Limited</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,310.54,232.52,7.08;13,54.14,318.47,232.52,7.08;13,54.14,326.47,110.36,7.08" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Reliability-based multidisciplinary design optimization of an underwater vehicle including cost analysis</title>
+		<author>
+			<persName><forename type="first">Hadi</forename><surname>Gholinezhad</surname></persName>
+			<idno type="ORCID">0000-0002-4099-456X</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Seyed</forename><forename type="middle">Hosein</forename><surname>Torabi</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00773-021-00804-2</idno>
+		<ptr target="https://doi.org/10.1007/s00773-021-00804-2" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Marine Science and Technology</title>
+		<title level="j" type="abbrev">J Mar Sci Technol</title>
+		<idno type="ISSN">0948-4280</idno>
+		<idno type="ISSNe">1437-8213</idno>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="11" to="26" />
+			<date type="published" when="2021-06-29">2021</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,334.46,231.09,7.08;13,54.14,342.40,232.56,7.08" xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Robust optimization considering tolerances of design variables</title>
+		<author>
+			<persName><forename type="first">Kwon-Hee</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gyung-Jin</forename><surname>Park</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/s0045-7949(00)00117-6</idno>
+		<ptr target="https://doi.org/10.1016/S0045-7949(00)00117-6" />
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Structures</title>
+		<title level="j" type="abbrev">Computers &amp; Structures</title>
+		<idno type="ISSN">0045-7949</idno>
+		<imprint>
+			<biblScope unit="volume">79</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="77" to="86" />
+			<date type="published" when="2001-01">2001</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,350.39,232.54,7.08;13,54.14,358.33,218.10,7.08;13,54.14,366.32,143.20,7.08" xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Propagating Skewness and Kurtosis Through Engineering Models for Low-Cost, Meaningful, Nondeterministic Design</title>
+		<author>
+			<persName><forename type="first">Travis</forename><forename type="middle">V</forename><surname>Anderson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christopher</forename><forename type="middle">A</forename><surname>Mattson</surname></persName>
+		</author>
+		<idno type="DOI">10.1115/1.4007389</idno>
+		<ptr target="https://doi.org/10.1115/1.4007389" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Mechanical Design</title>
+		<idno type="ISSN">1050-0472</idno>
+		<idno type="ISSNe">1528-9001</idno>
+		<imprint>
+			<biblScope unit="volume">134</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<date type="published" when="2012-09-28">2012</date>
+			<publisher>ASME International</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,374.26,226.34,7.08;13,54.14,382.25,219.16,7.08;13,54.14,390.24,128.90,7.08" xml:id="b21">
+	<analytic>
+		<title level="a" type="main">A robust optimization approach based on multi-fidelity metamodel</title>
+		<author>
+			<persName><forename type="first">Qi</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yan</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seung-Kyum</forename><surname>Choi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ping</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xinyu</forename><surname>Shao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jiexiang</forename><surname>Hu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Leshi</forename><surname>Shu</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00158-017-1783-4</idno>
+		<ptr target="https://doi.org/10.1007/s00158-017-1783-4" />
+	</analytic>
+	<monogr>
+		<title level="j">Structural and Multidisciplinary Optimization</title>
+		<title level="j" type="abbrev">Struct Multidisc Optim</title>
+		<idno type="ISSN">1615-147X</idno>
+		<idno type="ISSNe">1615-1488</idno>
+		<imprint>
+			<biblScope unit="volume">57</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="775" to="797" />
+			<date type="published" when="2018">2018</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,398.18,231.75,7.08;13,54.14,406.17,232.54,7.08;13,54.14,414.11,58.73,7.08" xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Review of Metamodeling Techniques in Support of Engineering Design Optimization</title>
+		<author>
+			<persName coords=""><forename type="first">G</forename><forename type="middle">Gary</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Shan</surname></persName>
+		</author>
+		<idno type="DOI">10.1115/1.2429697</idno>
+		<ptr target="https://doi.org/10.1115/1.2429697" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Mechanical Design</title>
+		<idno type="ISSN">1050-0472</idno>
+		<idno type="ISSNe">1528-9001</idno>
+		<imprint>
+			<biblScope unit="volume">129</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="370" to="380" />
+			<date type="published" when="2007">2007</date>
+			<publisher>ASME International</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,422.11,232.52,7.08;13,54.14,430.10,231.27,7.08;13,54.14,438.04,106.77,7.08" xml:id="b23">
+	<analytic>
+		<title level="a" type="main">A Critical Review of Surrogate Assisted Robust Design Optimization</title>
+		<author>
+			<persName><forename type="first">Tanmoy</forename><surname>Chatterjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Souvik</forename><surname>Chakraborty</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rajib</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11831-017-9240-5</idno>
+		<ptr target="https://doi.org/10.1007/s11831-017-9240-5" />
+	</analytic>
+	<monogr>
+		<title level="j">Archives of Computational Methods in Engineering</title>
+		<title level="j" type="abbrev">Arch Computat Methods Eng</title>
+		<idno type="ISSN">1134-3060</idno>
+		<idno type="ISSNe">1886-1784</idno>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="245" to="274" />
+			<date type="published" when="2019">2019</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,446.03,222.70,7.08;13,54.14,453.97,219.22,7.08;13,54.14,461.96,145.80,7.08" xml:id="b24">
+	<analytic>
+		<title level="a" type="main">A global two-layer meta-model for response statistics in robust design optimization</title>
+		<author>
+			<persName><forename type="first">Tanmoy</forename><surname>Chatterjee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><forename type="middle">I</forename><surname>Friswell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sondipon</forename><surname>Adhikari</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rajib</forename><surname>Chowdhury</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/0305215x.2020.1861262</idno>
+		<ptr target="https://doi.org/10.1080/0305215X.2020.1861262" />
+	</analytic>
+	<monogr>
+		<title level="j">Engineering Optimization</title>
+		<title level="j" type="abbrev">Engineering Optimization</title>
+		<idno type="ISSN">0305-215X</idno>
+		<idno type="ISSNe">1029-0273</idno>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="153" to="169" />
+			<date type="published" when="2021-01-11">2021</date>
+			<publisher>Informa UK Limited</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,469.90,232.52,7.08;13,54.14,477.89,214.59,7.08;13,54.14,485.88,158.78,7.08" xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Multi-scale robust design and optimization considering load uncertainties</title>
+		<author>
+			<persName><forename type="first">Xu</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaofang</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weisheng</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Yan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guomin</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cma.2014.10.014</idno>
+		<ptr target="https://doi.org/10.1016/j.cma.2014.10.014" />
+	</analytic>
+	<monogr>
+		<title level="j">Computer Methods in Applied Mechanics and Engineering</title>
+		<title level="j" type="abbrev">Computer Methods in Applied Mechanics and Engineering</title>
+		<idno type="ISSN">0045-7825</idno>
+		<imprint>
+			<biblScope unit="volume">283</biblScope>
+			<biblScope unit="page" from="994" to="1009" />
+			<date type="published" when="2015-01">2015</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,493.82,229.33,7.08;13,54.14,501.82,232.31,7.08;13,54.14,509.75,134.13,7.08" xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Reliability-based design optimization of structural systems under stochastic excitation: An overview</title>
+		<author>
+			<persName coords=""><forename type="first">D</forename><forename type="middle">J</forename><surname>Jerez</surname></persName>
+			<idno type="ORCID">0000-0003-2496-945X</idno>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">H</forename><forename type="middle">A</forename><surname>Jensen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">M</forename><surname>Beer</surname></persName>
+			<idno type="ORCID">0000-0002-0611-0345</idno>
+		</author>
+		<idno type="DOI">10.1016/j.ymssp.2021.108397</idno>
+		<ptr target="https://doi.org/10.1016/j.ymssp.2021.108397" />
+	</analytic>
+	<monogr>
+		<title level="j">Mechanical Systems and Signal Processing</title>
+		<title level="j" type="abbrev">Mechanical Systems and Signal Processing</title>
+		<idno type="ISSN">0888-3270</idno>
+		<imprint>
+			<biblScope unit="volume">166</biblScope>
+			<biblScope unit="page">108397</biblScope>
+			<date type="published" when="2022-03">2022</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,517.75,232.52,7.08;13,54.14,525.74,227.30,7.08;13,54.14,533.68,74.01,7.08" xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Multidisciplinary robust design optimization under parameter and model uncertainties</title>
+		<author>
+			<persName><forename type="first">Wei</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Liang</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mi</forename><surname>Xiao</surname></persName>
+			<idno type="ORCID">0000-0002-5544-9935</idno>
+		</author>
+		<idno type="DOI">10.1080/0305215x.2019.1590564</idno>
+		<ptr target="https://doi.org/10.1080/0305215X.2019.1590564" />
+	</analytic>
+	<monogr>
+		<title level="j">Engineering Optimization</title>
+		<title level="j" type="abbrev">Engineering Optimization</title>
+		<idno type="ISSN">0305-215X</idno>
+		<idno type="ISSNe">1029-0273</idno>
+		<imprint>
+			<biblScope unit="volume">52</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="426" to="445" />
+			<date type="published" when="2020">2020</date>
+			<publisher>Informa UK Limited</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,541.67,224.41,7.08;13,54.14,549.61,208.38,7.08;13,54.14,557.60,51.08,7.08" xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Robust optimization – A comprehensive survey</title>
+		<author>
+			<persName><forename type="first">Hans-Georg</forename><surname>Beyer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bernhard</forename><surname>Sendhoff</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cma.2007.03.003</idno>
+		<ptr target="https://doi.org/10.1016/j.cma.2007.03.003" />
+	</analytic>
+	<monogr>
+		<title level="j">Computer Methods in Applied Mechanics and Engineering</title>
+		<title level="j" type="abbrev">Computer Methods in Applied Mechanics and Engineering</title>
+		<idno type="ISSN">0045-7825</idno>
+		<imprint>
+			<biblScope unit="volume">196</biblScope>
+			<biblScope unit="issue">33-34</biblScope>
+			<biblScope unit="page" from="3190" to="3218" />
+			<date type="published" when="2007-07">2007</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,54.14,565.59,232.07,7.08;13,54.14,573.53,232.53,7.08;13,54.14,581.52,95.99,7.08" xml:id="b29">
+	<analytic>
+		<title level="a" type="main">An efficient procedure for structural reliability-based robust design optimization</title>
+		<author>
+			<persName><forename type="first">Renato</forename><forename type="middle">De S</forename><surname>Motta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Silvana</forename><forename type="middle">M B</forename><surname>Afonso</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00158-016-1418-1</idno>
+		<ptr target="https://doi.org/10.1007/s00158-016-1418-1" />
+	</analytic>
+	<monogr>
+		<title level="j">Structural and Multidisciplinary Optimization</title>
+		<title level="j" type="abbrev">Struct Multidisc Optim</title>
+		<idno type="ISSN">1615-147X</idno>
+		<idno type="ISSNe">1615-1488</idno>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="511" to="530" />
+			<date type="published" when="2016-03-09">2016</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,55.48,208.62,7.08;13,323.15,63.47,232.53,7.08;13,323.15,71.41,107.61,7.08" xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Comparison of evolutionary-based optimization algorithms for structural design optimization</title>
+		<author>
+			<persName coords=""><forename type="first">Ali</forename><forename type="middle">R</forename><surname>Yildiz</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.engappai.2012.05.014</idno>
+		<ptr target="https://doi.org/10.1016/j.engappai.2012.05.014" />
+	</analytic>
+	<monogr>
+		<title level="j">Engineering Applications of Artificial Intelligence</title>
+		<title level="j" type="abbrev">Engineering Applications of Artificial Intelligence</title>
+		<idno type="ISSN">0952-1976</idno>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="327" to="333" />
+			<date type="published" when="2013-01">2013</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,79.40,231.92,7.08;13,323.15,87.34,232.54,7.08;13,323.15,95.33,153.21,7.08" xml:id="b31">
+	<analytic>
+		<title level="a" type="main">A comparison of deterministic, reliability-based and risk-based structural optimization under uncertainty</title>
+		<author>
+			<persName><forename type="first">André</forename><forename type="middle">Teófilo</forename><surname>Beck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wellison</forename><forename type="middle">José De Santana</forename><surname>Gomes</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.probengmech.2011.08.007</idno>
+		<ptr target="https://doi.org/10.1016/j.probengmech.2011.08.007" />
+	</analytic>
+	<monogr>
+		<title level="j">Probabilistic Engineering Mechanics</title>
+		<title level="j" type="abbrev">Probabilistic Engineering Mechanics</title>
+		<idno type="ISSN">0266-8920</idno>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="18" to="29" />
+			<date type="published" when="2012-04">2012</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,103.32,223.82,7.08;13,323.15,111.26,227.07,7.08;13,323.15,119.26,47.39,7.08" xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Modeling, analysis, and optimization under uncertainties: a review</title>
+		<author>
+			<persName><forename type="first">Erdem</forename><surname>Acar</surname></persName>
+			<idno type="ORCID">0000-0002-3661-5563</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Gamze</forename><surname>Bayrak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yongsu</forename><surname>Jung</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ikjin</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Palaniappan</forename><surname>Ramu</surname></persName>
+			<idno type="ORCID">0000-0001-9704-2087</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Suja</forename><forename type="middle">Shree</forename><surname>Ravichandran</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00158-021-03026-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Structural and Multidisciplinary Optimization</title>
+		<title level="j" type="abbrev">Struct Multidisc Optim</title>
+		<idno type="ISSN">1615-147X</idno>
+		<idno type="ISSNe">1615-1488</idno>
+		<imprint>
+			<biblScope unit="volume">64</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="2909" to="2945" />
+			<date type="published" when="2021-08-21">2021</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,127.19,232.52,7.08;13,323.15,135.19,216.61,7.08;13,323.15,143.18,128.90,7.08" xml:id="b33">
+	<analytic>
+		<title level="a" type="main">The decision rule approach to optimization under uncertainty: methodology and applications</title>
+		<author>
+			<persName><forename type="first">Angelos</forename><surname>Georghiou</surname></persName>
+			<idno type="ORCID">0000-0003-4490-4020</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Kuhn</surname></persName>
+			<idno type="ORCID">0000-0003-2697-8886</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Wolfram</forename><surname>Wiesemann</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10287-018-0338-5</idno>
+		<ptr target="https://doi.org/10.1007/s10287-018-0338-5" />
+	</analytic>
+	<monogr>
+		<title level="j">Computational Management Science</title>
+		<title level="j" type="abbrev">Comput Manag Sci</title>
+		<idno type="ISSN">1619-697X</idno>
+		<idno type="ISSNe">1619-6988</idno>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="545" to="576" />
+			<date type="published" when="2019">2019</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,151.12,213.57,7.08;13,323.15,159.11,209.30,7.08;13,323.15,167.05,228.46,7.08" xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Study of Uncertainties and Objective Function Modeling Effects on Probabilistic Optimization Results</title>
+		<author>
+			<persName><forename type="first">Oussama</forename><surname>Braydi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pascal</forename><surname>Lafon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafic</forename><surname>Younes</surname></persName>
+		</author>
+		<idno type="DOI">10.1115/1.4044152</idno>
+		<ptr target="https://doi.org/10.1115/1.4044152" />
+	</analytic>
+	<monogr>
+		<title level="j">ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part B: Mechanical Engineering</title>
+		<idno type="ISSN">2332-9017</idno>
+		<idno type="ISSNe">2332-9025</idno>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<date type="published" when="2019-09-25">2019</date>
+			<publisher>ASME International</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,175.04,232.52,7.08;13,323.15,182.98,225.42,7.08;13,323.15,190.97,150.64,7.08" xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Reliability based design optimization with approximate failure probability function in partitioned design space</title>
+		<author>
+			<persName><forename type="first">Wang-Sheng</forename><surname>Liu</surname></persName>
+			<idno type="ORCID">0000-0001-8998-6029</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Sai</forename><forename type="middle">Hung</forename><surname>Cheung</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.ress.2017.07.007</idno>
+		<ptr target="https://doi.org/10.1016/j.ress.2017.07.007" />
+	</analytic>
+	<monogr>
+		<title level="j">Reliability Engineering &amp; System Safety</title>
+		<title level="j" type="abbrev">Reliability Engineering &amp; System Safety</title>
+		<idno type="ISSN">0951-8320</idno>
+		<imprint>
+			<biblScope unit="volume">167</biblScope>
+			<biblScope unit="page" from="602" to="611" />
+			<date type="published" when="2017-11">2017</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,198.96,232.53,7.08;13,323.15,206.90,213.61,7.08;13,323.15,214.90,58.73,7.08" xml:id="b36">
+	<analytic>
+		<title level="a" type="main">First-Order Approximation Methods in Reliability-Based Design Optimization</title>
+		<author>
+			<persName><forename type="first">Anukal</forename><surname>Chiralaksanakul</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sankaran</forename><surname>Mahadevan</surname></persName>
+		</author>
+		<idno type="DOI">10.1115/1.1899691</idno>
+		<ptr target="https://doi.org/10.1115/1.1899691" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Mechanical Design</title>
+		<idno type="ISSN">1050-0472</idno>
+		<idno type="ISSNe">1528-9001</idno>
+		<imprint>
+			<biblScope unit="volume">127</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="851" to="857" />
+			<date type="published" when="2005">2005</date>
+			<publisher>ASME International</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,222.83,210.48,7.08;13,323.15,230.83,217.41,7.08;13,323.15,238.82,126.52,7.08" xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Robust design of non-linear structures using optimization methods</title>
+		<author>
+			<persName><forename type="first">Ioannis</forename><surname>Doltsinis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhan</forename><surname>Kang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gengdong</forename><surname>Cheng</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cma.2004.02.027</idno>
+		<ptr target="https://doi.org/10.1016/j.cma.2004.02.027" />
+	</analytic>
+	<monogr>
+		<title level="j">Computer Methods in Applied Mechanics and Engineering</title>
+		<title level="j" type="abbrev">Computer Methods in Applied Mechanics and Engineering</title>
+		<idno type="ISSN">0045-7825</idno>
+		<imprint>
+			<biblScope unit="volume">194</biblScope>
+			<biblScope unit="issue">12-16</biblScope>
+			<biblScope unit="page" from="1779" to="1795" />
+			<date type="published" when="2005-04">2005</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,246.76,220.12,7.08;13,323.15,254.75,176.07,7.08;13,323.15,262.69,77.77,7.08" xml:id="b38">
+	<analytic>
+		<title level="a" type="main">Stochastic Subset Optimization for optimal reliability problems</title>
+		<author>
+			<persName coords=""><forename type="first">A</forename><forename type="middle">A</forename><surname>Taflanidis</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">J</forename><forename type="middle">L</forename><surname>Beck</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.probengmech.2007.12.011</idno>
+		<ptr target="https://doi.org/10.1016/j.probengmech.2007.12.011" />
+	</analytic>
+	<monogr>
+		<title level="j">Probabilistic Engineering Mechanics</title>
+		<title level="j" type="abbrev">Probabilistic Engineering Mechanics</title>
+		<idno type="ISSN">0266-8920</idno>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">2-3</biblScope>
+			<biblScope unit="page" from="324" to="338" />
+			<date type="published" when="2008-04">2008</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,270.68,225.58,7.08;13,323.15,278.62,227.75,7.08;13,323.15,286.61,71.42,7.08" xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Estimation of small failure probabilities in high dimensions by subset simulation</title>
+		<author>
+			<persName><forename type="first">Siu-Kui</forename><surname>Au</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">L</forename><surname>Beck</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/s0266-8920(01)00019-4</idno>
+		<ptr target="https://doi.org/10.1016/S0266-8920(01)00019-4" />
+	</analytic>
+	<monogr>
+		<title level="j">Probabilistic Engineering Mechanics</title>
+		<title level="j" type="abbrev">Probabilistic Engineering Mechanics</title>
+		<idno type="ISSN">0266-8920</idno>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="263" to="277" />
+			<date type="published" when="2001-10">2001</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,294.60,232.53,7.08;13,323.15,302.54,218.65,7.08;13,323.15,310.54,98.76,7.08" xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Non-parametric stochastic subset optimization for optimal-reliability design problems</title>
+		<author>
+			<persName><forename type="first">Gaofeng</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandros</forename><forename type="middle">A</forename><surname>Taflanidis</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compstruc.2012.12.009</idno>
+		<ptr target="https://doi.org/10.1016/j.compstruc.2012.12.009" />
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Structures</title>
+		<title level="j" type="abbrev">Computers &amp; Structures</title>
+		<idno type="ISSN">0045-7949</idno>
+		<imprint>
+			<biblScope unit="volume">126</biblScope>
+			<biblScope unit="page" from="86" to="99" />
+			<date type="published" when="2013-09">2013</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,318.47,230.60,7.08;13,323.15,326.47,231.01,7.08;13,323.15,334.46,163.30,7.08" xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Stochastic subset optimization incorporating moving least squares response surface methodologies for stochastic sampling</title>
+		<author>
+			<persName coords=""><forename type="first">Alexandros</forename><forename type="middle">A</forename><surname>Taflanidis</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.advengsoft.2011.07.009</idno>
+		<ptr target="https://doi.org/10.1016/j.advengsoft.2011.07.009" />
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Engineering Software</title>
+		<title level="j" type="abbrev">Advances in Engineering Software</title>
+		<idno type="ISSN">0965-9978</idno>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="3" to="14" />
+			<date type="published" when="2012-02">2012</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,342.40,224.35,7.08;13,323.15,350.39,232.52,7.08;13,323.15,358.33,112.20,7.08" xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Framework for Robust Design Optimization of Tuned Mass Dampers by Stochastic Subset Optimization</title>
+		<author>
+			<persName><forename type="first">Mohd</forename><forename type="middle">Aman</forename><surname>Khalid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sahil</forename><surname>Bansal</surname></persName>
+			<idno type="ORCID">0000-0002-4968-2079</idno>
+		</author>
+		<idno type="DOI">10.1142/s0219455423501559</idno>
+		<ptr target="https://doi.org/10.1142/S0219455423501559" />
+	</analytic>
+	<monogr>
+		<title level="j">International Journal of Structural Stability and Dynamics</title>
+		<title level="j" type="abbrev">Int. J. Str. Stab. Dyn.</title>
+		<idno type="ISSN">0219-4554</idno>
+		<idno type="ISSNe">1793-6764</idno>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<date type="published" when="2023-02-24">2023</date>
+			<publisher>World Scientific Pub Co Pte Ltd</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,366.32,230.88,7.08;13,323.15,374.26,51.62,7.08" xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Reliability-based design sensitivity by efficient simulation</title>
+		<author>
+			<persName coords=""><forename type="first">S</forename><forename type="middle">K</forename><surname>Au</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.compstruc.2004.11.015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Structures</title>
+		<title level="j" type="abbrev">Computers &amp; Structures</title>
+		<idno type="ISSN">0045-7949</idno>
+		<imprint>
+			<biblScope unit="volume">83</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page" from="1048" to="1061" />
+			<date type="published" when="2005-05">2005</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,382.25,232.50,7.08;13,323.15,390.24,232.52,7.08;13,323.15,398.18,104.39,7.08" xml:id="b44">
+	<analytic>
+		<title level="a" type="main">An efficient framework for optimal robust stochastic system design using stochastic simulation</title>
+		<author>
+			<persName><forename type="first">Alexandros</forename><forename type="middle">A</forename><surname>Taflanidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">L</forename><surname>Beck</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cma.2008.03.029</idno>
+		<ptr target="https://doi.org/10.1016/j.cma.2008.03.029" />
+	</analytic>
+	<monogr>
+		<title level="j">Computer Methods in Applied Mechanics and Engineering</title>
+		<title level="j" type="abbrev">Computer Methods in Applied Mechanics and Engineering</title>
+		<idno type="ISSN">0045-7825</idno>
+		<imprint>
+			<biblScope unit="volume">198</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="88" to="101" />
+			<date type="published" when="2008-11">2008</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,406.17,226.42,7.08;13,323.15,414.11,16.14,7.08" xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Monte Carlo Optimization</title>
+		<author>
+			<persName><forename type="first">Christian</forename><forename type="middle">P</forename><surname>Robert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><surname>Casella</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-1-4757-4145-2_5</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Springer Texts in Statistics</title>
+		<meeting><address><addrLine>New York, NY</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer New York</publisher>
+			<date type="published" when="2004">2004</date>
+			<biblScope unit="page" from="157" to="204" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,422.11,232.53,7.08;13,323.15,430.10,180.86,7.08" xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Subset simulation for unconstrained global optimization</title>
+		<author>
+			<persName coords=""><forename type="first">Hong-Shuang</forename><forename type="middle">S</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.apm.2011.04.023</idno>
+		<ptr target="https://doi.org/10.1016/j.apm.2011.04.023" />
+	</analytic>
+	<monogr>
+		<title level="j">Applied Mathematical Modelling</title>
+		<title level="j" type="abbrev">Applied Mathematical Modelling</title>
+		<idno type="ISSN">0307-904X</idno>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="5108" to="5120" />
+			<date type="published" when="2011-10">2011</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,438.04,232.51,7.08;13,323.15,446.03,232.54,7.08;13,323.15,453.97,131.85,7.08" xml:id="b47">
+	<analytic>
+		<title level="a" type="main">An augmented formulation for robust design optimization of structures using stochastic simulation method</title>
+		<author>
+			<persName><forename type="first">Mohd</forename><forename type="middle">Aman</forename><surname>Khalid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sahil</forename><surname>Bansal</surname></persName>
+			<idno type="ORCID">0000-0002-4968-2079</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Varun</forename><surname>Ramamohan</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00163-022-00405-z</idno>
+		<ptr target="https://doi.org/10.1007/s00163-022-00405-z" />
+	</analytic>
+	<monogr>
+		<title level="j">Research in Engineering Design</title>
+		<title level="j" type="abbrev">Res Eng Design</title>
+		<idno type="ISSN">0934-9839</idno>
+		<idno type="ISSNe">1435-6066</idno>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="179" to="200" />
+			<date type="published" when="2022-12-05">2022</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,461.96,232.50,7.08;13,323.15,469.90,226.04,7.08;13,323.15,477.89,151.58,7.08" xml:id="b48">
+	<analytic>
+		<title level="a" type="main">An efficient framework for optimal robust stochastic system design using stochastic simulation</title>
+		<author>
+			<persName><forename type="first">Alexandros</forename><forename type="middle">A</forename><surname>Taflanidis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">L</forename><surname>Beck</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cma.2008.03.029</idno>
+		<ptr target="https://doi.org/10.1016/j.cma.2008.03.029" />
+	</analytic>
+	<monogr>
+		<title level="j">Computer Methods in Applied Mechanics and Engineering</title>
+		<title level="j" type="abbrev">Computer Methods in Applied Mechanics and Engineering</title>
+		<idno type="ISSN">0045-7825</idno>
+		<imprint>
+			<biblScope unit="volume">198</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="88" to="101" />
+			<date type="published" when="2008-11">2008</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,485.88,232.11,7.08;13,323.15,493.82,232.53,7.08;13,323.15,501.82,114.33,7.08" xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Optimization of Seismic Base Isolation System Using a Fuzzy Reinforced Swarm Intelligence</title>
+		<author>
+			<persName><forename type="first">Elif</forename><forename type="middle">Cagda</forename><surname>Kandemir</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ali</forename><surname>Mortazavi</surname></persName>
+			<idno type="ORCID">0000-0002-6089-7046</idno>
+		</author>
+		<idno type="DOI">10.1016/j.advengsoft.2022.103323</idno>
+		<ptr target="https://doi.org/10.1016/j.advengsoft.2022.103323" />
+	</analytic>
+	<monogr>
+		<title level="j">Advances in Engineering Software</title>
+		<title level="j" type="abbrev">Advances in Engineering Software</title>
+		<idno type="ISSN">0965-9978</idno>
+		<imprint>
+			<biblScope unit="volume">174</biblScope>
+			<biblScope unit="page">103323</biblScope>
+			<date type="published" when="2022-12">2022</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,509.75,202.32,7.08;13,323.15,517.75,226.06,7.08" xml:id="b50">
+	<analytic>
+		<title level="a" type="main">Efficient Unstructured Mesh Generation by Means of Delaunay Triangulation and Bowyer-Watson Algorithm</title>
+		<author>
+			<persName coords=""><forename type="first">S</forename><surname>Rebay</surname></persName>
+		</author>
+		<idno type="DOI">10.1006/jcph.1993.1097</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational Physics</title>
+		<title level="j" type="abbrev">Journal of Computational Physics</title>
+		<idno type="ISSN">0021-9991</idno>
+		<imprint>
+			<biblScope unit="volume">106</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="125" to="138" />
+			<date type="published" when="1993-05">1993</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,525.74,228.04,7.08;13,323.15,533.68,226.48,7.08;13,323.15,541.67,57.18,7.08" xml:id="b51">
+	<analytic>
+		<title level="a" type="main">Estimating microstructural feature distributions from image data using a Bayesian framework</title>
+		<author>
+			<persName><forename type="first">Noah</forename><surname>Wade</surname></persName>
+			<idno type="ORCID">0000-0002-7478-3672</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Lori</forename><surname>Graham‐brady</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/jmi.13184</idno>
+		<ptr target="https://doi.org/10.1111/jmi.13184" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Microscopy</title>
+		<title level="j" type="abbrev">Journal of Microscopy</title>
+		<idno type="ISSN">0022-2720</idno>
+		<idno type="ISSNe">1365-2818</idno>
+		<imprint>
+			<biblScope unit="volume">290</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="137" to="152" />
+			<date type="published" when="2023-03-23">2023</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,549.61,232.51,7.08;13,323.15,557.60,167.04,7.08;13,323.15,565.59,73.56,7.08" xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Exact Voronoi diagram for topographic spatial analysis</title>
+		<author>
+			<persName><forename type="first">Xinqiao</forename><surname>Duan</surname></persName>
+			<idno type="ORCID">0000-0002-0429-2093</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Lin</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yong</forename><surname>Ge</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bo</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/15481603.2023.2171703</idno>
+		<ptr target="https://doi.org/10.1080/15481603.2023.2171703" />
+	</analytic>
+	<monogr>
+		<title level="j">GIScience &amp; Remote Sensing</title>
+		<title level="j" type="abbrev">GIScience &amp; Remote Sensing</title>
+		<idno type="ISSN">1548-1603</idno>
+		<idno type="ISSNe">1943-7226</idno>
+		<imprint>
+			<biblScope unit="volume">60</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2023-02">2023</date>
+			<publisher>Informa UK Limited</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="13,323.15,573.53,227.55,7.08;13,323.15,581.52,99.20,7.08" xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Matlab Version 6.5 Release 13. The MathWorks, Inc., 3 Apple Hill Dr., Natick, MA 01760-2098; 508/647-7000, Fax 508/647-7001, www.mathworks.com</title>
+		<author>
+			<persName><forename type="first">Susan</forename><surname>Eitelman</surname></persName>
+		</author>
+		<idno type="DOI">10.1177/106480460301100306</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Ergonomics in Design: The Quarterly of Human Factors Applications</title>
+		<title level="j" type="abbrev">Ergonomics in Design</title>
+		<idno type="ISSN">1064-8046</idno>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="27" to="29" />
+			<date type="published" when="2021">2021</date>
+			<publisher>SAGE Publications</publisher>
+			<pubPlace>Natick, Massachusetts, United States</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

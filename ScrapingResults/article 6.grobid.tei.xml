@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">High Spectral Resolution and Accuracy Studies for a Sr Optical Lattice Clock</title>
+				<funder>
+					<orgName type="full">NASA</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">ONR</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">NIST</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">National Science Foundation</orgName>
+					<orgName type="abbreviated">NSF</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName coords="1,114.96,161.96,63.90,9.63"><forename type="first">S</forename><forename type="middle">M</forename><surname>Foreman</surname></persName>
+							<email>foreman@jila.colorado.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution" key="instit1">JILA</orgName>
+								<orgName type="institution" key="instit2">National Institute of Standards and Technology</orgName>
+								<orgName type="institution" key="instit3">University of Colorado</orgName>
+								<orgName type="institution" key="instit4">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80309-0440</postCode>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,191.75,161.96,51.79,9.63"><forename type="first">M</forename><forename type="middle">M</forename><surname>Boyd</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution" key="instit1">JILA</orgName>
+								<orgName type="institution" key="instit2">National Institute of Standards and Technology</orgName>
+								<orgName type="institution" key="instit3">University of Colorado</orgName>
+								<orgName type="institution" key="instit4">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80309-0440</postCode>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,251.75,161.96,58.49,9.63"><forename type="first">A</forename><forename type="middle">D</forename><surname>Ludlow</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution" key="instit1">JILA</orgName>
+								<orgName type="institution" key="instit2">National Institute of Standards and Technology</orgName>
+								<orgName type="institution" key="instit3">University of Colorado</orgName>
+								<orgName type="institution" key="instit4">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80309-0440</postCode>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,318.48,161.96,59.09,9.63"><forename type="first">T</forename><surname>Zelevinsky</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution" key="instit1">JILA</orgName>
+								<orgName type="institution" key="instit2">National Institute of Standards and Technology</orgName>
+								<orgName type="institution" key="instit3">University of Colorado</orgName>
+								<orgName type="institution" key="instit4">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80309-0440</postCode>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,385.22,161.96,31.65,9.63"><forename type="first">S</forename><surname>Blatt</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution" key="instit1">JILA</orgName>
+								<orgName type="institution" key="instit2">National Institute of Standards and Technology</orgName>
+								<orgName type="institution" key="instit3">University of Colorado</orgName>
+								<orgName type="institution" key="instit4">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80309-0440</postCode>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,423.62,161.96,25.17,9.63"><forename type="first">T</forename><surname>Ido</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution" key="instit1">JILA</orgName>
+								<orgName type="institution" key="instit2">National Institute of Standards and Technology</orgName>
+								<orgName type="institution" key="instit3">University of Colorado</orgName>
+								<orgName type="institution" key="instit4">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80309-0440</postCode>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,474.49,161.96,22.90,9.63"><forename type="first">J</forename><surname>Ye</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Physics</orgName>
+								<orgName type="institution" key="instit1">JILA</orgName>
+								<orgName type="institution" key="instit2">National Institute of Standards and Technology</orgName>
+								<orgName type="institution" key="instit3">University of Colorado</orgName>
+								<orgName type="institution" key="instit4">University of Colorado Boulder</orgName>
+								<address>
+									<postCode>80309-0440</postCode>
+									<region>CO</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">High Spectral Resolution and Accuracy Studies for a Sr Optical Lattice Clock</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">72B07B9BF38004F1F0CA20EE83A25EB9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2024-02-03T16:12+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>We report recent progress on an optical lattice clock based on the 1 S 0 -3 P 0 transition of 87 Sr. Improvement of the spectral resolution allows measurement of the magneticallyinduced frequency shift with an uncertainty below 10 -15 . The high line quality factor is expected to yield complete evaluation of systematic effects at that same level in the near future.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Optical clocks based on neutral atoms tightly confined in an optical lattice have recently begun to show impressive promise as potential frequency standards <ref type="bibr" coords="1,238.37,350.50,7.40,8.79" target="#b0">[1]</ref><ref type="bibr" coords="1,245.77,350.50,3.70,8.79" target="#b1">[2]</ref><ref type="bibr" coords="1,245.77,350.50,3.70,8.79" target="#b2">[3]</ref><ref type="bibr" coords="1,249.47,350.50,7.40,8.79" target="#b3">[4]</ref>. These optical lattice clocks provide relatively high signal-to-noise from the large numbers of atoms, while at the same time allowing Doppler-free interrogation of the clock transitions for long probing times. Atomic Strontium provides an exciting candidate for such a clock, since the level structure provides a means for cooling the sample to µK temperatures as well as multiple narrow clock transitions. Several techniques are under investigation for the Sr clock transitions, including free-space spectroscopy of the 1 S 0 -3 P 1 transition in 88 Sr <ref type="bibr" coords="1,125.04,459.71,10.35,8.79" target="#b4">[5]</ref>, lattice-based spectroscopy of the 1 S 0 -3 P 0 transition in 87 Sr <ref type="bibr" coords="1,137.28,470.75,7.40,8.79" target="#b0">[1]</ref><ref type="bibr" coords="1,144.67,470.75,3.70,8.79" target="#b1">[2]</ref><ref type="bibr" coords="1,144.67,470.75,3.70,8.79" target="#b2">[3]</ref><ref type="bibr" coords="1,148.37,470.75,7.40,8.79" target="#b3">[4]</ref>, and state-mixing schemes such as electromagnetically-induced-transparency <ref type="bibr" coords="1,224.91,481.54,11.52,8.79" target="#b5">[6,</ref><ref type="bibr" coords="1,236.43,481.54,7.68,8.79" target="#b6">7]</ref> or use of a DC magnetic field <ref type="bibr" coords="1,142.10,492.58,11.52,8.79" target="#b2">[3]</ref> for spectroscopy of the strictly forbidden 1 S 0 -3 P 0 transition in 88 Sr. Currently, detailed evaluations of systematic effects for the sub-Hz natural linewidth transition in 87 Sr are being performed in several independent systems <ref type="bibr" coords="1,142.82,536.27,10.84,8.79" target="#b0">[1,</ref><ref type="bibr" coords="1,153.66,536.27,7.23,8.79" target="#b1">2,</ref><ref type="bibr" coords="1,160.89,536.27,7.23,8.79" target="#b7">8]</ref>. To this end we present our recent progress toward evaluation of systematic effects below the 10 -15 level, which has greatly benefited from a much narrower spectral linewidth corresponding to a line quality factor exceeding 2 × 10 14 .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. EXPERIMENTAL SYSTEM COMPONENTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Cooling and Trapping Neutral Strontium</head><p>The development of optical atomic clocks requires the ability to reach ultracold temperatures with large atom numbers (N). By achieving sufficiently low temperatures, atoms can be tightly confined in the Lamb-Dicke regime in a lattice potential, virtually eliminating adverse Doppler effects on the clock's performance. In addition, the stability of the clock can be improved by √N as larger numbers of atoms are employed. In the case of neutral Sr, we use two cooling transitions (the 32-MHz-wide 1 S 0 -1 P 1 transition at 461 nm followed by the 7.4-kHz-wide 1 S 0 -3 P 1 transition at 689 nm) in order to cool the atoms to µK temperatures before loading them into the optical lattice. Complete details of the laser cooling apparatus are given in <ref type="bibr" coords="1,482.90,320.50,11.26,8.79" target="#b8">[9,</ref><ref type="bibr" coords="1,494.16,320.50,11.26,8.79" target="#b9">10]</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Confinement in the Optical Lattice</head><p>In order to take advantage of the narrow sub-Hz clock transition offered by 87 Sr, the atoms must be held without perturbation to the clock transition for times on the order of 1 s. Free-space spectroscopy of Sr <ref type="bibr" coords="1,466.05,390.58,11.76,8.79" target="#b4">[5]</ref> yields troublesome Doppler effects which limit the achievable accuracy. An attractive solution is the tight confinement offered by an optical lattice, which allows long interaction times while essentially eliminating any Doppler or recoil effects. When the optical lattice is operated at the 'magic' wavelength, AC stark shifts induced by the lattice field become equal for the 1 S 0 and 3 P 0 energy levels. In this manner, the clock transition frequency is unperturbed by the presence of the lattice field. Our one-dimensional lattice is constructed from a ~300 mW wtanding wave of optical power at the magic wavelength of ~813.4 nm, and is oriented nearly parallel to the direction of gravity. After transfer from the second laser-cooling stage to the lattice, &gt; 10 4 atoms at ~1.5 µK temperatures are confined with a Lamb-Dicke parameter of ~0.3, allowing Dopplerand recoil-free spectroscopy of the clock transition along the axis of the lattice beam.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Probe Laser</head><p>For the purposes of operating a clock with the best possible stability, it is necessary for the probe laser to have both a narrow intrinsic linewidth as well as small frequency drift and low instability. We probe the extremely narrow natural linewidth of the clock transition in fermionic Sr with a cavity-stabilized diode laser operating at 698 nm. The high-finesse cavity is mounted in a vertical orientation in order to reduce sensitivity to vibrations in the vertical direction <ref type="bibr" coords="2,91.93,84.83,15.07,8.79" target="#b10">[11]</ref>. To characterize our clock laser, we compare it to a second stable laser operating at 1064 nm by use of the femtosecond comb described in the next section. Although the probe laser system used for our 2005 systematic measurements had net optical phase noise leading to measured spectra of linewidth &gt; 200 Hz during the measurements, improvements to both the design and construction of the cavity now provide laser linewidths (at 698 nm) below 0.5 Hz for a 3-s integration time and ~ 10 Hz for a 60-s integration time. We believe the measured linewidth is most likely limited by the 1064-nm laser.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>D. Clockwork</head><p>For absolute frequency measurements of the clock transition, we frequency count the probe laser relative to a microwave signal derived from a Hydrogen maser that is calibrated by the NIST primary Cs fountain clock. A diode laser operating near 1320 nm is amplitude-modulated at 950 MHz and transmitted over a 3.5-km fiber optic link from NIST to our lab <ref type="bibr" coords="2,121.20,296.98,15.07,8.79" target="#b11">[12]</ref>. A directly-octave-spanning frequency comb similar to that reported in <ref type="bibr" coords="2,187.94,307.78,16.56,8.79" target="#b12">[13]</ref> is locked to the probe laser at 698 nm, and is also self-referenced. The ~ 950-MHz harmonic of the comb's repetition rate is frequency counted against the Cs-fountain-calibrated microwave reference in order to perform the absolute frequency measurements. The instability of the frequency-counting signal is ~ 2.5 × 10 -13 for a 1-s integration time. At the same time, the frequency comb can be used to form an optical beat against a narrow 1064-nm laser <ref type="bibr" coords="2,115.93,395.15,16.56,8.79" target="#b10">[11]</ref> in order to characterize the phase noise and linewidth of the probe laser, as discussed in the previous section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. EVALUATION OF SYSTEMATICS IN 2005</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Spectroscopy</head><p>For absolute frequency measurements and investigation of systematic effects, it is first necessary to obtain a repeatable and narrow spectral line.</p><p>To this end, measurement of the clock transition carrier frequency and its associated motional sidebands (due to confinement in the lattice) was performed. Figure <ref type="figure" coords="2,203.05,532.67,16.08,8.79" target="#fig_0">1(a)</ref> shows the axial sidebands well-separated from the narrow carrier. Figure <ref type="figure" coords="2,54.00,554.51,4.14,8.79" target="#fig_0">1</ref>(b) also shows a higher-resolution scan of the carrier transition. Typically, spectra with linewidths on the order of ~ 200 Hz were fit as Lorentzians in order to determine the center frequency for evaluation of systematic effects and absolute frequency measurements.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Systematic Effects</head><p>The primary concern for an optical lattice clock is sensitivity of the clock transition to the optical lattice wavelength and intensity. We varied the lattice intensity near our operating wavelength of 813.437(2) nm and determined that a correction to the transition frequency of -17(8) Hz was necessary for the operating intensity of I 0 ~ 10 kW/cm 2 . By varying the wavelength we also determined that for the lattice intensity I 0 , the clock transition shifts by ~ 2 mHz for a 1-MHz change in the lattice frequency. From these data the magic wavelength was determined to be 813.418 <ref type="bibr" coords="2,346.27,294.35,17.80,8.79" target="#b9">(10)</ref> nm, in agreement with <ref type="bibr" coords="2,461.29,294.35,10.62,8.79" target="#b1">[2,</ref><ref type="bibr" coords="2,471.91,294.35,7.08,8.79" target="#b3">4]</ref>. For the operation of our lattice clock at the 10 -18 level of repeatability, our data suggests that the lattice wavelength need only be stabilized within 500 kHz of the magic wavelength.</p><p>We also investigated the effect of an applied magnetic field along three orthogonal axes, and determined that no frequency shifts existed to within an uncertainty of 12 Hz. In addition, by varying the density of atoms in the lattice by a factor of 50 we found no statistically significant shift of the transition frequency to within 12 Hz. Finally, the probe intensity was varied, and associated frequency shifts were found to within &lt; 1-Hz uncertainty.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Absolute Frequency</head><p>Taking into account the remaining calculated small frequency shifts (0.7 Hz for the gravitational shift and 2.2 Hz for the blackbody shift), our final reported value for the absolute frequency of the 1 S 0 -3 P 0 transition in 87 Sr was 429,228,004,229,869 ± 19 sys ± 2.8 stat Hz <ref type="bibr" coords="2,494.16,501.71,10.35,8.79" target="#b0">[1]</ref>. From the statistical uncertainty of 6.5 × 10 -15 , the excellent stability and repeatability of our apparatus is evident over the full Figure <ref type="figure" coords="2,337.70,660.80,3.03,6.91">2</ref>. Date record, corrected for systematic effects, of the measured center frequency for the Sr optical lattice clock as reported in <ref type="bibr" coords="2,525.15,670.16,8.50,6.91" target="#b0">[1]</ref>. Also included are some preliminary points for additional measurements in 2006. The three most significant sources of systematic uncertainty can be improved by use of a narrower line and with additional averaging. measurement period of 3 months, as shown in fig. <ref type="figure" coords="3,266.66,73.79,3.66,8.79">2</ref>. The measurement in <ref type="bibr" coords="3,125.29,84.83,11.76,8.79" target="#b1">[2]</ref> used a GPS uplink for the absolute frequency reference, and reported a value that disagrees with ours by ~80 Hz. The 80-Hz error made by <ref type="bibr" coords="3,225.61,106.67,11.76,8.79" target="#b1">[2]</ref> has since been resolved; a third independent measurement reported in <ref type="bibr" coords="3,276.04,117.47,11.52,8.79" target="#b7">[8]</ref> is now in good agreement with our value. In addition, new preliminary results from the Tokyo group agree <ref type="bibr" coords="3,278.18,139.31,15.07,8.79" target="#b13">[14]</ref>, although a rigorous and objective check of the measurement still needs to be performed.</p><p>The systematic uncertainty of 19 Hz is by no means a limit to the attainable accuracy of our clock; it can easily be significantly reduced by averaging against a more stable reference and taking advantage of a narrower spectral linewidth. The magnetic-induced frequency shift uncertainty has already been improved by a factor of 20 by achieving a much narrower spectral linewidth for the transition, as will be seen in the following section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. IMPROVED RESOLUTION AND ACCURACY</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. High Spectral Resolution</head><p>By improving the design and construction of the probe laser, its linewidth has been dramatically reduced. When compared against the 1064-nm narrow laser via the frequency comb, linewidths of 300 mHz at 1064 nm are revealed, RBW-limited, as shown in fig. <ref type="figure" coords="3,224.42,359.15,14.69,8.79" target="#fig_1">3(a)</ref>. Most likely the measurement is limited by the performance of the 1064nm laser. In 60 s of averaging time, the linewidth is &lt; 7 Hz as shown in fig. <ref type="figure" coords="3,126.48,392.03,15.26,8.79" target="#fig_1">3(b)</ref>, allowing spectroscopic scans of the carrier frequency to enjoy the benefits of a very stable local oscillator.</p><p>An interesting measurement allowed by this improved resolution is to directly probe the radial sidebands caused by transverse confinement in the lattice beam, shown in fig. <ref type="figure" coords="3,281.34,452.51,3.96,8.79" target="#fig_2">4</ref>(a) at ~ 120 Hz from the carrier. More importantly, the carrier frequency itself now has a repeatable linewidth of &lt; 5 Hz (Q ~ 10 14 ); one example is shown in fig. <ref type="figure" coords="3,231.61,485.39,15.07,8.79" target="#fig_2">4(b)</ref>. With this improved spectral resolution we are in the progresss of pushing the measurements of systematic effects below the 10 -15 level of uncertainty, limited by the microwave frequency reference we employ.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Magnetic Field Systematic</head><p>The systematic uncertainty benefiting most directly from the improved line quality factor is the magnetically-induced frequency shift. The differential g-factor of ~ 110 × m f Hz/G between the ground and excited states of the clock transition can lead to broadening or frequency shifts from stray magnetic fields, depending on the population distribution among the magnetic sublevels. By varying the strength of an applied magnetic field in three orthogonal directions and measuring the spectral linewidth as a function of field strength, the uncertainty of the residual magnetic field has been reduced to &lt; 15 mG for each axis. This is shown in fig. <ref type="figure" coords="3,315.12,387.94,4.02,8.79" target="#fig_3">5</ref>(a) for the axis which demonstrated the greatest sensitivity of frequency shift to applied magnetic field, as shown in fig. <ref type="figure" coords="3,315.12,409.78,11.45,8.79" target="#fig_3">5(b</ref>). The resulting net uncertainty for magnetically-induced frequency shifts is now 0.5 Hz (1 × 10 -15 ). These measurements were performed using a 50-Hz spectral linewidth; use of the 5-Hz spectra is expected to further decrease the uncertainty of frequency shifts caused by the residual magnetic field. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>C. Other Improvements</head><p>Reduction of the other systematic uncertainties (density and lattice intensity) should be straightforward with the improved spectral resolution we now achieve. In fact, in order to take full advantage of the accuracy of our microwave reference, we have begun stabilizing the microwave phase of the fiber link used to transmit the reference from NIST to JILA. Still, the averaging times necessary to achieve 10 -15 accuracy for all systematic effects are long. Knowing this, we have recently locked the probe laser to the clock transition, with the eventual goal of optically comparing the Sr clock to other nearby optical clocks at NIST such as Hg + , Al + , and Yb.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>V. CONCLUSION</head><p>We have experimentally measured the dominant sources of systematic uncertainty in an optical lattice clock based on the 1 S 0 -3 P 0 transition in 87 Sr, including frequency shifts due to lattice wavelength and intensity, magnetic field, density, and probe intensity.</p><p>The frequency we report is 429,228,004,229,869 ± 19 sys ± 2.8 stat Hz. The systematic uncertainty was chiefly limited by averaging time or, in the case of the Zeeman shift, spectral linewidth. With an improved probe laser, the spectral linewidth (quality factor) is routinely 4.5 Hz (1 × 10 14 ). The uncertainty in the Zeeman shift has now been reduced to 1 × 10 -15 , and the overall uncertainty from systematic shifts is expected to reach below 10 -15 in the near future.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="2,315.12,214.88,242.90,6.91;2,315.12,224.24,242.67,6.91;2,315.12,233.36,242.83,6.91;2,315.12,242.24,85.24,6.91;2,315.12,71.28,242.64,131.52"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. (a) Axial sidebands demonstrating confinement in the Lamb-Dicke regime, and allowing measurement of the sample's temperature. (b) Clock transition, showing the best linewidth used for systematic measurements in 2005 [1].</figDesc><graphic coords="2,315.12,71.28,242.64,131.52" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="3,54.00,684.56,242.83,6.91;3,54.00,693.92,242.93,6.91;3,54.00,703.04,242.75,6.91;3,54.00,712.16,151.13,6.91;3,54.00,543.36,242.88,129.12"><head>Figure 3 .</head><label>3</label><figDesc>Figure 3. (a) Resolution-bandwidth-limited relative linewidth between the 698-nm probe laser and a narrow 1064-nm reference laser, measured at 1064 nm via a frequency comb, for 3-s averaging time. (b) Identical measurement, taken with a 60-s averaging time</figDesc><graphic coords="3,54.00,543.36,242.88,129.12" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="3,315.12,200.48,242.82,6.91;3,315.12,209.84,242.79,6.91;3,315.12,218.96,242.78,6.91;3,315.12,228.08,73.98,6.91;3,315.12,71.28,242.64,117.12"><head>Figure 4 .</head><label>4</label><figDesc>Figure 4. (a) Improvement to the spectroscopic resolution allows the radial sidebands caused by the lattice waist to be measured at ~ 120 Hz offset from the carrier. (b) The clock transition linewidth is now routinely measured to be &lt; 5 Hz.</figDesc><graphic coords="3,315.12,71.28,242.64,117.12" type="vector_box" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="3,315.12,642.08,242.90,6.91;3,315.12,651.44,242.79,6.91;3,315.12,660.80,242.82,6.91;3,315.12,669.92,242.86,6.91;3,315.12,679.04,242.83,6.91;3,315.12,688.40,242.91,6.91;3,315.12,697.28,42.84,6.91;3,358.08,695.57,6.84,4.39;3,365.04,697.28,1.98,6.91;3,315.12,495.44,242.64,134.56"><head>Figure 5 .</head><label>5</label><figDesc>Figure 5. (a) Measurement of the transition linewidth as a function of applied magnetic field along one axis allows calibration of the zero-field point to within an uncertainty of 13 mG. With the improved sub-5-Hz linewidth even more accuracy should be attainable. (b) Simultaneous measurement of the frequency shift with respect to the applied magnetic field then allows the Zeeman shift to be determined with an uncertainty of only ~ 1 × 10 -15 .</figDesc><graphic coords="3,315.12,495.44,242.64,134.56" type="bitmap" /></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0" coords="1,54.00,730.27,141.10,7.73"><p>1-4244-0074-0/06/$20.00 © 2006 IEEE.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head>ACKNOWLEDGMENTS</head><p>The authors wish to thank <rs type="person">S. Diddams</rs>, <rs type="person">T. Parker</rs> and <rs type="person">L. Hollberg</rs> for facilitating the maser transfer and <rs type="person">M. Notcutt</rs> and <rs type="person">J. Hall</rs> for help with the interrogation laser. We acknowledge funding from <rs type="funder">ONR</rs>, <rs type="funder">NSF</rs>, <rs type="funder">NASA</rs>, and <rs type="funder">NIST</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+			</listOrg>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="4,72.00,493.76,148.73,6.91;4,223.20,492.05,5.16,4.39;4,228.48,493.76,68.29,6.91;4,72.00,502.88,222.99,6.91" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Systematic Study of the&lt;mml:math xmlns:mml=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mml:mmultiscripts&gt;&lt;mml:mi&gt;Sr&lt;/mml:mi&gt;&lt;mml:mprescripts /&gt;&lt;mml:none /&gt;&lt;mml:mn&gt;87&lt;/mml:mn&gt;&lt;/mml:mmultiscripts&gt;&lt;/mml:math&gt;Clock Transition in an Optical Lattice</title>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">D</forename><surname>Ludlow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><forename type="middle">M</forename><surname>Boyd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tanya</forename><surname>Zelevinsky</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Seth</forename><forename type="middle">M</forename><surname>Foreman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sebastian</forename><surname>Blatt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Notcutt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tetsuya</forename><surname>Ido</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Ye</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevlett.96.033003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<title level="j" type="abbrev">Phys. Rev. Lett.</title>
+		<idno type="ISSN">0031-9007</idno>
+		<idno type="ISSNe">1079-7114</idno>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">33003</biblScope>
+			<date type="published" when="2006-01-26">January 2006</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,72.00,514.40,224.69,6.91;4,72.00,523.28,177.67,6.91" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">An optical lattice clock</title>
+		<author>
+			<persName><forename type="first">Masao</forename><surname>Takamoto</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Feng-Lei</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ryoichi</forename><surname>Higashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hidetoshi</forename><surname>Katori</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/nature03541</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<title level="j" type="abbrev">Nature</title>
+		<idno type="ISSN">0028-0836</idno>
+		<idno type="ISSNe">1476-4687</idno>
+		<imprint>
+			<biblScope unit="volume">435</biblScope>
+			<biblScope unit="issue">7040</biblScope>
+			<biblScope unit="page" from="321" to="324" />
+			<date type="published" when="2005-05">May 2005</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,72.00,534.80,224.71,6.91;4,72.00,543.68,224.78,6.91;4,72.00,552.80,83.11,6.91;4,157.44,551.09,7.80,4.39;4,165.36,552.80,131.46,6.91;4,72.00,561.68,158.47,6.91" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Direct Excitation of the Forbidden Clock Transition in Neutral&lt;mml:math xmlns:mml=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mml:mmultiscripts&gt;&lt;mml:mi&gt;Yb&lt;/mml:mi&gt;&lt;mml:mprescripts /&gt;&lt;mml:none /&gt;&lt;mml:mn&gt;174&lt;/mml:mn&gt;&lt;/mml:mmultiscripts&gt;&lt;/mml:math&gt;Atoms Confined to an Optical Lattice</title>
+		<author>
+			<persName coords=""><forename type="first">Z</forename><forename type="middle">W</forename><surname>Barber</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><forename type="middle">W</forename><surname>Hoyt</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">C</forename><forename type="middle">W</forename><surname>Oates</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Hollberg</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><forename type="middle">V</forename><surname>Taichenachev</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">V</forename><forename type="middle">I</forename><surname>Yudin</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevlett.96.083002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<title level="j" type="abbrev">Phys. Rev. Lett.</title>
+		<idno type="ISSN">0031-9007</idno>
+		<idno type="ISSNe">1079-7114</idno>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">83002</biblScope>
+			<date type="published" when="2006-03-01">March 2006</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,72.00,573.20,224.70,6.91;4,72.00,582.32,224.73,6.91;4,72.00,591.20,121.99,6.91" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Hyperpolarizability Effects in a Sr Optical Lattice Clock</title>
+		<author>
+			<persName><forename type="first">Anders</forename><surname>Brusch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rodolphe</forename><surname>Le Targat</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xavier</forename><surname>Baillard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mathilde</forename><surname>Fouché</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Lemonde</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevlett.96.103003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<title level="j" type="abbrev">Phys. Rev. Lett.</title>
+		<idno type="ISSN">0031-9007</idno>
+		<idno type="ISSNe">1079-7114</idno>
+		<imprint>
+			<biblScope unit="volume">96</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page">103003</biblScope>
+			<date type="published" when="2006-03-16">March 2006</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,72.00,602.72,224.73,6.91;4,72.00,611.84,224.79,6.91;4,72.00,620.72,224.69,6.91;4,72.00,629.84,18.30,6.91" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Precision Spectroscopy and Density-Dependent Frequency Shifts in Ultracold Sr</title>
+		<author>
+			<persName><forename type="first">Tetsuya</forename><surname>Ido</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">H</forename><surname>Loftus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><forename type="middle">M</forename><surname>Boyd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">D</forename><surname>Ludlow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><forename type="middle">W</forename><surname>Holman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Ye</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevlett.94.153001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<title level="j" type="abbrev">Phys. Rev. Lett.</title>
+		<idno type="ISSN">0031-9007</idno>
+		<idno type="ISSNe">1079-7114</idno>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">15</biblScope>
+			<biblScope unit="page">153001</biblScope>
+			<date type="published" when="2005-04-18">April 2005</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,72.00,641.36,224.88,6.91;4,72.00,650.24,224.85,6.91;4,72.00,657.65,5.16,4.39;4,77.28,659.36,164.71,6.91" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">High-Accuracy Optical Clock via Three-Level Coherence in Neutral Bosonic&lt;mml:math xmlns:mml=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;inline&quot;&gt;&lt;mml:mmultiscripts&gt;&lt;mml:mi&gt;Sr&lt;/mml:mi&gt;&lt;mml:mprescripts /&gt;&lt;mml:none /&gt;&lt;mml:mn&gt;88&lt;/mml:mn&gt;&lt;/mml:mmultiscripts&gt;&lt;/mml:math&gt;</title>
+		<author>
+			<persName><forename type="first">Robin</forename><surname>Santra</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ennio</forename><surname>Arimondo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tetsuya</forename><surname>Ido</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chris</forename><forename type="middle">H</forename><surname>Greene</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Ye</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevlett.94.173002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<title level="j" type="abbrev">Phys. Rev. Lett.</title>
+		<idno type="ISSN">0031-9007</idno>
+		<idno type="ISSNe">1079-7114</idno>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">17</biblScope>
+			<biblScope unit="page">173002</biblScope>
+			<date type="published" when="2005-05-04">May 2005</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,72.00,670.88,224.70,6.91;4,72.00,679.76,224.78,6.91;4,72.00,688.88,191.10,6.91" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Optical Clocks Based on Ultranarrow Three-Photon Resonances in Alkaline Earth Atoms</title>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Hong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Claire</forename><surname>Cramer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Warren</forename><surname>Nagourney</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">E</forename><forename type="middle">N</forename><surname>Fortson</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevlett.94.050801</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<title level="j" type="abbrev">Phys. Rev. Lett.</title>
+		<idno type="ISSN">0031-9007</idno>
+		<idno type="ISSNe">1079-7114</idno>
+		<imprint>
+			<biblScope unit="volume">94</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page">50801</biblScope>
+			<date type="published" when="2005-02-10">February 2005</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,72.00,700.40,208.49,6.91;4,284.64,698.69,5.16,4.39;4,289.92,700.40,6.96,6.91;4,72.00,709.28,67.50,6.91" xml:id="b7">
+	<monogr>
+		<title level="m" type="main">An accurate optical lattice clock with 87 Sr atoms</title>
+		<author>
+			<persName coords=""><forename type="first">R</forename></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Le</forename><surname>Targat</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>unpublished</note>
+</biblStruct>
+
+<biblStruct coords="4,333.12,74.00,224.86,6.91;4,333.12,83.12,224.71,6.91;4,333.12,92.00,80.93,6.91" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Narrow line cooling and momentum-space crystals</title>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">H</forename><surname>Loftus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tetsuya</forename><surname>Ido</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><forename type="middle">M</forename><surname>Boyd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">D</forename><surname>Ludlow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Ye</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physreva.70.063413</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review A</title>
+		<title level="j" type="abbrev">Phys. Rev. A</title>
+		<idno type="ISSN">1050-2947</idno>
+		<idno type="ISSNe">1094-1622</idno>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page">63413</biblScope>
+			<date type="published" when="2004-12-28">December 2004</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,333.12,103.52,224.85,6.91;4,333.12,112.40,224.73,6.91;4,333.12,121.52,91.26,6.91" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Narrow Line Cooling: Finite Photon Recoil Dynamics</title>
+		<author>
+			<persName><forename type="first">Thomas</forename><forename type="middle">H</forename><surname>Loftus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tetsuya</forename><surname>Ido</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Andrew</forename><forename type="middle">D</forename><surname>Ludlow</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Martin</forename><forename type="middle">M</forename><surname>Boyd</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Ye</surname></persName>
+		</author>
+		<idno type="DOI">10.1103/physrevlett.93.073003</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physical Review Letters</title>
+		<title level="j" type="abbrev">Phys. Rev. Lett.</title>
+		<idno type="ISSN">0031-9007</idno>
+		<idno type="ISSNe">1079-7114</idno>
+		<imprint>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">73003</biblScope>
+			<date type="published" when="2004-08-13">August 2004</date>
+			<publisher>American Physical Society (APS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,333.12,133.04,224.87,6.91;4,333.12,141.92,224.84,6.91;4,333.12,151.04,204.09,6.91" xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Simple and compact 1-Hz laser system via an improved mounting configuration of a reference cavity</title>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Notcutt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Long-Sheng</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">L</forename><surname>Hall</surname></persName>
+		</author>
+		<idno type="DOI">10.1364/ol.30.001815</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Optics Letters</title>
+		<title level="j" type="abbrev">Opt. Lett.</title>
+		<idno type="ISSN">0146-9592</idno>
+		<idno type="ISSNe">1539-4794</idno>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">14</biblScope>
+			<biblScope unit="page">1815</biblScope>
+			<date type="published" when="2005-07-15">July 2005</date>
+			<publisher>Optica Publishing Group</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,333.12,162.56,224.82,6.91;4,333.12,171.44,224.95,6.91;4,333.12,180.56,84.06,6.91" xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Delivery of high-stability optical and microwave frequency standards over an optical fiber network</title>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Ye</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jin-Long</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Jason</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><forename type="middle">W</forename><surname>Holman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">L</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">J</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Scott</forename><forename type="middle">A</forename><surname>Diddams</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><surname>Kitching</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sebastien</forename><surname>Bize</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">James</forename><forename type="middle">C</forename><surname>Bergquist</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Leo</forename><forename type="middle">W</forename><surname>Hollberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Lennart</forename><surname>Robertsson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Long-Sheng</forename><surname>Ma</surname></persName>
+		</author>
+		<idno type="DOI">10.1364/josab.20.001459</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Optical Society of America B</title>
+		<title level="j" type="abbrev">J. Opt. Soc. Am. B</title>
+		<idno type="ISSN">0740-3224</idno>
+		<idno type="ISSNe">1520-8540</idno>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">1459</biblScope>
+			<date type="published" when="2003-07-01">July 2003</date>
+			<publisher>Optica Publishing Group</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,333.12,192.08,224.89,6.91;4,333.12,200.96,225.15,6.91;4,333.12,210.08,73.74,6.91" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Phase stabilization of an octave-spanning Ti:sapphire laser</title>
+		<author>
+			<persName coords=""><forename type="first">T</forename><forename type="middle">M</forename><surname>Fortier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">J</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">S</forename><forename type="middle">T</forename><surname>Cundiff</surname></persName>
+		</author>
+		<idno type="DOI">10.1364/ol.28.002198</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Optics Letters</title>
+		<title level="j" type="abbrev">Opt. Lett.</title>
+		<idno type="ISSN">0146-9592</idno>
+		<idno type="ISSNe">1539-4794</idno>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="issue">22</biblScope>
+			<biblScope unit="page">2198</biblScope>
+			<date type="published" when="2003-11-15">November 2003</date>
+			<publisher>Optica Publishing Group</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="4,333.12,221.60,224.70,6.91;4,333.12,230.48,8.04,6.91;4,341.28,228.77,6.60,4.39;4,354.96,230.48,202.86,6.91;4,333.12,239.60,183.18,6.91" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Optical lattice clock: towards frequency measurement at 10 -18 level</title>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Katori</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Conference on Lasers and Electro-Optics, Oral presentation QThC</title>
+		<meeting><address><addrLine>Long Beach, California</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2006-05">May 2006</date>
+			<biblScope unit="volume">4</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
